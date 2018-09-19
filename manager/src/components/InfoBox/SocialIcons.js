@@ -5,9 +5,7 @@ import injectSheet from "react-jss";
 import config from "../../../content/meta/config";
 
 import GithubIcon from "!svg-react-loader!../../images/svg-icons/github.svg?name=GithubIcon";
-import FacebookIcon from "!svg-react-loader!../../images/svg-icons/facebook.svg?name=FacebookIcon";
-import TwitterIcon from "!svg-react-loader!../../images/svg-icons/twitter.svg?name=TwitterIcon";
-
+import WechatIcon from "!svg-react-loader!../../images/svg-icons/wechat.svg?name=WechatIcon";
 const styles = theme => ({
   social: {
     display: "flex",
@@ -35,11 +33,11 @@ const Socialcons = props => {
   const { classes } = props;
   const items = config.authorSocialLinks;
   const icons = {
-    twitter: TwitterIcon,
-    facebook: FacebookIcon,
-    github: GithubIcon
+    github: GithubIcon,
+    wechat: WechatIcon
   };
 
+  //TODO 微信的弹出二维码 images/jpg/wechat-personal.jpg
   return (
     <div className={classes.social}>
       {items.map(item => {

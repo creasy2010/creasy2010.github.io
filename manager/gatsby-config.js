@@ -148,7 +148,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
-        trackingId:'UA-125993066-1'
+        trackingId: "UA-125993066-1"
       },
     },
     {
@@ -206,7 +206,7 @@ module.exports = {
         ]
       }
     },
-    'gatsby-plugin-typescript',
+    "gatsby-plugin-typescript",
     {
       resolve: `gatsby-plugin-sitemap`
     },
