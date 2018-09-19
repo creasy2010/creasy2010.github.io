@@ -1,63 +1,85 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[PersonalBlog - a blog starter for GatsbyJS]]></title><description><![CDATA[PersonalBlog is a GatsbyJS starter.]]></description><link>https://gatsby-starter-personal-blog.greglobinski.com</link><generator>RSS for Node</generator><lastBuildDate>Wed, 19 Sep 2018 04:25:04 GMT</lastBuildDate><item><title><![CDATA[How to customize the PersonalBlog starter's appearance]]></title><description><![CDATA[The  starter  uses a theme object so base customization is really easy. Find the   file. … Front-end web development To read the whole…]]></description><link>https://gatsby-starter-personal-blog.greglobinski.com/customize-personal-blog-starter/</link><guid isPermaLink="false">https://gatsby-starter-personal-blog.greglobinski.com/customize-personal-blog-starter/</guid><content:encoded>&lt;p&gt;The &lt;a href=&quot;/gatsby-starter-personal-blog/&quot;&gt;starter&lt;/a&gt; uses a theme object so base customization is really easy.&lt;/p&gt;
-&lt;p&gt;Find the &lt;code class=&quot;language-text&quot;&gt;theme.js&lt;/code&gt; file.&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;
-      &lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;root
-  ├── src
-  │   ├── styles
-  │   │   ├── colors.js
-  │   │   ├── globals.js
-  │   │   └── theme.js&lt;/code&gt;&lt;/pre&gt;
-      &lt;/div&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[PersonalBlog - a blog starter for GatsbyJS]]></title><description><![CDATA[PersonalBlog is a GatsbyJS starter.]]></description><link>https://gatsby-starter-personal-blog.greglobinski.com</link><generator>RSS for Node</generator><lastBuildDate>Wed, 19 Sep 2018 10:31:39 GMT</lastBuildDate><item><title><![CDATA[sentry落地实战]]></title><description><![CDATA[sentry 翻译过来是 哨兵,寓意着像哨兵一样守护应用;
+它是一个完善,开放的 error trace 工具,围绕”Stop hoping your users will report errors”的理念,提供一系列工具,帮助 coder…]]></description><link>https://gatsby-starter-personal-blog.greglobinski.com/sentry落地实战/</link><guid isPermaLink="false">https://gatsby-starter-personal-blog.greglobinski.com/sentry落地实战/</guid><content:encoded>&lt;p&gt;sentry 翻译过来是 哨兵,寓意着像哨兵一样守护应用;
+它是一个完善,开放的 error trace 工具,围绕”Stop hoping your users will report errors”的理念,提供一系列工具,帮助 coder 快速定位问题,发现问题,解决问题;&lt;/p&gt;
+&lt;p&gt;一个项目经常会遇到以下问题(如果没有遇到可以忽略此文,好幸运):&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;需要用户的帐号密码才能复现问题;&lt;br&gt;
+用户那里有问题,在开发这边怎么也复现不了,也不清楚用户环境信息;
+每次出问题都是从前端定位到后端,一系列流程之后才找到原因;
+项目人员的更替流失,找不到谁维护项目;
+每次出问题自己都是最后一个知道;
+线上事故似乎总会冷不防的蹦出来,不能安安静静的写代码;
+上线时出现问题,并不能第一时间发现,导致影响用户最终被怼的还是我们;&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;p&gt;…&lt;/p&gt;
-&lt;h4&gt;Front-end web development&lt;/h4&gt;
-&lt;p&gt;To read the whole instruction article - &lt;a href=&quot;https://dev.greglobinski.com/customize-personal-blog-starter/&quot;&gt;How to customize the personalBlog starter’s appearance&lt;/a&gt; - you have to move to &lt;a href=&quot;https://dev.greglobinski.com&quot;&gt;Front-end web development with Greg&lt;/a&gt; website.&lt;/p&gt;
-&lt;p&gt;…&lt;/p&gt;
-&lt;p&gt;Vivamus vel justo in leo laoreet ullamcorper non vitae lorem. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin bibendum ullamcorper rutrum.&lt;/p&gt;
-&lt;p&gt;
-  &lt;a
-    class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/photo-1463852247062-1bbca38f7805-a3b23c58902850ed9b4fa458aa658292-699d0.jpg&quot;
-    style=&quot;display: block&quot;
-    target=&quot;_blank&quot;
-    rel=&quot;noopener&quot;
-  &gt;
-  
-  &lt;span
-    class=&quot;gatsby-resp-image-wrapper&quot;
-    style=&quot;position: relative; display: block; ; max-width: 800px; margin-left: auto; margin-right: auto;&quot;
-  &gt;
-    &lt;span
-      class=&quot;gatsby-resp-image-background-image&quot;
-      style=&quot;padding-bottom: 46.08233731739708%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAJABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAIEAQX/xAAVAQEBAAAAAAAAAAAAAAAAAAAAAf/aAAwDAQACEAMQAAAByOzlwwgf/8QAGxAAAgEFAAAAAAAAAAAAAAAAAQIxAxIiM0L/2gAIAQEAAQUCVLQXyM1tXTT/AP/EABQRAQAAAAAAAAAAAAAAAAAAABD/2gAIAQMBAT8BP//EABURAQEAAAAAAAAAAAAAAAAAAAEQ/9oACAECAQE/ASf/xAAYEAACAwAAAAAAAAAAAAAAAAAAASAhMf/aAAgBAQAGPwK2bH//xAAZEAACAwEAAAAAAAAAAAAAAAAAARAhMXH/2gAIAQEAAT8hS99GVdIuNx4g/9oADAMBAAIAAwAAABBrz//EABURAQEAAAAAAAAAAAAAAAAAAAEQ/9oACAEDAQE/EGf/xAAWEQEBAQAAAAAAAAAAAAAAAAAAETH/2gAIAQIBAT8Qwj//xAAaEAEAAgMBAAAAAAAAAAAAAAABACERMaGx/9oACAEBAAE/ECpIXoIWLNWxKCX252Hs5ybZ/9k=&apos;); background-size: cover; display: block;&quot;
-    &gt;
-      &lt;img
-        class=&quot;gatsby-resp-image-image&quot;
-        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px transparent;&quot;
-        alt=&quot;unsplash.com&quot;
-        title=&quot;&quot;
-        src=&quot;/static/photo-1463852247062-1bbca38f7805-a3b23c58902850ed9b4fa458aa658292-78f2b.jpg&quot;
-        srcset=&quot;/static/photo-1463852247062-1bbca38f7805-a3b23c58902850ed9b4fa458aa658292-dce19.jpg 200w,
-/static/photo-1463852247062-1bbca38f7805-a3b23c58902850ed9b4fa458aa658292-c1413.jpg 400w,
-/static/photo-1463852247062-1bbca38f7805-a3b23c58902850ed9b4fa458aa658292-78f2b.jpg 800w,
-/static/photo-1463852247062-1bbca38f7805-a3b23c58902850ed9b4fa458aa658292-ab4c4.jpg 1200w,
-/static/photo-1463852247062-1bbca38f7805-a3b23c58902850ed9b4fa458aa658292-699d0.jpg 1506w&quot;
-        sizes=&quot;(max-width: 800px) 100vw, 800px&quot;
-      /&gt;
-    &lt;/span&gt;
-  &lt;/span&gt;
-  
-  &lt;/a&gt;
-    &lt;/p&gt;
-&lt;p&gt;Proin suscipit luctus orci placerat fringilla. Donec hendrerit laoreet risus eget adipiscing. Suspendisse in urna ligula, a volutpat mauris. Sed enim mi, bibendum eu pulvinar vel, sodales vitae dui. Pellentesque sed sapien lorem, at lacinia urna. In hac habitasse platea dictumst.&lt;/p&gt;
-&lt;p&gt;Fusce a metus eu diam varius congue nec nec sapien. Nunc convallis accumsan justo. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Donec malesuada vehicula lectus, viverra sodales ipsum gravida nec. Integer gravida nisi ut magna mollis molestie. Nullam pharetra accumsan sagittis. Proin tristique rhoncus orci, eget vulputate nisi sollicitudin et. Quisque lacus augue, mollis non mollis et, ullamcorper in purus. Morbi et sem orci.&lt;/p&gt;
-&lt;h3&gt;Vestibulum orci tortor, sollicitudin ac euismod non, placerat ac augue.&lt;/h3&gt;
-&lt;p&gt;Praesent accumsan odio in ante ullamcorper id pellentesque mauris rhoncus. Duis vitae neque dolor. Duis sed purus at eros bibendum cursus nec a nulla. Donec turpis quam, ultricies id pretium sit amet, gravida eget leo.&lt;/p&gt;
-&lt;p&gt;Proin ornare ligula eu tellus tempus elementum. . Vestibulum non nibh risus, a scelerisque purus. Ut vel arcu ac tortor adipiscing hendrerit vel sed massa. Fusce sem libero, lacinia vulputate interdum non, porttitor non quam. Aliquam sed felis ligula. Duis non nulla magna.&lt;/p&gt;
-&lt;h3&gt;Aenean bibendum iaculis mi, nec blandit lacus interdum vitae&lt;/h3&gt;
-&lt;p&gt;Nullam eros mi, mollis in sollicitudin non, tincidunt sed enim. Sed et felis metus, rhoncus ornare nibh. Ut at magna leo. Suspendisse egestas est ac dolor imperdiet pretium. Lorem ipsum dolor sit amet, consectetur adipiscing elit&lt;/p&gt;
-&lt;h3&gt;Donec hendrerit laoreet risus eget adipiscing.&lt;/h3&gt;
-&lt;p&gt;Proin suscipit luctus orci placerat fringilla. Suspendisse in urna ligula, a volutpat mauris. Sed enim mi, bibendum eu pulvinar vel, sodales vitae dui. Pellentesque sed sapien lorem, at lacinia urna. In hac habitasse platea dictumst. Vivamus vel justo in leo laoreet ullamcorper non vitae lorem. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin bibendum ullamcorper rutrum.&lt;/p&gt;
-&lt;p&gt;Fusce a metus eu diam varius congue nec nec sapien. Nunc convallis accumsan justo. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Donec malesuada vehicula lectus, viverra sodales ipsum gravida nec. Integer gravida nisi ut magna mollis molestie. Nullam pharetra accumsan sagittis. Proin tristique rhoncus orci, eget vulputate nisi sollicitudin et. Quisque lacus augue, mollis non mollis et, ullamcorper in purus. Morbi et sem orci.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[hello world ..]]></title><description><![CDATA[The  starter  uses a theme object so base customization is really easy. Find the   file. … Front-end web development To read the whole…]]></description><link>https://gatsby-starter-personal-blog.greglobinski.com/hello-world/</link><guid isPermaLink="false">https://gatsby-starter-personal-blog.greglobinski.com/hello-world/</guid><content:encoded>&lt;p&gt;The &lt;a href=&quot;/gatsby-starter-personal-blog/&quot;&gt;starter&lt;/a&gt; uses a theme object so base customization is really easy.&lt;/p&gt;
+&lt;p&gt;coder 是为了解决问题而生的工程师, 如果上面的问题你遇到 3 个或 3 个以上,那很不幸,估计眼中噙着泪水, 心中一 W 个草尼马在奔腾;
+然并卵,真不幸遇到了这些问题,该如何解决呢 ? 下面为大家介绍下我的实践;&lt;/p&gt;
+&lt;h3&gt;特性&lt;/h3&gt;
+&lt;p&gt;对比了一票工具, 最终选择了 sentry,基于以下理由;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;多端覆盖: 我们能想到的语言也好端也好基本都有对应的 SDK, 像小程序也有社区提供的 SDK;
+coder style: 完整对接开发工具栈(github,jira,slack…),开放 openapi 支持扩展任意;连独立部署都提供 docker,真是不能太周到体贴;
+产品细致到位: sourcemap,suspect commit,suggested assignees,alert rule 等在实际使用时让人倍感关怀,似乎能想到的,都已经做到;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;下面会详细说明这些特性:&lt;/p&gt;
+&lt;h4&gt;vocabulary&lt;/h4&gt;
+&lt;p&gt;把 sentry 涉及到的词汇整理出来:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Issue:与 githubissue 同义, 问题;一个 issue 可以发生多次 event;&lt;/li&gt;
+&lt;li&gt;Event:一个问题发生的一次,会聚合到一个 issue;&lt;/li&gt;
+&lt;li&gt;SourceMap:压缩后代码映射到压缩前的信息,可以获取在错误源代码的文件路径,行号 列号,有利于定位问题;&lt;/li&gt;
+&lt;li&gt;FeedBack:用户反馈,当发生问题时,弹出对话框,可以让用户填写信息,描述错误影响及发生错误的场景;&lt;/li&gt;
+&lt;li&gt;Release:发布的版本;&lt;/li&gt;
+&lt;li&gt;Breadcrumb:童话里的面包屑,在问题发生之前的一些动作, 可以自己记录一些信息(用户点击动作),在 raven sdk 默认会把 console 打印信息记录下来,通过配置可以记录 http 请求 (&lt;a href=&quot;https://docs.sentry.io/learn/breadcrumbs/&quot;&gt;https://docs.sentry.io/learn/breadcrumbs/&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;Dsn( Data Source Name):&lt;a href=&quot;https://docs.sentry.io/quickstart/#about-the-dsn&quot;&gt;https://docs.sentry.io/quickstart/#about-the-dsn&lt;/a&gt; 格式:https://&lt;key&gt;@sentry.io/&lt;project&gt;,包含上传协议,key 服务地址,项目标识&lt;/li&gt;
+&lt;li&gt;Suspect Commit:commit 语义同 githubcommit,即一次提交,suspect commit 表示出现的问题可能与某次 commit 有关联;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4&gt;主动上报问题;&lt;/h4&gt;
+&lt;p&gt;sentry 的基本职责,当出现问题时,把错误现场信息,一些调试必要的业务信息及用户信息带到服务端;
+当采集一段时间,我们就能知道一段时间发生了多少错,某个版本发生了多少错,影响了多少用户;
+再通过告警,让我们第一时间感知到问题所在,进行修复,当用户反馈时,我们可以自豪的说,“已经上线了或正在上线中”;&lt;/p&gt;
+&lt;h4&gt;如何与 github 完美结合&lt;/h4&gt;
+&lt;p&gt;sentry 与 github 的结合与可谓深入浅出,浅在简单易用,深在巧妙利用 issue commit coder 的关联;
+先问一个问题?sentry 与 github 结合能给我们带来什么?&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;把问题相关的 commit 展示出来;&lt;/li&gt;
+&lt;li&gt;选出最适合改这个 bug 的人;&lt;/li&gt;
+&lt;li&gt;两个版本之间的 commit 列出来;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;注:
+第二项,完美实现了这些,当问题发生时,任何一个人都可以分配问题,而不是一定要 TeamLeader 来做这件事,&lt;/p&gt;
+&lt;p&gt;下面详细说明如何实现:&lt;/p&gt;
+&lt;p&gt;与此相关的概念: Issue,Event,Release,Suspect Commit;&lt;/p&gt;
+&lt;p&gt;首先在项目中授权项目的 github 地址;&lt;/p&gt;
+&lt;p&gt;当我们发布版本时,设置一个 hook 把版本及 coomit 信息通知到 sentry;&lt;/p&gt;
+&lt;p&gt;当采集到问题时, 把问题的版本 version 关联上来;&lt;/p&gt;
+&lt;p&gt;这样就完成了. 对, 就这么简单! 然后呢 ? 以 js 为例说明&lt;/p&gt;
+&lt;p&gt;首先,根据上传的问题 call stack 分析到是那个 js 出了问题;
+然后根据 js 中 sourcemap 信息推断出源代码的 path line colume,方便用户调试;
+接着分析源代码的相关 commit 及 coder;&lt;/p&gt;
+&lt;p&gt;然后一切就明清晰了;&lt;/p&gt;
+&lt;h4&gt;多端覆盖&lt;/h4&gt;
+&lt;p&gt;sentry 目前最新版本 9.0 算得上老牌厂商了, 我们能用得上的语言他基本都可以支持;小程序的采集与有社区贡献代码;&lt;/p&gt;
+&lt;h4&gt;openapi(&lt;a href=&quot;https://docs.sentry.io/api/&quot;&gt;https://docs.sentry.io/api/&lt;/a&gt;)&lt;/h4&gt;
+&lt;p&gt;借助于 openapi 几乎可以做到所有的事情(项目管理,issue 管理),像第三方工具对接,&lt;/p&gt;
+&lt;h4&gt;问题处理流程&lt;/h4&gt;
+&lt;p&gt;我们的愿景是对问题主动出击,那么如何实现主动,如何在第一时间感知问题?
+sentry 提供了 email 与 webhook;基于 webhook 可以把问题简略信息发布到钉钉,企业微信或个人微信;让我们能第一时间感知&lt;/p&gt;
+&lt;p&gt;也许有经验的小伙伴会反驳,告警群里一直反馈问题不定的报警,会引发 coder 的反感,最终演化成狼来了的故事;
+为了避免陷入这种困境,一定要有一个原则:“所报出的问题,都是有价值的,都是值得追踪的”;
+sentry 为我们提供了灵活的报警策略,实现这个目标:&lt;/p&gt;
+&lt;p&gt;项目中肯定会有报错是低优先级的,不影响流程的,这种错误可以借助 sentry 统计起来, 一周或一个月集中处理;(这个时候是不是锻炼新队员的好时候,哈哈.)&lt;/p&gt;
+&lt;h4&gt;知识积累及问题回顾&lt;/h4&gt;
+&lt;h3&gt;遇到的一些问题&lt;/h3&gt;
+&lt;h4&gt;服务端日志处理&lt;/h4&gt;
+&lt;p&gt;服务端日志采集;&lt;/p&gt;
+&lt;h2&gt;总结&lt;/h2&gt;
+&lt;p&gt;如果让我用一句话来总结 sentry,我想说:“改变了对问题的态度,从被 push 到 pull, 从此运筹帷幄,可以安安静静写代码!“;&lt;/p&gt;
+&lt;h2&gt;问题&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;开源与 sass 的&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2&gt;相关资料&lt;/h2&gt;</content:encoded></item><item><title><![CDATA[How to customize the PersonalBlog starter's appearance]]></title><description><![CDATA[The  starter  uses a theme object so base customization is really easy. Find the   file. … Front-end web development To read the whole…]]></description><link>https://gatsby-starter-personal-blog.greglobinski.com/customize-personal-blog-starter/</link><guid isPermaLink="false">https://gatsby-starter-personal-blog.greglobinski.com/customize-personal-blog-starter/</guid><content:encoded>&lt;p&gt;The &lt;a href=&quot;/gatsby-starter-personal-blog/&quot;&gt;starter&lt;/a&gt; uses a theme object so base customization is really easy.&lt;/p&gt;
 &lt;p&gt;Find the &lt;code class=&quot;language-text&quot;&gt;theme.js&lt;/code&gt; file.&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;
       &lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;root
