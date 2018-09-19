@@ -7,8 +7,9 @@
   "license": "MIT",
   "scripts": {
     "develop": "gatsby develop",
+    "clean": "ts-node ./bin/clean.ts",
     "develop-host": "gatsby develop --host 192.168.0.112",
-    "build": "gatsby build && cd public && mv -f * ../..",
+    "build": "npm run clean && gatsby build && cd public && mv -f * ../..",
     "serve": "gatsby serve",
     "format-output": "prettier src/**/*.{js,jsx}",
     "format": "prettier --write src/**/*.{js,jsx}",
@@ -29,6 +30,7 @@
     "eslint-plugin-jsx-a11y": "^6.1.1",
     "eslint-plugin-prettier": "^2.6.2",
     "eslint-plugin-react": "^7.10.0",
+    "fs-extra": "^7.0.0",
     "prettier": "^1.13.7",
     "sharp-cli": "^1.7.0",
     "webpack-bundle-analyzer": "^2.13.1"
@@ -36,6 +38,7 @@
   "dependencies": {
     "@material-ui/core": "^1.4.0",
     "@material-ui/icons": "^1.1.0",
+    "@types/fs-extra": "^5.0.4",
     "color": "^3.0.0",
     "gatsby": "^1.9.274",
     "gatsby-image": "^1.0.55",
