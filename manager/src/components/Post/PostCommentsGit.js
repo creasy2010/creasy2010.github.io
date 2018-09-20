@@ -4,7 +4,6 @@ import injectSheet from "react-jss";
 import FacebookProvider, { Comments } from "react-facebook";
 require("core-js/fn/array/find");
 import 'gitment/style/default.css'
-import Gitment from 'gitment'
 
 import config from "../../../content/meta/config";
 
@@ -15,18 +14,18 @@ const styles = theme => ({
     borderTop: "1px solid #ddd"
   }
 });
-//
+
 // const PostComments = props => {
 //   const { classes, slug, facebook } = props;
-
-  const gitment = new Gitment({
-    owner: 'creasy2010',
-    repo: 'https://github.com/creasy2010/creasy2010.github.io',
-    oauth: {
-      client_id: '1816b072b2ee81711445',
-      client_secret: '4e5dc1d0b197493c0871c14f35860f7c9d6cd317',
-    },
-  })
+//
+//   const gitment = new Gitment({
+//     owner: 'creasy2010',
+//     repo: 'https://github.com/creasy2010/creasy2010.github.io',
+//     oauth: {
+//       client_id: '1816b072b2ee81711445',
+//       client_secret: '4e5dc1d0b197493c0871c14f35860f7c9d6cd317',
+//     },
+//   })
 //
 //
 //   // gitment.render('comments')
@@ -48,15 +47,18 @@ const styles = theme => ({
 class PostComments extends React.Component{
 
   componentDidMount(){
-    const gitment = new Gitment({
-      owner: 'creasy2010',
-      repo: 'https://github.com/creasy2010/creasy2010.github.io',
-      oauth: {
-        client_id: '1816b072b2ee81711445',
-        client_secret: '4e5dc1d0b197493c0871c14f35860f7c9d6cd317',
-      },
-    });
-    gitment.render('post-comments');
+
+    if(window.Gitment){
+      const gitment = new window.Gitment({
+        owner: 'creasy2010',
+        repo: 'https://github.com/creasy2010/creasy2010.github.io',
+        oauth: {
+          client_id: '1816b072b2ee81711445',
+          client_secret: '4e5dc1d0b197493c0871c14f35860f7c9d6cd317',
+        },
+      });
+      gitment.render('post-comments');
+    }
   }
 
   render() {
