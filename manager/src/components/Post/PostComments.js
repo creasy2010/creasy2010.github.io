@@ -3,6 +3,8 @@ import PropTypes from "prop-types";
 import injectSheet from "react-jss";
 import FacebookProvider, { Comments } from "react-facebook";
 require("core-js/fn/array/find");
+import 'gitment/style/default.css'
+import Gitment from 'gitment'
 
 import config from "../../../content/meta/config";
 
@@ -16,6 +18,22 @@ const styles = theme => ({
 
 const PostComments = props => {
   const { classes, slug, facebook } = props;
+
+  const gitment = new Gitment({
+    id: 'Your page ID', // optional
+    owner: 'Your GitHub ID',
+    repo: 'The repo to store comments',
+    oauth: {
+      client_id: 'Your client ID',
+      client_secret: 'Your client secret',
+    },
+    // ...
+    // For more available options, check out the documentation below
+  })
+
+
+  // gitment.render('comments')
+
 
   return (
     <div id="post-comments" className={classes.postComments}>
