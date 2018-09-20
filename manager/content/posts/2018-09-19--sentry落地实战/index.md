@@ -6,7 +6,7 @@ category: "tools"
 ---
 
 sentry 翻译过来是 哨兵,寓意着像哨兵一样守护应用;
-它是一个完善,开放的 error trace 工具,围绕"Stop hoping your users will report errors"的理念,提供一系列工具,帮助 coder 快速定位问题,发现问题,解决问题;
+它是一个完善,开放的 error trace 工具,围绕"***Stop hoping your users will report errors***"的理念,提供一系列工具,帮助 coder 快速定位问题,发现问题,解决问题;
 
 你的项目经常会遇到以下问题(如果没有遇到可以忽略此文,好幸运,[求交往](/about/)!):
 
@@ -27,9 +27,9 @@ coder 是为了解决问题而生的工程师, 如果上面的问题你遇到 3 
 
 对比了一票工具, 最终选择了 sentry,基于以下理由;
 
-- [多端覆盖](https://docs.sentry.io/platforms/?platform=javascript): 我们能想到的语言也好端也好基本都有对应的 SDK, 像小程序也有社区提供的 SDK;
-- coder style: 完整对接开发工具栈(github,jira,slack...),开放 openapi 支持扩展任意;连独立部署都提供 docker,真是不能太周到体贴;
-- 产品细致到位: sourcemap,suspect commit,suggested assignees,alert rule 等在实际使用时让人倍感关怀,似乎能想到的,都已经做到;
+- ***[多端覆盖](https://docs.sentry.io/platforms/?platform=javascript)***: 我们能想到的语言也好端也好基本都有对应的 SDK, 像小程序也有社区提供的 SDK;
+- ***coder style***: 完整对接开发工具栈(github,jira,slack...),开放 openapi 支持扩展任意;连独立部署都提供 docker,真是不能太周到体贴;
+- ***产品细致到位***: sourcemap,suspect commit,suggested assignees,alert rule 等在实际使用时让人倍感关怀,似乎能想到的,都已经做到;
 
 下面会详细说明这些特性:
 

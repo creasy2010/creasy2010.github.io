@@ -1,7 +1,7 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[PersonalBlog - a blog starter for GatsbyJS]]></title><description><![CDATA[PersonalBlog is a GatsbyJS starter.]]></description><link>https://github.com/creasy2010</link><generator>RSS for Node</generator><lastBuildDate>Thu, 20 Sep 2018 01:40:37 GMT</lastBuildDate><item><title><![CDATA[灰度方案如何拉低我的焦虑值]]></title><description><![CDATA[预告!!! 我know你进入了这个页面,文章会很快发出来!]]></description><link>https://github.com/creasy2010/灰度/</link><guid isPermaLink="false">https://github.com/creasy2010/灰度/</guid><content:encoded>&lt;p&gt;&lt;strong&gt;&lt;em&gt;预告!!!&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[PersonalBlog - a blog starter for GatsbyJS]]></title><description><![CDATA[PersonalBlog is a GatsbyJS starter.]]></description><link>https://github.com/creasy2010</link><generator>RSS for Node</generator><lastBuildDate>Thu, 20 Sep 2018 01:52:50 GMT</lastBuildDate><item><title><![CDATA[灰度方案如何拉低我的焦虑值]]></title><description><![CDATA[预告!!! 我know你进入了这个页面,文章会很快发出来!]]></description><link>https://github.com/creasy2010/灰度/</link><guid isPermaLink="false">https://github.com/creasy2010/灰度/</guid><content:encoded>&lt;p&gt;&lt;strong&gt;&lt;em&gt;预告!!!&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;我know你进入了这个页面,文章会很快发出来!&lt;/p&gt;</content:encoded></item><item><title><![CDATA[sentry落地实战]]></title><description><![CDATA[sentry 翻译过来是 哨兵,寓意着像哨兵一样守护应用;
-它是一个完善,开放的 error trace 工具,围绕”Stop hoping your users will report errors”的理念,提供一系列工具,帮助 coder…]]></description><link>https://github.com/creasy2010/sentry落地实战/</link><guid isPermaLink="false">https://github.com/creasy2010/sentry落地实战/</guid><content:encoded>&lt;p&gt;sentry 翻译过来是 哨兵,寓意着像哨兵一样守护应用;
-它是一个完善,开放的 error trace 工具,围绕”Stop hoping your users will report errors”的理念,提供一系列工具,帮助 coder 快速定位问题,发现问题,解决问题;&lt;/p&gt;
+它是一个完善,开放的 error trace 工具,围绕” Stop hoping your users will report errors “的理念,提供一系列工具,帮助 coder…]]></description><link>https://github.com/creasy2010/sentry落地实战/</link><guid isPermaLink="false">https://github.com/creasy2010/sentry落地实战/</guid><content:encoded>&lt;p&gt;sentry 翻译过来是 哨兵,寓意着像哨兵一样守护应用;
+它是一个完善,开放的 error trace 工具,围绕”&lt;strong&gt;&lt;em&gt;Stop hoping your users will report errors&lt;/em&gt;&lt;/strong&gt;“的理念,提供一系列工具,帮助 coder 快速定位问题,发现问题,解决问题;&lt;/p&gt;
 &lt;p&gt;你的项目经常会遇到以下问题(如果没有遇到可以忽略此文,好幸运,&lt;a href=&quot;/about/&quot;&gt;求交往&lt;/a&gt;!):&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;需要用户的帐号密码才能复现问题;&lt;/li&gt;
@@ -18,9 +18,9 @@
 &lt;h3&gt;特性&lt;/h3&gt;
 &lt;p&gt;对比了一票工具, 最终选择了 sentry,基于以下理由;&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://docs.sentry.io/platforms/?platform=javascript&quot;&gt;多端覆盖&lt;/a&gt;: 我们能想到的语言也好端也好基本都有对应的 SDK, 像小程序也有社区提供的 SDK;&lt;/li&gt;
-&lt;li&gt;coder style: 完整对接开发工具栈(github,jira,slack…),开放 openapi 支持扩展任意;连独立部署都提供 docker,真是不能太周到体贴;&lt;/li&gt;
-&lt;li&gt;产品细致到位: sourcemap,suspect commit,suggested assignees,alert rule 等在实际使用时让人倍感关怀,似乎能想到的,都已经做到;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;em&gt;&lt;a href=&quot;https://docs.sentry.io/platforms/?platform=javascript&quot;&gt;多端覆盖&lt;/a&gt;&lt;/em&gt;&lt;/strong&gt;: 我们能想到的语言也好端也好基本都有对应的 SDK, 像小程序也有社区提供的 SDK;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;em&gt;coder style&lt;/em&gt;&lt;/strong&gt;: 完整对接开发工具栈(github,jira,slack…),开放 openapi 支持扩展任意;连独立部署都提供 docker,真是不能太周到体贴;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;em&gt;产品细致到位&lt;/em&gt;&lt;/strong&gt;: sourcemap,suspect commit,suggested assignees,alert rule 等在实际使用时让人倍感关怀,似乎能想到的,都已经做到;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;下面会详细说明这些特性:&lt;/p&gt;
 &lt;h4&gt;vocabulary&lt;/h4&gt;

@@ -4,4 +4,3 @@ menuTitle: About
 --- 
 
 ![微信](wechat-personal.jpg)
- 
