@@ -51,7 +51,7 @@ class PostComments extends React.Component{
     if(window.Gitment){
       const gitment = new window.Gitment({
         owner: 'creasy2010',
-        repo: 'https://github.com/creasy2010/creasy2010.github.io',
+        repo: 'creasy2010.github.io',
         oauth: {
           client_id: '1816b072b2ee81711445',
           client_secret: '4e5dc1d0b197493c0871c14f35860f7c9d6cd317',
