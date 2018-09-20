@@ -1,26 +1,26 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[PersonalBlog - a blog starter for GatsbyJS]]></title><description><![CDATA[PersonalBlog is a GatsbyJS starter.]]></description><link>https://github.com/creasy2010</link><generator>RSS for Node</generator><lastBuildDate>Wed, 19 Sep 2018 15:00:20 GMT</lastBuildDate><item><title><![CDATA[sentry落地实战]]></title><description><![CDATA[sentry 翻译过来是 哨兵,寓意着像哨兵一样守护应用;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[PersonalBlog - a blog starter for GatsbyJS]]></title><description><![CDATA[PersonalBlog is a GatsbyJS starter.]]></description><link>https://github.com/creasy2010</link><generator>RSS for Node</generator><lastBuildDate>Thu, 20 Sep 2018 00:41:17 GMT</lastBuildDate><item><title><![CDATA[sentry落地实战]]></title><description><![CDATA[sentry 翻译过来是 哨兵,寓意着像哨兵一样守护应用;
 它是一个完善,开放的 error trace 工具,围绕”Stop hoping your users will report errors”的理念,提供一系列工具,帮助 coder…]]></description><link>https://github.com/creasy2010/sentry落地实战/</link><guid isPermaLink="false">https://github.com/creasy2010/sentry落地实战/</guid><content:encoded>&lt;p&gt;sentry 翻译过来是 哨兵,寓意着像哨兵一样守护应用;
 它是一个完善,开放的 error trace 工具,围绕”Stop hoping your users will report errors”的理念,提供一系列工具,帮助 coder 快速定位问题,发现问题,解决问题;&lt;/p&gt;
-&lt;p&gt;一个项目经常会遇到以下问题(如果没有遇到可以忽略此文,好幸运):&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;需要用户的帐号密码才能复现问题;&lt;br&gt;
-用户那里有问题,在开发这边怎么也复现不了,也不清楚用户环境信息;
-每次出问题都是从前端定位到后端,一系列流程之后才找到原因;
-项目人员的更替流失,找不到谁维护项目;
-每次出问题自己都是最后一个知道;
-线上事故似乎总会冷不防的蹦出来,不能安安静静的写代码;
-上线时出现问题,并不能第一时间发现,导致影响用户最终被怼的还是我们;&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;你的项目经常会遇到以下问题(如果没有遇到可以忽略此文,好幸运,&lt;a href=&quot;/about/&quot;&gt;求交往&lt;/a&gt;!):&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;需要用户的帐号密码才能复现问题;&lt;/li&gt;
+&lt;li&gt;用户那里有问题,在开发这边怎么也复现不了,也不清楚用户环境信息;&lt;/li&gt;
+&lt;li&gt;每次出问题都是从前端定位到后端,一系列流程之后才找到原因;&lt;/li&gt;
+&lt;li&gt;项目人员的更替流失,找不到谁维护项目;&lt;/li&gt;
+&lt;li&gt;每次出问题自己都是最后一个知道,经过客户,客服/售后,teamLeader or boss;&lt;/li&gt;
+&lt;li&gt;线上事故似乎总会冷不防的蹦出来,不能安安静静的写代码;&lt;/li&gt;
+&lt;li&gt;上线时出现问题,并不能第一时间发现,导致影响大批用户,不能把火情控制在最小范围;&lt;/li&gt;
+&lt;/ul&gt;
 &lt;p&gt;…&lt;/p&gt;
 &lt;p&gt;coder 是为了解决问题而生的工程师, 如果上面的问题你遇到 3 个或 3 个以上,那很不幸,估计眼中噙着泪水, 心中一 W 个草尼马在奔腾;
-然并卵,真不幸遇到了这些问题,该如何解决呢 ? 下面为大家介绍下我的实践;&lt;/p&gt;
+然并卵,真不幸遇到了这些问题,该如何解决呢 ? 如何带领团队走出困境;&lt;/p&gt;
 &lt;h3&gt;特性&lt;/h3&gt;
 &lt;p&gt;对比了一票工具, 最终选择了 sentry,基于以下理由;&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;多端覆盖: 我们能想到的语言也好端也好基本都有对应的 SDK, 像小程序也有社区提供的 SDK;
-coder style: 完整对接开发工具栈(github,jira,slack…),开放 openapi 支持扩展任意;连独立部署都提供 docker,真是不能太周到体贴;
-产品细致到位: sourcemap,suspect commit,suggested assignees,alert rule 等在实际使用时让人倍感关怀,似乎能想到的,都已经做到;&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://docs.sentry.io/platforms/?platform=javascript&quot;&gt;多端覆盖&lt;/a&gt;: 我们能想到的语言也好端也好基本都有对应的 SDK, 像小程序也有社区提供的 SDK;&lt;/li&gt;
+&lt;li&gt;coder style: 完整对接开发工具栈(github,jira,slack…),开放 openapi 支持扩展任意;连独立部署都提供 docker,真是不能太周到体贴;&lt;/li&gt;
+&lt;li&gt;产品细致到位: sourcemap,suspect commit,suggested assignees,alert rule 等在实际使用时让人倍感关怀,似乎能想到的,都已经做到;&lt;/li&gt;
+&lt;/ul&gt;
 &lt;p&gt;下面会详细说明这些特性:&lt;/p&gt;
 &lt;h4&gt;vocabulary&lt;/h4&gt;
 &lt;p&gt;把 sentry 涉及到的词汇整理出来:&lt;/p&gt;
@@ -31,13 +31,194 @@ coder style: 完整对接开发工具栈(github,jira,slack…),开放 openapi �
 &lt;li&gt;FeedBack:用户反馈,当发生问题时,弹出对话框,可以让用户填写信息,描述错误影响及发生错误的场景;&lt;/li&gt;
 &lt;li&gt;Release:发布的版本;&lt;/li&gt;
 &lt;li&gt;Breadcrumb:童话里的面包屑,在问题发生之前的一些动作, 可以自己记录一些信息(用户点击动作),在 raven sdk 默认会把 console 打印信息记录下来,通过配置可以记录 http 请求 (&lt;a href=&quot;https://docs.sentry.io/learn/breadcrumbs/&quot;&gt;https://docs.sentry.io/learn/breadcrumbs/&lt;/a&gt;)&lt;/li&gt;
-&lt;li&gt;Dsn( Data Source Name):&lt;a href=&quot;https://docs.sentry.io/quickstart/#about-the-dsn&quot;&gt;https://docs.sentry.io/quickstart/#about-the-dsn&lt;/a&gt; 格式:https://&lt;key&gt;@sentry.io/&lt;project&gt;,包含上传协议,key 服务地址,项目标识&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://docs.sentry.io/quickstart/#about-the-dsn&quot;&gt;Dsn( Data Source Name)&lt;/a&gt; 格式:https://&lt;key&gt;@sentry.io/&lt;project&gt;,包含上传协议,key 服务地址,项目标识&lt;/li&gt;
 &lt;li&gt;Suspect Commit:commit 语义同 githubcommit,即一次提交,suspect commit 表示出现的问题可能与某次 commit 有关联;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h4&gt;主动上报问题;&lt;/h4&gt;
 &lt;p&gt;sentry 的基本职责,当出现问题时,把错误现场信息,一些调试必要的业务信息及用户信息带到服务端;
 当采集一段时间,我们就能知道一段时间发生了多少错,某个版本发生了多少错,影响了多少用户;
-再通过告警,让我们第一时间感知到问题所在,进行修复,当用户反馈时,我们可以自豪的说,“已经上线了或正在上线中”;&lt;/p&gt;
+再通过告警,让我们第一时间感知到问题所在,进行修复;
+当用户或售后反馈时,我们可以坦然的说,“已经上线了!”或”正在上线中!“;&lt;/p&gt;
+&lt;p&gt;
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/issue列表-ead2385ae692eb289c2e661ced35733f-fdcf4.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block; ; max-width: 800px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 52.112676056338024%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAYAAAC0VX7mAAAACXBIWXMAAAsSAAALEgHS3X78AAAB0UlEQVQoz1WSW0/bQBCF/Tt4QCoFVRWCFKIEIYKgVSXuLzxV7Xv/DgIJCJeA1Kr/jHBzEt8vu9716czYCWSlkdeW98w536zze/8XNlcO0Lv4C601ojCGUhplWYIXP7mstVLj97dV7+vvztG3n+g09nDX/SffAz9AFMUTAWtJzFhplCYpVK6QUxWFQaGL6kmlaa9UwYI/sNHYxf3lH9BZDAYefC/AaOgj9CNkaU5C2VTlmUIcptAkoCkNJ8q5WRjC2ekcY/XTFnrn98iVRf/RJZchAi+sDpObLK1E2B0Xu2F3nJxTGEahFco0gfN17RBfFjq4JcHClOj3XXLnYUhOvZE/YfqeH+85Ju8N4WAk3CSjZs52aw/LH9dxc9aDKSye+s94fXHx+uxK9CRORGA8IF4swigqQSPF/NJMw9ls7mDxQxvXZ7dknRi6HrmKZAB8cDLL2t3YIfMrCbqRoRCCnHjGJLix8h2fZ5u4Or0Rhg8PLyQ6FHcVNwKe5XJwImqrqCJeR1YUOaV/nfbSNuZnGrg86YrDx6ehTHjgjuQKJfVVsSLw5lTY1VeK35kpN3a22rtYnGuhe3oNK5FHCAO6LuzKmKmoU7HHQjxx5kj8DF2l/zx71uR+nSMiAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px transparent;&quot;
+        alt=&quot;issue列表&quot;
+        title=&quot;&quot;
+        src=&quot;/static/issue列表-ead2385ae692eb289c2e661ced35733f-48538.png&quot;
+        srcset=&quot;/static/issue列表-ead2385ae692eb289c2e661ced35733f-bed0f.png 200w,
+/static/issue列表-ead2385ae692eb289c2e661ced35733f-5fd34.png 400w,
+/static/issue列表-ead2385ae692eb289c2e661ced35733f-48538.png 800w,
+/static/issue列表-ead2385ae692eb289c2e661ced35733f-b70ec.png 1200w,
+/static/issue列表-ead2385ae692eb289c2e661ced35733f-d134a.png 1600w,
+/static/issue列表-ead2385ae692eb289c2e661ced35733f-fdcf4.png 1917w&quot;
+        sizes=&quot;(max-width: 800px) 100vw, 800px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    &lt;/p&gt;
+&lt;p&gt;
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/issue详情1-ab31143c772f3223eeaa6ce4e31c81b7-e6552.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block; ; max-width: 800px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 52.11047420531527%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAYAAAC0VX7mAAAACXBIWXMAAAsSAAALEgHS3X78AAAB0ElEQVQoz11S22oUQRDtD1FBBE1Awq6rLCFudIMQcnvJU8RnP0Z92EVNICrqN/kggs8iureZ6XvPTB+ra3Y2WRsONVU9depUdYmXhy+w++AYH959hbUOSmoEX6KuI2KMZGtUVdWgrNhvT7pv0R5xsvccg+4hLt9+htEK08kM89kC2SJjmwpY4xhamxWpVholfYeQCkZY8hXlipPhGQadAyL8wpdZJpHnihIMjLFritrDqomMO4g1+9l0TmIKiP3Hp3i48RTno0/Ucon5XKGQHlKXcD6grupVW5YKhqSK4mXZjGU6kZRn0TYthv0j9DZ2MX59AS0VqfR84Snp+4+fpNKslH37ZTFZyDS9VSzPNSTlYVlUPHl0gK0727gYf2yIwvIBqvqabVD+F0/ExgYUhedOki8GvX3cv93H+9EltRPxd6aQUdVc0otrj0I5QhrBFVKsIQSK3OHPbwNZBOqqgtjpPsPmrR7OlwqVsjSfmh/o+lqsA7QFjteryA3Bk59ILUR/a4h7N7sYvRrTvEhZlsM5IqVZpsHzvOIVmp2LrMxZz/8m3zlPHRHhdmcPd290MH4z4otsQbunJJMbrdctw7ANwdErV0TqeIUUrZmk7v4BpOzV4s4j5QoAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px transparent;&quot;
+        alt=&quot;issue详情1&quot;
+        title=&quot;&quot;
+        src=&quot;/static/issue详情1-ab31143c772f3223eeaa6ce4e31c81b7-48538.png&quot;
+        srcset=&quot;/static/issue详情1-ab31143c772f3223eeaa6ce4e31c81b7-bed0f.png 200w,
+/static/issue详情1-ab31143c772f3223eeaa6ce4e31c81b7-5fd34.png 400w,
+/static/issue详情1-ab31143c772f3223eeaa6ce4e31c81b7-48538.png 800w,
+/static/issue详情1-ab31143c772f3223eeaa6ce4e31c81b7-b70ec.png 1200w,
+/static/issue详情1-ab31143c772f3223eeaa6ce4e31c81b7-d134a.png 1600w,
+/static/issue详情1-ab31143c772f3223eeaa6ce4e31c81b7-e6552.png 1919w&quot;
+        sizes=&quot;(max-width: 800px) 100vw, 800px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    &lt;/p&gt;
+&lt;p&gt;
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/issue详情2-b619d4c1df9c12dd5ce8038ce40d3b15-e6552.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block; ; max-width: 800px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 52.31891610213653%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAYAAAC0VX7mAAAACXBIWXMAAAsSAAALEgHS3X78AAABUElEQVQoz42S3UrDQBCF8yCCCFIUxDZUqbYEGlSsohfSG7302kcRtGqs1aogvpT4DNpim+Zn/467m1A3bQIuHHaZzHx7ZjbWxck59uptvDy8QwiOYBIgDEMwxv4lIURG1rF7hsZ6C0/eG9RSSb4/wWjsYywVBKG8IMpIx6IIXAJmlwSewqkcoH+fAikDIQRUO+DgXEjxjJQTSil+hiNdk3HYctrYWGmid/uqP8Yx0cksLWY5UpeovO+vQQaoHbq1I9glB92bZx1Q7lTLREIJyRH920UKg7Fbzc1DlJe30e30dYCqlmVysbv0zBJBuTOBTnUfa0s1eNePKZAikIMvdJi6YzyZsXYHo+WGvYvVxSrurnoJUBZwlu9OAVSx7xN8fgz0a8/NcKvsorRQMYAEnPK5lzWlwHFsODSBdXtHAzuX3rTlMIr1LAvF2PS3mm35F7kf3Ghe7zk3AAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px transparent;&quot;
+        alt=&quot;issue详情2&quot;
+        title=&quot;&quot;
+        src=&quot;/static/issue详情2-b619d4c1df9c12dd5ce8038ce40d3b15-48538.png&quot;
+        srcset=&quot;/static/issue详情2-b619d4c1df9c12dd5ce8038ce40d3b15-bed0f.png 200w,
+/static/issue详情2-b619d4c1df9c12dd5ce8038ce40d3b15-5fd34.png 400w,
+/static/issue详情2-b619d4c1df9c12dd5ce8038ce40d3b15-48538.png 800w,
+/static/issue详情2-b619d4c1df9c12dd5ce8038ce40d3b15-b70ec.png 1200w,
+/static/issue详情2-b619d4c1df9c12dd5ce8038ce40d3b15-d134a.png 1600w,
+/static/issue详情2-b619d4c1df9c12dd5ce8038ce40d3b15-e6552.png 1919w&quot;
+        sizes=&quot;(max-width: 800px) 100vw, 800px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    &lt;/p&gt;
+&lt;p&gt;
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/issue事件列表-b1bd914359c8076471b01a4f89295b47-c4c6d.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block; ; max-width: 800px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 52.35355648535565%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAYAAAC0VX7mAAAACXBIWXMAAAsSAAALEgHS3X78AAABy0lEQVQoz22Rb2sUMRDG93MoRZAWilDPA7XF40BbocUW3/iqBV/3K4mtV1vPKv1aorbu7f9sks1m93FmsldRDAxJJskzv2cSHR+8xeTRPuazKzjnUJUKrnHoug5918N7j7ZdRhvyfS9xu6Z5OaLXO0eYPNzDxcklrDFYxAnSJEOeFcjSHLXSMNpK6NpIARaqVS1FnKNCvoOpNVSckuD2IQnu4vPZlVTI0gJVoVAWFVSl5PG/g6lYWCgpeBRJijiuEO1N32C8NsV8ELTGwlNl74NQRzOL8p6JwpkPeR/yHP3S8vbmAUarE1zMvoIlfi0U0txIHxXZ5Z7WZMdQO7iYIqtaG7KvZeYhd8mNofPo+dNX2Li/hfMPX2A98O1ngZtFDUuXmrKAVgpN00jwp7Awr621suYc743mvEM0fbyLB/ee4OPpJVri/nGTY5EqockzhYoq8+/zI5611rdiTM4ivOc834km45dYXxnj7GSOhjx/vy4Rp1psFCXbNoOgGwjtX4TOEaFtxL4Ibo1eYO3uCLP3nwLhdY44CYRJWaFkwsEyCzNVIDJ/euhCD0Xw2XgHq3c2cPruXAiXPWTCvLLyMfzA/YeQIwi2g2WH3/z31eVDIrrvAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px transparent;&quot;
+        alt=&quot;issue详issue事件列表情2&quot;
+        title=&quot;&quot;
+        src=&quot;/static/issue事件列表-b1bd914359c8076471b01a4f89295b47-48538.png&quot;
+        srcset=&quot;/static/issue事件列表-b1bd914359c8076471b01a4f89295b47-bed0f.png 200w,
+/static/issue事件列表-b1bd914359c8076471b01a4f89295b47-5fd34.png 400w,
+/static/issue事件列表-b1bd914359c8076471b01a4f89295b47-48538.png 800w,
+/static/issue事件列表-b1bd914359c8076471b01a4f89295b47-b70ec.png 1200w,
+/static/issue事件列表-b1bd914359c8076471b01a4f89295b47-d134a.png 1600w,
+/static/issue事件列表-b1bd914359c8076471b01a4f89295b47-c4c6d.png 1912w&quot;
+        sizes=&quot;(max-width: 800px) 100vw, 800px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    &lt;/p&gt;
+&lt;p&gt;
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/issue影响用户列表-7525d70b64b7d1d3dcdb9412cc8497e5-e6552.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block; ; max-width: 800px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 52.006253256904635%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAYAAAC0VX7mAAAACXBIWXMAAAsSAAALEgHS3X78AAABbklEQVQoz5WSW0/CMBiG90OMiTEhGhMBiQciqBATlOCNVxqv/TdGBUXFE/44z+y8dYN222v7DQzxRviSb13b9Nn7NNNO6yfYWmmgc/WCMAjhuwx8IBDHCZIkkWOMKIrSFhHNR6X25SMdh6UdVI9Rztdx3+pKYABDN2EaFizLppH5gVzvUwcsJLCC+j6DkB/gPIKIYgRy7vcMCawcoZTbkwm7dEj/NuA6HoHUofFE48kUmAyG6VzTgt5zodVKhygs7OC2+QTP8ygZH3CMLJKh0t/+VZbFOacm5cp6A/lMSSZ8pgXbYRhwdWdCKv3fyoBJE9MwKbW2vbqP5fkibpqPiAXHx6sOPxRTA23bocRauVDD0twa2pcPSgK9ng0v4NMBGZP37qbAzfwuFmcLuL7okLJjuWAqoZgMqDTDsE9QBdc2shVkZnJond9B7uLrzYDt84mBo4SWZaXAYq4qgVk0z9oU+f3TgcemV1Z/h3r/Ad1l16y/QesGAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px transparent;&quot;
+        alt=&quot;issue影响用户列表&quot;
+        title=&quot;&quot;
+        src=&quot;/static/issue影响用户列表-7525d70b64b7d1d3dcdb9412cc8497e5-48538.png&quot;
+        srcset=&quot;/static/issue影响用户列表-7525d70b64b7d1d3dcdb9412cc8497e5-bed0f.png 200w,
+/static/issue影响用户列表-7525d70b64b7d1d3dcdb9412cc8497e5-5fd34.png 400w,
+/static/issue影响用户列表-7525d70b64b7d1d3dcdb9412cc8497e5-48538.png 800w,
+/static/issue影响用户列表-7525d70b64b7d1d3dcdb9412cc8497e5-b70ec.png 1200w,
+/static/issue影响用户列表-7525d70b64b7d1d3dcdb9412cc8497e5-d134a.png 1600w,
+/static/issue影响用户列表-7525d70b64b7d1d3dcdb9412cc8497e5-e6552.png 1919w&quot;
+        sizes=&quot;(max-width: 800px) 100vw, 800px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    &lt;/p&gt;
 &lt;h4&gt;如何与 github 完美结合&lt;/h4&gt;
 &lt;p&gt;sentry 与 github 的结合与可谓深入浅出,浅在简单易用,深在巧妙利用 issue commit coder 的关联;
 先问一个问题?sentry 与 github 结合能给我们带来什么?&lt;/p&gt;
@@ -58,23 +239,394 @@ coder style: 完整对接开发工具栈(github,jira,slack…),开放 openapi �
 然后根据 js 中 sourcemap 信息推断出源代码的 path line colume,方便用户调试;
 接着分析源代码的相关 commit 及 coder;&lt;/p&gt;
 &lt;p&gt;然后一切就明清晰了;&lt;/p&gt;
+&lt;p&gt;
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/release相关commit及coder-e119a2f27e7b0347b9b65691db55c4b3-f032e.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block; ; max-width: 800px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 60.84860173577628%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAMCAYAAABiDJ37AAAACXBIWXMAABYlAAAWJQFJUiTwAAAB6ElEQVQoz21Sy27UQBD016HkgqJEkCyHiAs3/oFP5Ao3RHax1297PB7PeOyiqx1Hu1IstXo8j+rqqk5+fDrADiNMZ9BULaZxwrIscG7CHGZcfuu6Xv3HEDAYCydvmL0PSL7cfUWWZijyAucsx/HliKZuMLmgMRqDrOj0Mj/mvZAdLEY7CoFVM0MB86xAVdQYhgFd28Fa+8amLc/4+fske9PGKi4SUdd9b6QTp2tmFkgOH59R172gT0LdYZo85jkqi/3hVct728v7UiQPtwd0ZYmXP3+15XOaC8tedWUQNIqmbGt/GNyIUyXy2B6BRWWb51GIJPc3j0p16Af0YgxZ+on6edVrB2HmI368+ytP4YTmumz7NDLQlPvbJ2FYIT2lqMpa3eaBF0C6x0xwyrCBrzDjjLx3pKWacn8ruFwwNAOMVGYmU+4FP+slxv5IWw5RC7MTnumeX+RfAB9unmRMWqT/ziiLCnXVaNDBoMYIYNyYsOPJSrGuFp2NsJ7f5BhtFIkU8FHFpxEEbptOo5a1kWGdZwGT2FqWUWkblOcMtndXDi+v45TcffisU06QqmxUxz2TKc/IjoB0M68NjlkDL/quF4DxddSS78/fMKqzXjNdZq47i3Nl0Bm3ORm30Zm9l8f+it3lHP4HHyuQV5yCmcEAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px transparent;&quot;
+        alt=&quot;release相关commit及coder&quot;
+        title=&quot;&quot;
+        src=&quot;/static/release相关commit及coder-e119a2f27e7b0347b9b65691db55c4b3-48538.png&quot;
+        srcset=&quot;/static/release相关commit及coder-e119a2f27e7b0347b9b65691db55c4b3-bed0f.png 200w,
+/static/release相关commit及coder-e119a2f27e7b0347b9b65691db55c4b3-5fd34.png 400w,
+/static/release相关commit及coder-e119a2f27e7b0347b9b65691db55c4b3-48538.png 800w,
+/static/release相关commit及coder-e119a2f27e7b0347b9b65691db55c4b3-b70ec.png 1200w,
+/static/release相关commit及coder-e119a2f27e7b0347b9b65691db55c4b3-d134a.png 1600w,
+/static/release相关commit及coder-e119a2f27e7b0347b9b65691db55c4b3-f032e.png 2074w&quot;
+        sizes=&quot;(max-width: 800px) 100vw, 800px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    &lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://blog.sentry.io/2017/05/01/release-commits&quot;&gt;开通流程参考&lt;/a&gt;&lt;/p&gt;
 &lt;h4&gt;多端覆盖&lt;/h4&gt;
 &lt;p&gt;sentry 目前最新版本 9.0 算得上老牌厂商了, 我们能用得上的语言他基本都可以支持;小程序的采集与有社区贡献代码;&lt;/p&gt;
-&lt;h4&gt;openapi(&lt;a href=&quot;https://docs.sentry.io/api/&quot;&gt;https://docs.sentry.io/api/&lt;/a&gt;)&lt;/h4&gt;
+&lt;p&gt;eg :javascript&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;javascript&quot;&gt;
+      &lt;pre class=&quot;language-javascript&quot;&gt;&lt;code class=&quot;language-javascript&quot;&gt;&lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;script src&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;https://web-img.qmimg.com/qmfe/lib/ravenjs/raven-3.26.2.min.js&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;/&lt;/span&gt;script&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;
+&lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;script&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;
+    Raven&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;config&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;https://&amp;lt;key&gt;@sentry.io/&amp;lt;project&gt;&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+        &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; logger&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;@qianmi/official-mobile&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; release&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token constant&quot;&gt;QM_VERSION&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; environment&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;production&quot;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;install&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;/&lt;/span&gt;script&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+      &lt;/div&gt;
+&lt;p&gt;eg:(reactNative)[https://docs.sentry.io/clients/javascript/integrations/react/]&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;javascript&quot;&gt;
+      &lt;pre class=&quot;language-javascript&quot;&gt;&lt;code class=&quot;language-javascript&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;//index.ios.js&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; Sentry &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;react-native-sentry&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+
+Sentry&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;config&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;
+  &lt;span class=&quot;token string&quot;&gt;&apos;https://8070a174f3ab4fe298d4c5516b3e2704@sentry.qianmi.com/7&apos;&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;install&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token comment&quot;&gt;// set the user context&lt;/span&gt;
+Sentry&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;setUserContext&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  email&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+  userID&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; Config&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token constant&quot;&gt;ADMINID&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+  username&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; Config&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token constant&quot;&gt;DEVICE&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;model&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+  extra&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    is_admin&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token boolean&quot;&gt;false&lt;/span&gt;
+  &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+
+Sentry&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;setTagsContext&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  environment&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;production&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+  react&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token boolean&quot;&gt;true&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+
+Sentry&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;setEventSentSuccessfully&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;event &lt;span class=&quot;token operator&quot;&gt;=&gt;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;发送错误&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; event&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+      &lt;/div&gt;
+&lt;h5&gt;备注&lt;/h5&gt;
+&lt;p&gt;&lt;a href=&quot;https://docs.sentry.io/platforms/?platform=javascript&quot;&gt;node java python …接入&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/youzan/raven-weapp&quot;&gt;小程序接入&lt;/a&gt;:&lt;/p&gt;
+&lt;h4&gt;&lt;a href=&quot;https://docs.sentry.io/api/&quot;&gt;openapi&lt;/a&gt;&lt;/h4&gt;
 &lt;p&gt;借助于 openapi 几乎可以做到所有的事情(项目管理,issue 管理),像第三方工具对接,&lt;/p&gt;
+&lt;p&gt;
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/api-c4c845b87fd3126de7dea66516fd5bea-32735.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block; ; max-width: 800px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 70.38461538461537%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAOCAYAAAAvxDzwAAAACXBIWXMAABYlAAAWJQFJUiTwAAAB9UlEQVQ4y52TS0/bQBSF/T94bBDZlKeoUtpSHimPVDwrUfWHoC5aCUpTKgib7rplwYYNO/5Iq6qABAJBkjbECY7jB44fp3euxyYqorK40pFH9sw35/jOKD++/8ThryOcnZ7jqlyBqCAIWL7vx+N/5fuBmImTYw0H+xfQ6w6vVT68+4TdnT28X8nh6/Y3eJ5HH3UYhgnbvkHyCjdSMs9nMT6cRU9XGrnVLYLVcXlxiVKhhDqNXdeF4zhoNpuh5Pj2ncsmBIwdzk+/wavMa3S19SK3tkkTb6CqKhp6g6RDFyIwi8aapvFG17UaPRukMEkMnJtaxmL2LVId/fi8lqeoBkrFIi+ybRuWacKyLFbkkN3JpzAgUkT/XpkcmcfM2BJSnQMcuVatolgowJYQIZOgQiLaHbkeNy8q5SUBR9Mz6G7vw5f1PE0AQS08pKTDBTwdzKCbI2/xv/tTKnM8X7q47+i0KgZmns2yw1THAAMdp0kOr2VUi6LbcaRo4X3uOHJ2Yglzk8vscGN9m19WKxaqqh0f1qQwdpjuG8OT/nHu8sbHPH9QrwyUfxvk1mu5OUgUXRl6NAIBFV2OgJWyQVDRYVdesaRNociPe15Ih61Ak4HCYRJXfLeD8G5LYOhQNEVUXaO73DBjd/8DWdQ0w6BjRo0r6AH+AsDc4mxUfZ5WAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px transparent;&quot;
+        alt=&quot;api.png&quot;
+        title=&quot;&quot;
+        src=&quot;/static/api-c4c845b87fd3126de7dea66516fd5bea-48538.png&quot;
+        srcset=&quot;/static/api-c4c845b87fd3126de7dea66516fd5bea-bed0f.png 200w,
+/static/api-c4c845b87fd3126de7dea66516fd5bea-5fd34.png 400w,
+/static/api-c4c845b87fd3126de7dea66516fd5bea-48538.png 800w,
+/static/api-c4c845b87fd3126de7dea66516fd5bea-b70ec.png 1200w,
+/static/api-c4c845b87fd3126de7dea66516fd5bea-d134a.png 1600w,
+/static/api-c4c845b87fd3126de7dea66516fd5bea-32735.png 2080w&quot;
+        sizes=&quot;(max-width: 800px) 100vw, 800px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    &lt;/p&gt;
 &lt;h4&gt;问题处理流程&lt;/h4&gt;
 &lt;p&gt;我们的愿景是对问题主动出击,那么如何实现主动,如何在第一时间感知问题?
 sentry 提供了 email 与 webhook;基于 webhook 可以把问题简略信息发布到钉钉,企业微信或个人微信;让我们能第一时间感知&lt;/p&gt;
-&lt;p&gt;也许有经验的小伙伴会反驳,告警群里一直反馈问题不定的报警,会引发 coder 的反感,最终演化成狼来了的故事;
+&lt;p&gt;项目中肯定会有报错是低优先级的,不影响流程的,这种错误可以借助 sentry 统计起来, 一周或一个月集中处理;(这个时候是不是锻炼新队员的好时候,哈哈.)&lt;/p&gt;
+&lt;p&gt;
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/告警群-79d56e54366b8389668adbdace4c2f42-671f5.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block; ; max-width: 800px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 85.57377049180327%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAARCAYAAADdRIy+AAAACXBIWXMAABYlAAAWJQFJUiTwAAADLElEQVQ4y6WUy4/jRBDG8+9y5rRCIIGQWK1Wc1hAK64c4AiHBaHRitkMeTieZJyZ2cHxO+kkdmLHmcRO/E4+qtvZADckIv1U1d3p6u6qr9xgbIr53CXmOAI4Ho8n/umLwdlC/PPv9UNVibGmaWiM2RyLYA134WO13mCzjfG02daQv95wIkH4FJ3HQbhBXpQiUJqXYq/OA07YDN3+A357N0B7oOHmYYzeoweZ6A4t3D6YGJkMqjGGqtuEA82awJl6SLNc3DbJK7jLFQxdR+NR1dBs9XDd6RMyrtsyOoqBzqOPtmKhM1AhKRodeo+2JKMr38J0ppi6wSkgkGQVtnECx7HR0E0bcl9BqyOhJd9DUWd4MFwMNUJf4I4YmVM4lBp7UuMwV9gPAeOkgE8pGI8dNEb0DOneQW+oQerf0e0sdO8cdIY2Wgq3tEbr70c2NNPByHDOT0+zQgTcpSXldIsJDxiGa5RUpIwSm6aZOJX7POF8w26fCvg4zwthi6JeL/nG4wF7CrgInmBZJhps5tGGBBGRVwdkPFCeU15yssW/oTU+n+S5qGx1rOWTlkdRdcOgohiWg+uWhKvL33F7o8BQTbDZEox5YBMXzJlhRvDx1GZibjKmPFoM+2iHY5og3uwQrCNYpkFVJklcX0lQn30E9fOPYb34FNrFF9BffQXj9UuYzz+B8fwzaN9cwP7yGcavXmD+7UuE310g//5r4MfXSH/+AZ7DYFgWl42Bq2YPzV/eovXrWzTfXKL50xv0Lt/hVhpC+UPGn+0OVLkPlVvCHihg71Ukpg74LmJqCne+gGlSDqfkBOst/LjCkhOV8E6+tymEjSlfUVqQrQRRVmKzz1DXGNhTw7h+WD9ZpxwOlHvc9AcwyXe9JYLVGn4QnvGoCxY+saxZ+vVcRqrgnZLSIVyHpkEBLXsMidTfbHXRkQfgKeBaE3DdkeZ0ewZ9EkKbrE6EYNQp2an1uNRWYUhVpoBBsBJ64ot5USChU7kty1JQlLXeivJAej2cbUXwL02WZYhJp3OX55ACRlGE//tL8wOeSEKi9fgNC9EVdZf8V7IPkODjeEefvS003cBfj7zohC1CmiAAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px transparent;&quot;
+        alt=&quot;告警群&quot;
+        title=&quot;&quot;
+        src=&quot;/static/告警群-79d56e54366b8389668adbdace4c2f42-48538.png&quot;
+        srcset=&quot;/static/告警群-79d56e54366b8389668adbdace4c2f42-bed0f.png 200w,
+/static/告警群-79d56e54366b8389668adbdace4c2f42-5fd34.png 400w,
+/static/告警群-79d56e54366b8389668adbdace4c2f42-48538.png 800w,
+/static/告警群-79d56e54366b8389668adbdace4c2f42-b70ec.png 1200w,
+/static/告警群-79d56e54366b8389668adbdace4c2f42-d134a.png 1600w,
+/static/告警群-79d56e54366b8389668adbdace4c2f42-671f5.png 1830w&quot;
+        sizes=&quot;(max-width: 800px) 100vw, 800px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    
+
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/复盘也是必要的-9774e76d3191ff206c5ea38960113ae9-412e1.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block; ; max-width: 800px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 52.61121856866537%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAYAAAB/Ca1DAAAACXBIWXMAABYlAAAWJQFJUiTwAAAB1klEQVQoz4WSS2sUQRSF+y+KooSEGKNEQyAg6O9w50oQF24CiotAFmIgm6AhkCzEhS5cZfrd1d0z3fWu4701mXEkqA2XW3RVn/rOPZ082XqGVnTQSsM7j8UTQgC8R/AOzhg4a+G56J13jsrGPT7nfbjuHsne9nN0bU+iPYbZCCU1iRtYY2FIWFP10mI0HorWlu6xmJei+/ms0Sb2YToi2d18irpsMckEsqxCUwsMwxgPyItz6Isv0F8v4X7+gL88g0uv4M5P4T6fwH7/Bkd0c2IPKRWSnY39SFcUNYqsRN9NyQpbIMdH74DXL4D3bxCODxHevkT4+AHh4FVcu9NP4CmxXS5NpMmj9T00VYs0q5Fe5ahIWEoZN5VxUNpCWR9JHNlkgdi54pjnYgyhKIdke20XoumQFw3qqoEcJc1RRUFLIThScM4tKVYrBuSvQ1kIbt17DFG3JCiW82NBQ6HEpFdS/2v5Fcubd3eITCBNS0zIMq+n/SzSMcGc0C8/uknof1vmUDbuPCSyDkXVQ4gpZrMBI9smfP4dmJR7FL0hGP6YYSRcv/0AVdkgnRTI0xwlhSJES4Lqv5YXs+MZM2kkXLt1P/6HedHGhMdBLgP559xWCBfhsJtfjZ5B5HaxXocAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px transparent;&quot;
+        alt=&quot;复盘也是必要的&quot;
+        title=&quot;&quot;
+        src=&quot;/static/复盘也是必要的-9774e76d3191ff206c5ea38960113ae9-48538.png&quot;
+        srcset=&quot;/static/复盘也是必要的-9774e76d3191ff206c5ea38960113ae9-bed0f.png 200w,
+/static/复盘也是必要的-9774e76d3191ff206c5ea38960113ae9-5fd34.png 400w,
+/static/复盘也是必要的-9774e76d3191ff206c5ea38960113ae9-48538.png 800w,
+/static/复盘也是必要的-9774e76d3191ff206c5ea38960113ae9-b70ec.png 1200w,
+/static/复盘也是必要的-9774e76d3191ff206c5ea38960113ae9-d134a.png 1600w,
+/static/复盘也是必要的-9774e76d3191ff206c5ea38960113ae9-412e1.png 2068w&quot;
+        sizes=&quot;(max-width: 800px) 100vw, 800px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    &lt;/p&gt;
+&lt;p&gt;也许有经验的小伙伴会反驳,告警群里一直反馈问题不停的报警,会引发 coder 的反感,最终演化成”狼来了”的故事;
 为了避免陷入这种困境,一定要有一个原则:“所报出的问题,都是有价值的,都是值得追踪的”;
 sentry 为我们提供了灵活的报警策略,实现这个目标:&lt;/p&gt;
-&lt;p&gt;项目中肯定会有报错是低优先级的,不影响流程的,这种错误可以借助 sentry 统计起来, 一周或一个月集中处理;(这个时候是不是锻炼新队员的好时候,哈哈.)&lt;/p&gt;
-&lt;h4&gt;知识积累及问题回顾&lt;/h4&gt;
-&lt;h3&gt;遇到的一些问题&lt;/h3&gt;
+&lt;p&gt;
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/告警规则-8d135d708aa067f48da8322026f46231-5b1cb.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block; ; max-width: 800px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 67.79069767441861%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAOCAYAAAAvxDzwAAAACXBIWXMAABYlAAAWJQFJUiTwAAAB+klEQVQ4y21U2Y7bMAzM/39ZHwoU6HOB7rbdZpP4kC1L1mFpOqTspNnWwECkLA/FIemTGSY4uyA5hxQzgg8IqyAihoTMvRS5przbWe0Y+J5nxAY2oG5qn5xfsVqLdegwzRaWcItThBCwlQ3b9i8CCVNKXBO+fzP48TLTJ+EyO0TeoDDO68tPEnnUCpRSFI2gfEDbq7XwAgGfP13w9Uun5Kd5shppyxne8bZ+YbruCesH/74XPIPGljKyBjot1iHnloZ3FmbsMZuBkUfMU8NEX/bEtoK57bll4kUCdV2pqSePaMgUtxQb4bJi6ExLu1QUptVQeYZBc/NlFT8TaS+UFksI5YahP6PkpES3S4f+Nqot+jrrFRIwqyxeK3xo3FB1VcKRbRNj1GqubBkzzFiERAgZTGzRVj6Q4h3VfyYsD8LJWG2BlrJHYqUeqT7QUt7u/pHu0afynRJKEx+9NdqI89XgfBnw9t7j17nDb64K7p2vo65v3Bf7xmyu3QRjA3zcbzhPS0uZhNYnvFO/nrc2THWkhoKBZ2Ttxhn9aNWX9z4VxcoihXxo2BslLGVTwcVfOT3/e7xL1DTe/boXo/6toYivk0JCsbtbD+dkWuoT5JH5dmwt8WOQqhe1n6osH5fymM82LUEHXbXNO7Y2/PqjkPahPHEvhP44csMfhNRCyRFCqCoAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px transparent;&quot;
+        alt=&quot;告警规则&quot;
+        title=&quot;&quot;
+        src=&quot;/static/告警规则-8d135d708aa067f48da8322026f46231-48538.png&quot;
+        srcset=&quot;/static/告警规则-8d135d708aa067f48da8322026f46231-bed0f.png 200w,
+/static/告警规则-8d135d708aa067f48da8322026f46231-5fd34.png 400w,
+/static/告警规则-8d135d708aa067f48da8322026f46231-48538.png 800w,
+/static/告警规则-8d135d708aa067f48da8322026f46231-b70ec.png 1200w,
+/static/告警规则-8d135d708aa067f48da8322026f46231-d134a.png 1600w,
+/static/告警规则-8d135d708aa067f48da8322026f46231-5b1cb.png 1720w&quot;
+        sizes=&quot;(max-width: 800px) 100vw, 800px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    
+
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/告警规则设置-64d01fb7a63ec97a1b57001a229aa565-00700.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block; ; max-width: 800px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 68.71980676328504%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAOCAYAAAAvxDzwAAAACXBIWXMAABYlAAAWJQFJUiTwAAABr0lEQVQ4y6VTy27bQAzU/39ST73k0M8oYDeOpX2/tA9lSlKWY6QOULSHgXZlcjgzoqecC0JIKN4jqwUxZaSYkFNBpOe6rhhjoPd+B99rbSjU22pHShU5V/ltykRQyiqXlZ7zdUZrTZqeo98HvGNALRnfv53x4+UixFMiQms8KakY24DRTlDpzir5fSM1rEgGdSJrXcBnFuFcJLJd1ORcANseNyuWyPRsYJXD8qYQqHjrmzTXUhF9xJrXHXQ32uLy+gZ2KoQpZgQq6hsZ2Daa5jDPC65kncFn74Mo5TxPpzO0NjDGytM5Dx+COGBBk4RPhPX6E6NxsEOaa61iUcInW0zGNjmiGCJ9yCjnjUR0IuLaXSG91ItFzUkmGLKqrhoLYb4sco4+wVCN46yJvNwscwRaGZxPv2hI+rDMhbvkTSwoKlJKw1ondhvnS0p4TbjZkl1Hv7Htvc7KhxPLvHM89VgLtsqqcyliRyzx/t1WJVBe4WbZy3nPj6P6UGjDfcKxuJ+X+XGpj+ZnkI/CuT0SPjZ/xldDDkwcJuMZ4b9gkpUgHFl9/Zf7O0x/5tP/i/g3ML9Cf68LMYgAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px transparent;&quot;
+        alt=&quot;告警规则设置&quot;
+        title=&quot;&quot;
+        src=&quot;/static/告警规则设置-64d01fb7a63ec97a1b57001a229aa565-48538.png&quot;
+        srcset=&quot;/static/告警规则设置-64d01fb7a63ec97a1b57001a229aa565-bed0f.png 200w,
+/static/告警规则设置-64d01fb7a63ec97a1b57001a229aa565-5fd34.png 400w,
+/static/告警规则设置-64d01fb7a63ec97a1b57001a229aa565-48538.png 800w,
+/static/告警规则设置-64d01fb7a63ec97a1b57001a229aa565-b70ec.png 1200w,
+/static/告警规则设置-64d01fb7a63ec97a1b57001a229aa565-d134a.png 1600w,
+/static/告警规则设置-64d01fb7a63ec97a1b57001a229aa565-00700.png 1656w&quot;
+        sizes=&quot;(max-width: 800px) 100vw, 800px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    &lt;/p&gt;
 &lt;h4&gt;服务端日志处理&lt;/h4&gt;
-&lt;p&gt;服务端日志采集;&lt;/p&gt;
+&lt;p&gt;服务端错误日志采集最好与官方提供的sdk进行结合,但目前已运行项目已经接入logserver,通过kafka进行消息传递,那么我们怎么办呢?;
+通过监听kafka的日志消息将错误日志上报到sentry;
+
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/server告警流程-e1305b8366fc4cd7797ec75e731e113e-9415b.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block; ; max-width: 800px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 80.53204353083434%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAQCAYAAAAWGF8bAAAACXBIWXMAABYlAAAWJQFJUiTwAAACLElEQVQ4y61UPWgUQRR+M7M/N7s7u5s777xcgtEkiCQaSGEQGyEaIRhsREQMxoCIFsEUXqFNUKysBGNOETXYqJ0giK2IoqBYWAg21oJgpZafb+5y7l3gUE+Lx857M++b9+b73pIYPwi5+Bjy0GUQUZcmsrWcq2HTWyC88x06ySPUOZAQfwwWzBDiKsGcIsiUY2LXUQRLL+HOrUA4LmITQSrVliQEW4sfRiGiKEIQBBi73YvJD8OYeF6BN2wBB8ZBBy6AJo7UD2utodYBrrc4juG6Ll8iUTzpYfNygL5LPlTRtnzsKiovAHPjC3Tcg3yacEVZy3lDGBkgbOxpaTMMuZIOF8qZ80juA7mlVyDHq7fs+z4811bp4OY5B3gT4+kVBcUJPlvCLYuO75wzoPIIKK3UA8bEbAZRqLmKEA8vBsCnQbxe0Uh4vyAJ/Z7M3pR9UmtmfWdqAemtr9DVJ5CuDxOFbSyPDRKOTxF2j2ZVFDlZdZJNbr6G0fdA6d4PeCatv2GTZSHaE5pVlVQGEEwzSWfZ5lk2iY1ZlqerEDsPNw4wy62ykQyqZOPbjPW5EmVHoMDroWse9n7cih3PUqghK5tte0CzyxD7FhoaC4PfysZW6ohG2/nThC13NXotaSXed0/UMP4OKK9+Qy4pIK4zKP9q9GwRmWwmz8Bc/wx/8RFPitfVLIdWlxkx1PVPQfyaHINU/SNgE2wDE/agX2N/IP8P4HZPYLUo4a75PwGb0oZK1CuSRgAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px transparent;&quot;
+        alt=&quot;server告警流程.png&quot;
+        title=&quot;&quot;
+        src=&quot;/static/server告警流程-e1305b8366fc4cd7797ec75e731e113e-48538.png&quot;
+        srcset=&quot;/static/server告警流程-e1305b8366fc4cd7797ec75e731e113e-bed0f.png 200w,
+/static/server告警流程-e1305b8366fc4cd7797ec75e731e113e-5fd34.png 400w,
+/static/server告警流程-e1305b8366fc4cd7797ec75e731e113e-48538.png 800w,
+/static/server告警流程-e1305b8366fc4cd7797ec75e731e113e-b70ec.png 1200w,
+/static/server告警流程-e1305b8366fc4cd7797ec75e731e113e-d134a.png 1600w,
+/static/server告警流程-e1305b8366fc4cd7797ec75e731e113e-9415b.png 1654w&quot;
+        sizes=&quot;(max-width: 800px) 100vw, 800px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    ;&lt;/p&gt;
+&lt;p&gt;优点:侵入小,无改动,只需监听消息便可以把所以错误消息导入;
+缺点:错误异常栈,影响用户,代码版本,breadcrumb等信息皆无, 只有通过上报的一条消息; 另外每一个消息的fingerprint要自己提取设置, 不&lt;/p&gt;
+&lt;p&gt;参考资料:
+&lt;a href=&quot;https://docs.sentry.io/clients/node/usage/?platform=javascript&quot;&gt;Multiple Instances &amp;#x26; Capturing Messages&lt;/a&gt;&lt;/p&gt;
+&lt;h4&gt;部署&lt;/h4&gt;
+&lt;p&gt;sentry sass服务注册帐号是直接可以使用的,但他的服务器是American,我们可以单独进行&lt;a href=&quot;https://docs.sentry.io/server/installation/?platform=javascript&quot;&gt;部署&lt;/a&gt;
+
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/sentry-docker-10f66eb27ad869010c5910888b466091-b903a.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block; ; max-width: 800px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 75.16879219804952%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAPCAYAAADkmO9VAAAACXBIWXMAAAsSAAALEgHS3X78AAACjklEQVQ4y4VTy27TQBT1tyBAPFQkaIHQNE1fadqmTUsLTQUIvoAVEhvEhm9g0x0bxAIWfFCp1JA0iWN7xvFj7NjO4d5xG1oIYqSja4/t4zPnnms0T5r4cXQMq29hMPAwGo3Ai+u/kGVZjjSjNzMcH7n49vkY3dMAxru3H/D1y3ccfvyEN6/fw5UuoiiGUhGiM6hQ6RrHQ0KsyS7+ICXiOE5pfwRjtbyDjeU9lO5Xsbf5Ar2uiVazhXb7FN1OF53TDponP2m/h2SYIEnS8SkmLaNcWMf8gzXcujKDenUfjuNASgEhBHzPI3UhQoJSSl9HaqiVkCkT7TBYXWPnFaZvl7C91oDZ66Pd6pEyUxP9b/2p1qjMb6MyX8fU1YeksAHbstGnBjFM00JA/vE3aZpeRpL8pU4TLs1uolLawZ3rBa3Qtm06tk1d70PaLpQI4QsPriXh2ZLscOG6gbZgklpjubiF1fJjTF0raA9ty4LFIELfkQiFiwGTCB+e6yMMgrzrESdAaWK2JqZ7rXDhUQ2blQbmZqrYrT2HJBJXSAg5gOsF8FWMQIPiEyeIqNPnNUc63stY4SIRVhd2cfdmEdvrB6RiQIoG6NsCDqkLwgg+KfKp8scJZZkxTEeXEKdZnkMm3Fh6guJ0RXvoEJkkZWGUaCgiYYSkgNX6YY4gGtIPsjH4nfScsLayjxJlcbf2DI7NOZTko62vHUdoeDSW7BtPEPuWUJcvNeRiU+rVA5qUNR0bkyai2+lQFlt6SsyeqSeGA58TqnHIuUHhWY3Om7IyV0e1TB7eKGpCJuGZnRSJPIPZhZrjdxaJcHG2hq3KPmbvLeNp/SWEI/WRBR2Tj8dGp1lu+CTwM488d6WHIXX7F/SRHVvfYwqjAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px transparent;&quot;
+        alt=&quot;sentry-docker&quot;
+        title=&quot;&quot;
+        src=&quot;/static/sentry-docker-10f66eb27ad869010c5910888b466091-48538.png&quot;
+        srcset=&quot;/static/sentry-docker-10f66eb27ad869010c5910888b466091-bed0f.png 200w,
+/static/sentry-docker-10f66eb27ad869010c5910888b466091-5fd34.png 400w,
+/static/sentry-docker-10f66eb27ad869010c5910888b466091-48538.png 800w,
+/static/sentry-docker-10f66eb27ad869010c5910888b466091-b70ec.png 1200w,
+/static/sentry-docker-10f66eb27ad869010c5910888b466091-b903a.png 1333w&quot;
+        sizes=&quot;(max-width: 800px) 100vw, 800px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    ;
+文档 说的很详细不再赘述!&lt;/p&gt;
+&lt;p&gt;在部署的时间有一个有意思的事情 , sentry服务内部 的报错会上报给自己,这样当我们查一些问题通过上报的错误信息就知道发生了什么. 很棒,好的工具给人惊喜!&lt;/p&gt;
+&lt;p&gt;
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/sentry内部报错-1181e56d4df7b9792e593c4804807e3a-564e4.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block; ; max-width: 800px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 52.27629513343799%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAYAAAC0VX7mAAAACXBIWXMAAAsSAAALEgHS3X78AAABvElEQVQoz2VSXU8TQRTdH0JMiEFCTGyRoBBKBGKCoL74ZOSZf0PQ8FGlSjT+MiPQpt0u7e52OzM7H8c7d7JlGyc52Zk7e0/OOXei48MjbK++Ref8F7TWmBYCSpVwzqG+rLVcq1AtOj3sqR693/uEVvMA3y9/czEdpygmBRMYY2FN+GZZjgnVpVAMow10qUmE/xqUSkPJ0hN+RKvxBj8ufhIJMBimGI1yZGkOMZWBkJpmoLNvztOCncwgFf8f7bc+4PnyK3TOriGkwZ+bIYZJjjwrIEQJbeatB2tgYm/RWjJtHTvykUW7L9+hudSiDK+htMPNXUyEGUbjAtlEohDBljEm2CPU8/T7QGZYZbSzfoBnjzfx7UuHFf69jTHoD5HEySxPIfygVAA1+WavqlIY8vY5Uobba/t4uvgC7c9XnGG/n2B0n3KGU8qEc/QXc5bdTGWlkAlLItxafY2VR2ton36FVAa9XkzKMrrU/5HMwbqabfdgeaOxiycLTVyctKFKh26XhjJIcJ+MmdhbllISVBhAReKflK1btiwi2mzuYWmhgbOTS55or9tHTIRsuZjyW6tbrKuqT9k/KZ/xPzlL155wIPnhAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px transparent;&quot;
+        alt=&quot;sentry内部报错.png&quot;
+        title=&quot;&quot;
+        src=&quot;/static/sentry内部报错-1181e56d4df7b9792e593c4804807e3a-48538.png&quot;
+        srcset=&quot;/static/sentry内部报错-1181e56d4df7b9792e593c4804807e3a-bed0f.png 200w,
+/static/sentry内部报错-1181e56d4df7b9792e593c4804807e3a-5fd34.png 400w,
+/static/sentry内部报错-1181e56d4df7b9792e593c4804807e3a-48538.png 800w,
+/static/sentry内部报错-1181e56d4df7b9792e593c4804807e3a-b70ec.png 1200w,
+/static/sentry内部报错-1181e56d4df7b9792e593c4804807e3a-d134a.png 1600w,
+/static/sentry内部报错-1181e56d4df7b9792e593c4804807e3a-564e4.png 1911w&quot;
+        sizes=&quot;(max-width: 800px) 100vw, 800px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    ;&lt;/p&gt;
+&lt;p&gt;问一句,如果拿开源代码这个在墙内部署,供其他人使用,是否有问题?  &lt;/p&gt;
 &lt;h2&gt;总结&lt;/h2&gt;
-&lt;p&gt;如果让我用一句话来总结 sentry,我想说:“改变了对问题的态度,从被 push 到 pull, 从此运筹帷幄,可以安安静静写代码!“;&lt;/p&gt;
+&lt;p&gt;如果让我用一句话来总结 sentry,我想说:“改变了对问题的态度,从被 push 到 pull, 从此运筹帷幄,可以安安静静写代码!”&lt;/p&gt;
+&lt;p&gt;从此摆脱传话筒的尴尬局面;&lt;/p&gt;
 &lt;h2&gt;问题&lt;/h2&gt;
 &lt;blockquote&gt;
 &lt;p&gt;开源与 sass 的&lt;/p&gt;
