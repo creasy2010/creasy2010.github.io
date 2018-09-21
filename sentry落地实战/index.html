@@ -1,0 +1,1998 @@
+<!DOCTYPE html><html lang="zh-cn" prefix="og: http://ogp.me/ns#"><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="ie=edge"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="preload" href="/component---src-layouts-index-js-b8135bf7a2f007ef84ae.js" as="script"/><link rel="preload" href="/component---src-templates-post-template-js-ef37c9e9a42144afdd50.js" as="script"/><link rel="preload" href="/path---sentry落地实战-f9db27827dba770dc60f.js" as="script"/><link rel="preload" href="/app-75a747c75e3049884ae1.js" as="script"/><link rel="preload" href="/commons-c4d8e44a0ee665e0dfe4.js" as="script"/><style type="text/css" id="server-side-jss">html {
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+body {
+  margin: 0;
+  background-color: #fafafa;
+}
+@media print {
+  body {
+    background-color: #fff;
+  }
+}
+.jss51 {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  z-index: 0;
+  position: absolute;
+  overflow: hidden;
+  border-radius: inherit;
+  pointer-events: none;
+}
+.jss52 {
+  top: 0;
+  left: 0;
+  width: 50px;
+  height: 50px;
+  opacity: 0;
+  position: absolute;
+}
+.jss53 {
+  opacity: 0.3;
+  transform: scale(1);
+  animation: mui-ripple-enter 550ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.jss54 {
+  animation-duration: 200ms;
+}
+.jss55 {
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+  display: block;
+  border-radius: 50%;
+  background-color: currentColor;
+}
+.jss56 {
+  opacity: 0;
+  animation: mui-ripple-exit 550ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.jss57 {
+  top: 0;
+  left: 0;
+  position: absolute;
+  animation: mui-ripple-pulsate 2500ms cubic-bezier(0.4, 0, 0.2, 1) 200ms infinite;
+}
+@keyframes mui-ripple-enter {
+  0% {
+    opacity: 0.1;
+    transform: scale(0);
+  }
+  100% {
+    opacity: 0.3;
+    transform: scale(1);
+  }
+}
+@keyframes mui-ripple-exit {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes mui-ripple-pulsate {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.92);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.jss41 {
+  color: inherit;
+  cursor: pointer;
+  margin: 0;
+  border: 0;
+  display: inline-flex;
+  padding: 0;
+  outline: none;
+  position: relative;
+  user-select: none;
+  align-items: center;
+  border-radius: 0;
+  vertical-align: middle;
+  justify-content: center;
+  -moz-appearance: none;
+  text-decoration: none;
+  background-color: transparent;
+  -webkit-appearance: none;
+  -webkit-tap-highlight-color: transparent;
+}
+.jss41::-moz-focus-inner {
+  border-style: none;
+}
+.jss41.jss42 {
+  cursor: default;
+  pointer-events: none;
+}
+.jss35 {
+  flex: 0 0 auto;
+  width: 48px;
+  color: rgba(0, 0, 0, 0.54);
+  height: 48px;
+  padding: 0;
+  font-size: 1.7142857142857142rem;
+  text-align: center;
+  transition: background-color 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  border-radius: 50%;
+}
+.jss35:hover {
+  background-color: rgba(0, 0, 0, 0.08);
+}
+.jss35.jss39 {
+  color: rgba(0, 0, 0, 0.26);
+}
+@media (hover: none) {
+  .jss35:hover {
+    background-color: transparent;
+  }
+}
+.jss35:hover.jss39 {
+  background-color: transparent;
+}
+.jss36 {
+  color: inherit;
+}
+.jss37 {
+  color: #709425;
+}
+.jss37:hover {
+  background-color: rgba(112, 148, 37, 0.08);
+}
+@media (hover: none) {
+  .jss37:hover {
+    background-color: transparent;
+  }
+}
+.jss38 {
+  color: #f50057;
+}
+.jss38:hover {
+  background-color: rgba(245, 0, 87, 0.08);
+}
+@media (hover: none) {
+  .jss38:hover {
+    background-color: transparent;
+  }
+}
+.jss40 {
+  width: 100%;
+  display: flex;
+  align-items: inherit;
+  justify-content: inherit;
+}
+.jss44 {
+  fill: currentColor;
+  width: 1em;
+  height: 1em;
+  display: inline-block;
+  font-size: 24px;
+  transition: fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  user-select: none;
+  flex-shrink: 0;
+}
+.jss45 {
+  color: #709425;
+}
+.jss46 {
+  color: #f50057;
+}
+.jss47 {
+  color: rgba(0, 0, 0, 0.54);
+}
+.jss48 {
+  color: #f44336;
+}
+.jss49 {
+  color: rgba(0, 0, 0, 0.26);
+}
+.jss50 {
+  font-size: inherit;
+}
+.jss61 {
+  background-color: #fff;
+}
+.jss62 {
+  border-radius: 4px;
+}
+.jss63 {
+  box-shadow: none;
+}
+.jss64 {
+  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.2),0px 1px 1px 0px rgba(0, 0, 0, 0.14),0px 2px 1px -1px rgba(0, 0, 0, 0.12);
+}
+.jss65 {
+  box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.2),0px 2px 2px 0px rgba(0, 0, 0, 0.14),0px 3px 1px -2px rgba(0, 0, 0, 0.12);
+}
+.jss66 {
+  box-shadow: 0px 1px 8px 0px rgba(0, 0, 0, 0.2),0px 3px 4px 0px rgba(0, 0, 0, 0.14),0px 3px 3px -2px rgba(0, 0, 0, 0.12);
+}
+.jss67 {
+  box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2),0px 4px 5px 0px rgba(0, 0, 0, 0.14),0px 1px 10px 0px rgba(0, 0, 0, 0.12);
+}
+.jss68 {
+  box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, 0.2),0px 5px 8px 0px rgba(0, 0, 0, 0.14),0px 1px 14px 0px rgba(0, 0, 0, 0.12);
+}
+.jss69 {
+  box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, 0.2),0px 6px 10px 0px rgba(0, 0, 0, 0.14),0px 1px 18px 0px rgba(0, 0, 0, 0.12);
+}
+.jss70 {
+  box-shadow: 0px 4px 5px -2px rgba(0, 0, 0, 0.2),0px 7px 10px 1px rgba(0, 0, 0, 0.14),0px 2px 16px 1px rgba(0, 0, 0, 0.12);
+}
+.jss71 {
+  box-shadow: 0px 5px 5px -3px rgba(0, 0, 0, 0.2),0px 8px 10px 1px rgba(0, 0, 0, 0.14),0px 3px 14px 2px rgba(0, 0, 0, 0.12);
+}
+.jss72 {
+  box-shadow: 0px 5px 6px -3px rgba(0, 0, 0, 0.2),0px 9px 12px 1px rgba(0, 0, 0, 0.14),0px 3px 16px 2px rgba(0, 0, 0, 0.12);
+}
+.jss73 {
+  box-shadow: 0px 6px 6px -3px rgba(0, 0, 0, 0.2),0px 10px 14px 1px rgba(0, 0, 0, 0.14),0px 4px 18px 3px rgba(0, 0, 0, 0.12);
+}
+.jss74 {
+  box-shadow: 0px 6px 7px -4px rgba(0, 0, 0, 0.2),0px 11px 15px 1px rgba(0, 0, 0, 0.14),0px 4px 20px 3px rgba(0, 0, 0, 0.12);
+}
+.jss75 {
+  box-shadow: 0px 7px 8px -4px rgba(0, 0, 0, 0.2),0px 12px 17px 2px rgba(0, 0, 0, 0.14),0px 5px 22px 4px rgba(0, 0, 0, 0.12);
+}
+.jss76 {
+  box-shadow: 0px 7px 8px -4px rgba(0, 0, 0, 0.2),0px 13px 19px 2px rgba(0, 0, 0, 0.14),0px 5px 24px 4px rgba(0, 0, 0, 0.12);
+}
+.jss77 {
+  box-shadow: 0px 7px 9px -4px rgba(0, 0, 0, 0.2),0px 14px 21px 2px rgba(0, 0, 0, 0.14),0px 5px 26px 4px rgba(0, 0, 0, 0.12);
+}
+.jss78 {
+  box-shadow: 0px 8px 9px -5px rgba(0, 0, 0, 0.2),0px 15px 22px 2px rgba(0, 0, 0, 0.14),0px 6px 28px 5px rgba(0, 0, 0, 0.12);
+}
+.jss79 {
+  box-shadow: 0px 8px 10px -5px rgba(0, 0, 0, 0.2),0px 16px 24px 2px rgba(0, 0, 0, 0.14),0px 6px 30px 5px rgba(0, 0, 0, 0.12);
+}
+.jss80 {
+  box-shadow: 0px 8px 11px -5px rgba(0, 0, 0, 0.2),0px 17px 26px 2px rgba(0, 0, 0, 0.14),0px 6px 32px 5px rgba(0, 0, 0, 0.12);
+}
+.jss81 {
+  box-shadow: 0px 9px 11px -5px rgba(0, 0, 0, 0.2),0px 18px 28px 2px rgba(0, 0, 0, 0.14),0px 7px 34px 6px rgba(0, 0, 0, 0.12);
+}
+.jss82 {
+  box-shadow: 0px 9px 12px -6px rgba(0, 0, 0, 0.2),0px 19px 29px 2px rgba(0, 0, 0, 0.14),0px 7px 36px 6px rgba(0, 0, 0, 0.12);
+}
+.jss83 {
+  box-shadow: 0px 10px 13px -6px rgba(0, 0, 0, 0.2),0px 20px 31px 3px rgba(0, 0, 0, 0.14),0px 8px 38px 7px rgba(0, 0, 0, 0.12);
+}
+.jss84 {
+  box-shadow: 0px 10px 13px -6px rgba(0, 0, 0, 0.2),0px 21px 33px 3px rgba(0, 0, 0, 0.14),0px 8px 40px 7px rgba(0, 0, 0, 0.12);
+}
+.jss85 {
+  box-shadow: 0px 10px 14px -6px rgba(0, 0, 0, 0.2),0px 22px 35px 3px rgba(0, 0, 0, 0.14),0px 8px 42px 7px rgba(0, 0, 0, 0.12);
+}
+.jss86 {
+  box-shadow: 0px 11px 14px -7px rgba(0, 0, 0, 0.2),0px 23px 36px 3px rgba(0, 0, 0, 0.14),0px 9px 44px 8px rgba(0, 0, 0, 0.12);
+}
+.jss87 {
+  box-shadow: 0px 11px 15px -7px rgba(0, 0, 0, 0.2),0px 24px 38px 3px rgba(0, 0, 0, 0.14),0px 9px 46px 8px rgba(0, 0, 0, 0.12);
+}
+.jss94 {
+  width: 100%;
+  display: flex;
+  position: relative;
+  box-sizing: border-box;
+  text-align: left;
+  align-items: center;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  justify-content: flex-start;
+  text-decoration: none;
+}
+.jss95 {
+  position: relative;
+}
+.jss96 {
+  background-color: rgba(0, 0, 0, 0.01);
+}
+.jss98 {
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+.jss99 {
+  opacity: 0.5;
+}
+.jss100 {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+  background-clip: padding-box;
+}
+.jss101 {
+  padding-left: 16px;
+  padding-right: 16px;
+}
+@media (min-width:600px) {
+  .jss101 {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+}
+.jss102 {
+  transition: background-color 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+}
+.jss102:hover {
+  text-decoration: none;
+  background-color: rgba(0, 0, 0, 0.01);
+}
+@media (hover: none) {
+  .jss102:hover {
+    background-color: transparent;
+  }
+}
+.jss103 {
+  padding-right: 32px;
+}
+.jss92 {
+  width: auto;
+  color: rgba(0, 0, 0, 0.87);
+  height: 24px;
+  overflow: hidden;
+  font-size: 1.1428571428571428rem;
+  box-sizing: content-box;
+  font-weight: 400;
+  line-height: 1.5em;
+  font-family: Arial, sans-serif;
+  white-space: nowrap;
+  padding-left: 16px;
+  text-overflow: ellipsis;
+  padding-right: 16px;
+}
+.jss92.jss93 {
+  background-color: rgba(0, 0, 0, 0.14);
+}
+.jss88 {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  list-style: none;
+}
+.jss89 {
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+.jss90 {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+.jss91 {
+  padding-top: 0;
+}
+.jss15 {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  position: relative;
+  overflow: hidden;
+  font-size: 1.4285714285714284rem;
+  flex-shrink: 0;
+  font-family: Arial, sans-serif;
+  align-items: center;
+  user-select: none;
+  border-radius: 50%;
+  justify-content: center;
+}
+.jss16 {
+  color: #fafafa;
+  background-color: #bdbdbd;
+}
+.jss17 {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  object-fit: cover;
+}
+.jss24 {
+  display: none;
+}
+.is-aside.closed .jss24, .moving-featured.closed .jss24 {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  margin: 0;
+  display: flex;
+  padding: 0 30px 0 40px;
+  position: absolute;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.jss24 h3 {
+  color: #555555;
+  margin: -.2em 0 0 0;
+  font-size: 1.1em;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.jss24 h3 small {
+  margin: 0 0 .1em;
+  display: block;
+  font-size: .6em;
+  font-weight: 300;
+  letter-spacing: .2em;
+}
+.jss25 {
+  color: #555555;
+}
+.jss26 {
+  color: #709425;
+  margin: 0 calc(-.5rem + 20px) 1em calc(-.5rem + 20px);
+  padding: 0 1em 1em;
+  position: relative;
+  font-size: 1.2em;
+  line-height: 1;
+  font-weight: 300;
+  border-bottom: 1px solid #dedede;
+}
+.jss26 strong {
+  display: block;
+  font-weight: 600;
+}
+.jss26 small {
+  margin: 0 0 .3em 0;
+  display: block;
+}
+@media (min-width: 1024px) {
+  .jss26 {
+    margin: 0 0 1em 0;
+    padding: 0 1em 1.5em;
+  }
+  .is-aside .jss26 {
+    margin: 0 calc(-.5rem + 20px) 1em calc(-.5rem + 20px);
+    padding: 0 0 1em .5em;
+  }
+}
+.jss27 {
+  top: 0;
+  right: 0;
+  position: absolute;
+}
+.jss28 {
+  margin: 0 0 .7em 0;
+  transition: height 1s;
+}
+@media (min-width: 600px) {
+  .jss28 {
+    margin: 0 0 1.5rem 0;
+  }
+}
+@media (min-width: 1024px) {
+  .moving-featured .jss28, .is-aside .jss28 {
+    margin: 0 0 0 0;
+  }
+}
+.jss29 {
+  color: #555555;
+  display: flex;
+  padding: .7em 1em .7em 1em;
+  align-items: center;
+  align-content: center;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+@media (hover: hover) {
+  .jss29:hover {
+    color: #709425;
+  }
+  .jss29:hover .pointer {
+    border-radius: 65% 75%;
+  }
+}
+.jss30 {
+  width: 60px;
+  height: 60px;
+  margin: 0;
+  position: relative;
+  overflow: hidden;
+  transition: all .5s;
+  flex-shrink: 0;
+  border-radius: 75% 65%;
+}
+.jss30 img {
+  width: 100%;
+  height: 100%;
+}
+@media (min-width: 600px) {
+  .jss30 {
+    width: 80px;
+    height: 80px;
+    margin-right: .5em;
+  }
+}
+@media (min-width: 1024px) {
+  .jss30 {
+    width: 90px;
+    height: 90px;
+    transition: all .3s;
+    margin-right: .8em;
+    transition-timing-function: ease;
+  }
+  .moving-featured .jss30, .is-aside .jss30 {
+    width: 30px;
+    height: 30px;
+  }
+}
+.jss31 {
+  width: 100%;
+  margin: 0 0 0 1.5em;
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+}
+.jss31 h1 {
+  margin: 0;
+  font-size: 1.3em;
+  line-height: 1.15;
+  font-weight: 600;
+  letter-spacing: -0.03em;
+}
+.jss31 h2 {
+  margin: .3em 0 0 0;
+  display: block;
+  font-size: 1.1em;
+  line-height: 1.2;
+}
+@media (min-width: 1024px) {
+  .moving-featured .jss31, .is-aside .jss31 {
+    margin: 0 0 0 .5em;
+  }
+}
+@media (min-width: 600px) {
+  .jss31 h2 {
+    font-size: 1.265em;
+  }
+}
+@media (min-width: 1024px) {
+  .jss31 h2 {
+    font-size: 1.4300000000000002em;
+  }
+  .moving-featured .jss31 h2, .is-aside .jss31 h2 {
+    display: none;
+  }
+}
+@media (min-width: 600px) {
+  .jss31 h1 {
+    font-size: 1.4949999999999999em;
+  }
+}
+@media (min-width: 1024px) {
+  .jss31 h1 {
+    font-size: 1.6900000000000002em;
+  }
+  .moving-featured .jss31 h1, .is-aside .jss31 h1 {
+    font-size: 1em;
+    font-weight: 400;
+  }
+}
+.jss21 {
+  top: 0;
+  left: 0;
+  width: 100%;
+  bottom: 0;
+  position: absolute;
+}
+.jss22 {
+  padding: calc(60px + 1.3rem) 1.3rem calc(60px + 1.3rem) 1.3rem;
+}
+@media (min-width: 600px) {
+  .jss22 {
+    padding: calc(60px + 2rem) 2rem calc(60px + 2rem) 2rem;
+  }
+}
+@media (min-width: 1024px) {
+  .jss22 {
+    left: 320px;
+    padding: 2rem  calc(1rem + 17px) calc(2rem + 17px) 2rem;
+  }
+  .moving-featured .jss22, .is-aside .jss22 {
+    padding: 1rem .5rem 1rem .5rem;
+  }
+}
+.jss23 {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.is-aside.closed .jss23, .moving-featured.closed .jss23 {
+  display: none;
+}
+.jss20 {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  transform: translate3d(0, 0, 0);
+  background: #ffffff;
+  transition: left .9s;
+  will-change: left, top, bottom, width;
+  transition-timing-function: ease;
+}
+@media (max-width: 1023px) {
+  .jss20.is-aside {
+    left: -100%;
+  }
+  .jss20.is-featured {
+    left: 0;
+  }
+}
+@media (min-width: 1024px) {
+  .jss20.is-featured {
+    top: 0;
+    left: 320px;
+    width: calc(100vw - 320px - 60px);
+    transition: left .9s;
+  }
+  .jss20.is-aside {
+    top: auto;
+    left: 0;
+    width: 319px;
+    z-index: 1;
+    transition: none, bottom 0.5s;
+  }
+  .jss20.moving-aside {
+    top: 0;
+    left: calc(-100vw + 700px);
+    width: calc(100vw - 320px - 60px);
+    transition: left 0.9s;
+  }
+  .jss20.resizing-aside {
+    top: auto;
+    left: 0;
+    width: 319px;
+    transition: none;
+  }
+  .jss20.moving-featured {
+    top: auto;
+    left: 0;
+    width: 319px;
+    bottom: -100%;
+    z-index: 1;
+    transition: bottom .3s;
+  }
+  .jss20.resizing-featured {
+    top: 0;
+    left: calc(-100vw + 700px);
+    width: calc(100vw - 320px - 60px);
+    bottom: auto;
+    transition: none;
+  }
+  .jss20.resizing-aside.closed {
+    bottom: calc(-100% + 100px);
+    height: calc(100% - 100px);
+  }
+  .jss20.resizing-aside.open {
+    bottom: calc(-100% + 100px);
+    height: calc(100% - 100px);
+  }
+  .jss20.is-aside.closed {
+    bottom: calc(-100% + 100px + 80px);
+    height: calc(100% - 100px);
+  }
+  .jss20.is-aside.open {
+    bottom: 0;
+    height: calc(100% - 100px);
+  }
+  .jss20.is-aside::after {
+    top: 0;
+    left: 20px;
+    right: 20px;
+    height: 0;
+    content: "";
+    position: absolute;
+    border-top: 1px solid #dedede;
+  }
+}
+.jss59 {
+  color: #555555;
+}
+.jss60 {
+  pointer-events: none;
+}
+.jss32 {
+  left: 0;
+  width: 100%;
+  bottom: 0;
+  height: 60px;
+  display: flex;
+  padding: 0 20px;
+  position: absolute;
+  background: #ffffff;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.jss32::before {
+  top: 0;
+  left: 20px;
+  right: 20px;
+  height: 0;
+  content: "";
+  position: absolute;
+  border-top: 1px solid #dedede;
+}
+@media (min-width: 600px) {
+  .jss32 {
+    padding: 0 calc(20px * 1.5);
+  }
+}
+@media (min-width: 1024px) {
+  .jss32 {
+    top: 0;
+    left: auto;
+    right: 0;
+    width: 60px;
+    height: 100%;
+    padding: 20px 0;
+    flex-direction: column;
+  }
+  .jss32::before {
+    top: 20px;
+    left: 0;
+    right: auto;
+    width: 0;
+    bottom: 20px;
+    height: auto;
+    border-left: 1px solid #dedede;
+  }
+}
+.jss33 {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+}
+@media (min-width: 1024px) {
+  .jss33 {
+    flex-direction: column;
+  }
+}
+.jss34 {
+  color: #555555;
+}
+.jss108 {
+  float: right;
+  margin: 5px 10px 0 0;
+}
+.jss109 {
+  color: #555555;
+}
+.jss110 {
+  pointer-events: none;
+}
+.jss104 {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  position: absolute;
+  background: #ffffff;
+}
+.jss104::before {
+  left: 20px;
+  right: 20px;
+  height: 0;
+  bottom: 0;
+  content: "";
+  position: absolute;
+  border-top: 1px solid #dedede;
+}
+@media (min-width: 1024px) {
+  .jss104 {
+    display: none;
+  }
+}
+.jss105 {
+  float: left;
+  color: #555555;
+  margin: 10px 0 0 15px;
+}
+.jss105 small {
+  margin: 2px 0 0 0;
+  display: block;
+  font-size: .65em;
+}
+.jss106 {
+  float: left;
+  margin: 13px 0 0 30px;
+  display: block;
+}
+.jss107 {
+  width: 36px;
+  border: 1px solid #ddd;
+  height: 36px;
+  border-radius: 65% 75%;
+}
+.jss1 {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 1px;
+  position: absolute;
+  overflow: hidden;
+}
+@media print {
+  .jss1 {
+    position: relative;
+    overflow: visible;
+  }
+}
+article, aside, footer, header, nav, section, figcaption, figure, main {
+  display: block;
+}
+h1 {
+  margin: 0.67em 0;
+  font-size: 2em;
+}
+hr {
+  height: 0;
+  overflow: visible;
+  box-sizing: content-box;
+}
+pre {
+  font-size: 1em;
+  font-family: monospace, monospace;
+}
+a:active, a:hover {
+  outline-width: 0;
+}
+abbr[title] {
+  border-bottom: none;
+  text-decoration: underline;
+}
+b, strong {
+  font-weight: bolder;
+}
+code, kbp, samp {
+  font-size: 1em;
+  font-family: monospace, monospace;
+}
+dfn {
+  font-style: italic;
+}
+mark {
+  color: #000;
+  background-color: #ff0;
+}
+small {
+  font-size: 80%;
+}
+sub, sup {
+  position: relative;
+  font-size: 75%;
+  line-height: 0;
+  vertical-align: baseline;
+}
+sup {
+  top: -0.5em;
+}
+sub {
+  bottom: -0.25em;
+}
+audio, video {
+  display: inline-block;
+}
+audio:not([controls]) {
+  height: 0;
+  display: none;
+}
+img {
+  border-style: none;
+  vertical-align: middle;
+}
+svg:not(:root) {
+  overflow: hidden;
+}
+button, input, optgroup, select, textarea {
+  margin: 0;
+  font-size: 100%;
+  font-family: sans-serif;
+  line-height: 1.15;
+}
+button, input {
+  overflow: visible;
+}
+button, select {
+  text-transform: none;
+}
+button, [type=reset], [type=submit] {
+  -webkit-appearance: button;
+}
+button::-moz-focus-inner, [type=button]::-moz-focus-inner, [type=reset]::-moz-focus-inner, [type=submit]::-moz-focus-inner {
+  padding: 0;
+  border-style: none;
+}
+button:-moz-focusring, [type=button]:-moz-focusring, [type=reset]:-moz-focusring, [type=submit]:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+legend {
+  color: inherit;
+  display: table;
+  padding: 0;
+  max-width: 100%;
+  box-sizing: border-box;
+  white-space: normal;
+}
+progress {
+  display: inline-block;
+  vertical-align: baseline;
+}
+textarea {
+  overflow: auto;
+}
+[type=checkbox], [type=radio] {
+  padding: 0;
+  box-sizing: border-box;
+}
+[type=number]::-webkit-inner-spin-button, [type=number]::-webkit-outer-spin-button {
+  height: auto;
+}
+[type=search] {
+  appearance: textfield;
+  outline-offset: -2px;
+}
+[type=search]::-webkit-search-cancel-button, [type=search]::-webkit-search-decoration {
+  appearance: none;
+}
+::-webkit-file-upload-button {
+  font: inherit;
+  appearance: button;
+}
+details, menu {
+  display: block;
+}
+summary {
+  display: list-item;
+}
+canvas {
+  display: inline-block;
+}
+template {
+  display: none;
+}
+[hidden] {
+  display: none;
+}
+html {
+  box-sizing: border-box;
+  font-family: Arial;
+  line-height: 1.15;
+  text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: 100%;
+}
+html.wf-active {
+  font-family: Open Sans;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+noscript {
+  top: 50%;
+  left: 50%;
+  color: #fff;
+  z-index: 1000;
+  padding: 1.5rem 2.5rem;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  background: #d00;
+  box-shadow: 0 0 10px 52px rgba(255,255,255,.8);
+  font-weight: 400;
+  border-radius: 2px;
+}
+body {
+  margin: 0;
+  background: #ffffff;
+  -webkit-tap-highlight-color: rgba(0,0,0,.05);
+}
+main {
+  position: relative;
+}
+h1, h2, h3 {
+  font-weight: 300;
+}
+a {
+  background: transparent;
+  transition: 0.3s;
+  font-weight: bold;
+  text-decoration: none;
+  text-decoration-skip: objects;
+}
+input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 50px white inset;
+}
+:not(pre) > code[class*='language-'] {
+  color: #666;
+  padding: 1px 5px;
+  background: #eee;
+  text-shadow: none;
+  border-radius: 2px;
+}
+.jss2 {
+  top: 0;
+  left: 0;
+  width: 100%;
+  bottom: 0;
+  position: absolute;
+  animation-name: main-entry;
+  animation-duration: .5s;
+}
+@media (min-width: 1024px) {
+  .jss2 {
+    left: 320px;
+    width: calc(100vw - 320px - 60px);
+  }
+}
+@media print {
+  .jss2 {
+    position: relative;
+  }
+  .jss2 > div {
+    overflow: visible!important;
+  }
+  .jss2 > div > div {
+    position: relative!important;
+  }
+}
+.jss3 {
+  margin: 0 auto;
+  padding: calc(1.5rem + undefinedpx) 1.8rem 1.5rem 1.5rem;
+}
+.jss3 strong, .jss3 b {
+  font-weight: 600;
+  letter-spacing: -.02em;
+}
+.jss3 a {
+  display: inline-block;
+  transition: 0.3s;
+  font-weight: 600;
+  text-shadow: 
+         2px  2px #ffffff,
+        -2px  2px #ffffff,
+        -2px -2px #ffffff,
+        -2px  2px #ffffff,
+        -2px  0   #ffffff,
+         2px  0   #ffffff
+      ;
+  letter-spacing: -.02em;
+  text-decoration: none;
+}
+@media (min-width: 600px) {
+  .jss3 {
+    padding: calc(2.5rem + undefinedpx) 3.5rem 2.5rem;
+  }
+}
+@media (min-width: 1024px) {
+  .jss3 {
+    padding: 3.5rem;
+  }
+}
+.jss3 a:hover {
+  color: hsl(79.5, 60%, 39.9%);
+}
+@keyframes main-entry {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.jss4 {
+  margin: 0 auto;
+  padding: calc(60px + 1.5rem) 1.5rem  1.5rem 1.5rem;
+  max-width: 50em;
+  background: #ffffff;
+}
+.jss4 strong, .jss4 b {
+  letter-spacing: -.02em;
+}
+.jss4 a {
+  transition: 0.3s;
+  font-weight: bold;
+  letter-spacing: -.02em;
+  text-decoration: underline;
+}
+@media (min-width: 600px) {
+  .jss4 {
+    padding: calc(2.5rem + 60px) 3.5rem 2.5rem;
+  }
+}
+@media (min-width: 1024px) {
+  .jss4 {
+    padding: 3.5rem;
+  }
+}
+.jss4 a:hover {
+  color: hsl(79.5, 60%, 39.9%);
+}
+.jss5 {
+  margin: 0 0 3em;
+}
+.jss6 {
+  color: #555555;
+  margin: 0 0 0.4em;
+  font-size: 1.9em;
+  font-weight: 600;
+  line-height: 1.1;
+  letter-spacing: -0.04em;
+}
+@media (min-width: 600px) {
+  .jss6 {
+    font-size: 2.5em;
+  }
+}
+@media (min-width: 1024px) {
+  .jss6 {
+    font-size: 2.7em;
+    letter-spacing: -0.05em;
+  }
+}
+.jss7 {
+  color: #555555;
+  font-size: 1.5em;
+  line-height: 1.1;
+  font-weight: 300;
+}
+@media (min-width: 600px) {
+  .jss7 {
+    font-size: 1.8em;
+  }
+}
+@media (min-width: 1024px) {
+  .jss7 {
+    font-size: 1.95em;
+  }
+}
+.jss8 {
+  color: #555555;
+  font-size: 0.9em;
+  font-weight: 600;
+}
+.jss9 {
+  color: #333333;
+  line-height: 1.6;
+}
+.jss9 a {
+  color: #709425;
+}
+.jss9 .gatsby-highlight {
+  margin: 2em 0;
+}
+.jss9 .gatsby-resp-iframe-wrapper {
+  margin: 2em 0;
+}
+.jss9 .gatsby-resp-image-link {
+  margin: 2em -1.5rem;
+  border: none;
+}
+.jss9 h2, .jss9 h3 {
+  color: #555555;
+  margin: 2em 0 1em;
+  font-size: 1.5em;
+  font-weight: 600;
+  line-height: 1.3;
+  letter-spacing: -0.02em;
+}
+.jss9 h3 {
+  font-size: 1.3em;
+}
+.jss9 p {
+  margin: 0 0 1.5em 0;
+  font-weight: 400;
+}
+.jss9 ul {
+  padding: 0 0 0 1.3em;
+  list-style: circle;
+}
+.jss9 li {
+  margin: 0 0 .5em 0;
+}
+.jss9 blockquote {
+  border: 5px solid #bbbbbb;
+  margin: 2.5em 0;
+  padding: 1em 1.1em 1em 1.3em;
+  position: relative;
+  font-style: italic;
+}
+@media (min-width: 600px) {
+  .jss9 {
+    font-size: 1.15em;
+  }
+}
+@media (min-width: 1024px) {
+  .jss9 {
+    font-size: 1.1em;
+  }
+}
+.jss9 blockquote p {
+  margin: 0;
+}
+.jss9 blockquote::before, .jss9 blockquote::after {
+  top: -5px;
+  left: 50%;
+  width: 94%;
+  height: 5px;
+  content: "";
+  position: absolute;
+  background: #ffffff;
+  margin-left: -47%;
+}
+.jss9 blockquote::after {
+  top: auto;
+  bottom: -5px;
+}
+@media (min-width: 600px) {
+  .jss9 ul {
+    padding: 0 0 0 2em;
+  }
+}
+@media (min-width: 600px) {
+  .jss9 .gatsby-resp-image-link {
+    margin: 2.5em -3.5rem;
+  }
+}
+.jss10 {
+  font-size: calc(1em * 1);
+}
+.jss12 {
+  margin: 3em 0 0;
+  padding: 3em 0 0;
+  display: flex;
+  border-top: 1px solid #ddd;
+  align-items: center;
+  flex-direction: column;
+}
+.jss12 a {
+  color: #709425;
+}
+@media (min-width: 600px) {
+  .jss12 {
+    flex-direction: row;
+    justify-content: center;
+  }
+}
+.jss13 {
+  width: 60px;
+  margin: 0 1em 1em;
+  height: 60px;
+  border: 1px solid #ddd;
+  flex-shrink: 0;
+  border-radius: 75% 65%;
+}
+@media (min-width: 600px) {
+  .jss13 {
+    margin: 0 1em 0;
+  }
+}
+.jss14 {
+  display: flex;
+  min-height: 50px;
+  align-items: center;
+  flex-dirction: column;
+}
+.jss11 {
+  color: #555555;
+  font-size: 1em;
+  line-height: 1.4;
+}
+.jss11 p {
+  margin: 0;
+}
+.jss19 {
+  color: hsl(0, 0%, 50%);
+  font-size: 0.8em;
+  line-height: 1.4;
+}
+.jss19 a {
+  color: #709425;
+  font-weight: normal;
+  text-shadow: none;
+}
+.jss19 a:hover {
+  color: hsl(79.5, 60%, 43.5%);
+}
+.jss19 ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-align: center;
+}
+.jss19 li {
+  margin: 0 .3em;
+  display: inline-block;
+}
+.jss18 {
+  color: #555555;
+  padding: 1.5rem 1.5rem  calc(60px + 1.5rem) 1.5rem;
+}
+.jss18 p {
+  margin: 0;
+}
+@media (min-width: 600px) {
+  .jss18 {
+    padding: 2rem 2.5rem  calc(60px + 2rem) 2.5rem;
+  }
+}
+@media (min-width: 1024px) {
+  .jss18 {
+    padding: 2rem 3rem 2rem 3rem;
+  }
+}</style><title data-react-helmet="true">sentry落地实战 - PersonalBlog GatsbyJS Starter</title><meta data-react-helmet="true" name="description" content="PersonalBlog is a GatsbyJS starter."/><meta data-react-helmet="true" property="og:url" content="https://github.com/creasy2010/sentry落地实战/"/><meta data-react-helmet="true" property="og:title" content="sentry落地实战 - PersonalBlog GatsbyJS Starter"/><meta data-react-helmet="true" property="og:description" content="PersonalBlog is a GatsbyJS starter."/><meta data-react-helmet="true" property="og:image" content="/static/sentry-logo-ddfb822e9447c2c1a9f72b35e7a9ad4c-160fa.png"/><meta data-react-helmet="true" property="og:type" content="website"/><meta data-react-helmet="true" property="fb:app_id" content="coder.yang2001@gmail.com"/><meta data-react-helmet="true" name="twitter:card" content="summary"/><meta data-react-helmet="true" name="twitter:creator" content="xiaoDongYang_"/><link rel="manifest" href="/manifest.webmanifest"/><meta name="theme-color" content="#ffffff"/><link rel="alternate" type="application/rss+xml" href="/rss.xml"/><link rel="sitemap" type="application/xml" href="/sitemap.xml"/><style id="gatsby-inlined-css">code[class*=language-],pre[class*=language-]{color:#f8f8f2;background:none;text-shadow:0 1px rgba(0,0,0,.3);font-family:Consolas,Monaco,Andale Mono,Ubuntu Mono,monospace;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;word-wrap:normal;line-height:1.5;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-hyphens:none;-ms-hyphens:none;hyphens:none}pre[class*=language-]{padding:1em;margin:.5em 0;overflow:auto;border-radius:.3em}:not(pre)>code[class*=language-],pre[class*=language-]{background:#272822}:not(pre)>code[class*=language-]{padding:.1em;border-radius:.3em;white-space:normal}.token.cdata,.token.comment,.token.doctype,.token.prolog{color:#708090}.token.punctuation{color:#f8f8f2}.namespace{opacity:.7}.token.constant,.token.deleted,.token.property,.token.symbol,.token.tag{color:#f92672}.token.boolean,.token.number{color:#ae81ff}.token.attr-name,.token.builtin,.token.char,.token.inserted,.token.selector,.token.string{color:#a6e22e}.language-css .token.string,.style .token.string,.token.entity,.token.operator,.token.url,.token.variable{color:#f8f8f2}.token.atrule,.token.attr-value,.token.class-name,.token.function{color:#e6db74}.token.keyword{color:#66d9ef}.token.important,.token.regex{color:#fd971f}.token.bold,.token.important{font-weight:700}.token.italic{font-style:italic}.token.entity{cursor:help}</style><meta name="apple-mobile-web-app-capable" content="yes"/><meta name="apple-mobile-web-app-status-bar-style" content="#D0E0D8"/><meta name="apple-mobile-web-app-title" content="Lazywill"/><link rel="apple-touch-icon" href="/icons/apple-icon-57x57.png" sizes="57x57"/><link rel="apple-touch-icon" href="/icons/apple-icon-60x60.png" sizes="60x60"/><link rel="apple-touch-icon" href="/icons/apple-icon-72x72.png" sizes="72x72"/><link rel="apple-touch-icon" href="/icons/apple-icon-76x76.png" sizes="76x76"/><link rel="apple-touch-icon" href="/icons/apple-icon-114x114.png" sizes="114x114"/><link rel="apple-touch-icon" href="/icons/apple-icon-120x120.png" sizes="120x120"/><link rel="apple-touch-icon" href="/icons/apple-icon-144x144.png" sizes="144x144"/><link rel="apple-touch-icon" href="/icons/apple-icon-152x152.png" sizes="152x152"/><link rel="apple-touch-icon" href="/icons/apple-icon-180x180.png" sizes="180x180"/><link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.png"/><link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png"/><link rel="icon" type="image/png" sizes="96x96" href="/icons/favicon-96x96.png"/><link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css"/><script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script></head><body><noscript>You need to enable JavaScript to run this app!</noscript><div id="___gatsby"><div class="jss1"><main class="jss2"><div style="position:relative;overflow:hidden;width:100%;height:100%"><div style="position:absolute;top:0;left:0;right:0;bottom:0;overflow:hidden;-webkit-overflow-scrolling:touch;margin-right:0;margin-bottom:0"><article class="jss4"><header class="jss5"><h1 class="jss6">sentry落地实战</h1><h2 class="jss7">如何让sentry真正起到作用</h2><div class="jss8">Wed, 19 Sep 2018</div></header><div class="jss9 jss10"><p>sentry 翻译过来是 哨兵,寓意着像哨兵一样守护应用;
+它是一个完善,开放的 error trace 工具,围绕”<strong><em>Stop hoping your users will report errors</em></strong>“的理念,提供一系列工具,帮助 coder 快速定位问题,发现问题,解决问题;</p>
+<p>你的项目经常会遇到以下问题(如果没有遇到可以忽略此文,好幸运,<a href="/about/">求交往</a>!):</p>
+<ul>
+<li>需要用户的帐号密码才能复现问题;</li>
+<li>用户那里有问题,在开发这边怎么也复现不了,也不清楚用户环境信息;</li>
+<li>每次出问题都是从前端定位到后端,一系列流程之后才找到原因;</li>
+<li>项目人员的更替流失,找不到谁维护项目;</li>
+<li>每次出问题自己都是最后一个知道,经过客户,客服/售后,teamLeader or boss;</li>
+<li>线上事故似乎总会冷不防的蹦出来,不能安安静静的写代码;</li>
+<li>上线时出现问题,并不能第一时间发现,导致影响大批用户,不能把火情控制在最小范围;</li>
+</ul>
+<p>…</p>
+<p>coder 是为了解决问题而生的工程师, 如果上面的问题你遇到 3 个或 3 个以上,那很不幸,估计眼中噙着泪水, 心中一 W 个草尼马在奔腾;
+然并卵,真不幸遇到了这些问题,该如何解决呢 ? 如何带领团队走出困境;</p>
+<h3>特性</h3>
+<p>对比了一票工具, 最终选择了 sentry,基于以下理由;</p>
+<ul>
+<li><strong><em><a href="https://docs.sentry.io/platforms/?platform=javascript">多端覆盖</a></em></strong>: 我们能想到的语言也好端也好基本都有对应的 SDK, 像小程序也有社区提供的 SDK;</li>
+<li><strong><em>coder style</em></strong>: 完整对接开发工具栈(github,jira,slack…),开放 openapi 支持扩展任意;连独立部署都提供 docker,真是不能太周到体贴;</li>
+<li><strong><em>产品细致到位</em></strong>: sourcemap,suspect commit,suggested assignees,alert rule 等在实际使用时让人倍感关怀,似乎能想到的,都已经做到;</li>
+</ul>
+<p>下面会详细说明这些特性:</p>
+<h4>vocabulary</h4>
+<p>把 sentry 涉及到的词汇整理出来:</p>
+<ul>
+<li>Issue:与 githubissue 同义, 问题;一个 issue 可以发生多次 event;</li>
+<li>Event:一个问题发生的一次,会聚合到一个 issue;</li>
+<li>SourceMap:压缩后代码映射到压缩前的信息,可以获取在错误源代码的文件路径,行号 列号,有利于定位问题;</li>
+<li>FeedBack:用户反馈,当发生问题时,弹出对话框,可以让用户填写信息,描述错误影响及发生错误的场景;</li>
+<li>Release:发布的版本;</li>
+<li>Breadcrumb:童话里的面包屑,在问题发生之前的一些动作, 可以自己记录一些信息(用户点击动作),在 raven sdk 默认会把 console 打印信息记录下来,通过配置可以记录 http 请求 (<a href="https://docs.sentry.io/learn/breadcrumbs/">https://docs.sentry.io/learn/breadcrumbs/</a>)</li>
+<li><a href="https://docs.sentry.io/quickstart/#about-the-dsn">Dsn( Data Source Name)</a> 格式:https://<key>@sentry.io/<project>,包含上传协议,key 服务地址,项目标识</li>
+<li>Suspect Commit:commit 语义同 githubcommit,即一次提交,suspect commit 表示出现的问题可能与某次 commit 有关联;</li>
+</ul>
+<h4>主动上报问题;</h4>
+<p>sentry 的基本职责,当出现问题时,把错误现场信息,一些调试必要的业务信息及用户信息带到服务端;
+当采集一段时间,我们就能知道一段时间发生了多少错,某个版本发生了多少错,影响了多少用户;
+再通过告警,让我们第一时间感知到问题所在,进行修复;
+当用户或售后反馈时,我们可以坦然的说,“已经上线了!”或”正在上线中!“;</p>
+<p>
+  <a
+    class="gatsby-resp-image-link"
+    href="/static/issue列表-ead2385ae692eb289c2e661ced35733f-fdcf4.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+  
+  <span
+    class="gatsby-resp-image-wrapper"
+    style="position: relative; display: block; ; max-width: 800px; margin-left: auto; margin-right: auto;"
+  >
+    <span
+      class="gatsby-resp-image-background-image"
+      style="padding-bottom: 52.112676056338024%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAYAAAC0VX7mAAAACXBIWXMAAAsSAAALEgHS3X78AAAB0UlEQVQoz1WSW0/bQBCF/Tt4QCoFVRWCFKIEIYKgVSXuLzxV7Xv/DgIJCJeA1Kr/jHBzEt8vu9716czYCWSlkdeW98w536zze/8XNlcO0Lv4C601ojCGUhplWYIXP7mstVLj97dV7+vvztG3n+g09nDX/SffAz9AFMUTAWtJzFhplCYpVK6QUxWFQaGL6kmlaa9UwYI/sNHYxf3lH9BZDAYefC/AaOgj9CNkaU5C2VTlmUIcptAkoCkNJ8q5WRjC2ekcY/XTFnrn98iVRf/RJZchAi+sDpObLK1E2B0Xu2F3nJxTGEahFco0gfN17RBfFjq4JcHClOj3XXLnYUhOvZE/YfqeH+85Ju8N4WAk3CSjZs52aw/LH9dxc9aDKSye+s94fXHx+uxK9CRORGA8IF4swigqQSPF/NJMw9ls7mDxQxvXZ7dknRi6HrmKZAB8cDLL2t3YIfMrCbqRoRCCnHjGJLix8h2fZ5u4Or0Rhg8PLyQ6FHcVNwKe5XJwImqrqCJeR1YUOaV/nfbSNuZnGrg86YrDx6ehTHjgjuQKJfVVsSLw5lTY1VeK35kpN3a22rtYnGuhe3oNK5FHCAO6LuzKmKmoU7HHQjxx5kj8DF2l/zx71uR+nSMiAAAAAElFTkSuQmCC'); background-size: cover; display: block;"
+    >
+      <img
+        class="gatsby-resp-image-image"
+        style="width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px transparent;"
+        alt="issue列表"
+        title=""
+        src="/static/issue列表-ead2385ae692eb289c2e661ced35733f-48538.png"
+        srcset="/static/issue列表-ead2385ae692eb289c2e661ced35733f-bed0f.png 200w,
+/static/issue列表-ead2385ae692eb289c2e661ced35733f-5fd34.png 400w,
+/static/issue列表-ead2385ae692eb289c2e661ced35733f-48538.png 800w,
+/static/issue列表-ead2385ae692eb289c2e661ced35733f-b70ec.png 1200w,
+/static/issue列表-ead2385ae692eb289c2e661ced35733f-d134a.png 1600w,
+/static/issue列表-ead2385ae692eb289c2e661ced35733f-fdcf4.png 1917w"
+        sizes="(max-width: 800px) 100vw, 800px"
+      />
+    </span>
+  </span>
+  
+  </a>
+    </p>
+<p>
+  <a
+    class="gatsby-resp-image-link"
+    href="/static/issue详情1-ab31143c772f3223eeaa6ce4e31c81b7-e6552.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+  
+  <span
+    class="gatsby-resp-image-wrapper"
+    style="position: relative; display: block; ; max-width: 800px; margin-left: auto; margin-right: auto;"
+  >
+    <span
+      class="gatsby-resp-image-background-image"
+      style="padding-bottom: 52.11047420531527%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAYAAAC0VX7mAAAACXBIWXMAAAsSAAALEgHS3X78AAAB0ElEQVQoz11S22oUQRDtD1FBBE1Awq6rLCFudIMQcnvJU8RnP0Z92EVNICrqN/kggs8iureZ6XvPTB+ra3Y2WRsONVU9depUdYmXhy+w++AYH959hbUOSmoEX6KuI2KMZGtUVdWgrNhvT7pv0R5xsvccg+4hLt9+htEK08kM89kC2SJjmwpY4xhamxWpVholfYeQCkZY8hXlipPhGQadAyL8wpdZJpHnihIMjLFritrDqomMO4g1+9l0TmIKiP3Hp3i48RTno0/Ucon5XKGQHlKXcD6grupVW5YKhqSK4mXZjGU6kZRn0TYthv0j9DZ2MX59AS0VqfR84Snp+4+fpNKslH37ZTFZyDS9VSzPNSTlYVlUPHl0gK0727gYf2yIwvIBqvqabVD+F0/ExgYUhedOki8GvX3cv93H+9EltRPxd6aQUdVc0otrj0I5QhrBFVKsIQSK3OHPbwNZBOqqgtjpPsPmrR7OlwqVsjSfmh/o+lqsA7QFjteryA3Bk59ILUR/a4h7N7sYvRrTvEhZlsM5IqVZpsHzvOIVmp2LrMxZz/8m3zlPHRHhdmcPd290MH4z4otsQbunJJMbrdctw7ANwdErV0TqeIUUrZmk7v4BpOzV4s4j5QoAAAAASUVORK5CYII='); background-size: cover; display: block;"
+    >
+      <img
+        class="gatsby-resp-image-image"
+        style="width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px transparent;"
+        alt="issue详情1"
+        title=""
+        src="/static/issue详情1-ab31143c772f3223eeaa6ce4e31c81b7-48538.png"
+        srcset="/static/issue详情1-ab31143c772f3223eeaa6ce4e31c81b7-bed0f.png 200w,
+/static/issue详情1-ab31143c772f3223eeaa6ce4e31c81b7-5fd34.png 400w,
+/static/issue详情1-ab31143c772f3223eeaa6ce4e31c81b7-48538.png 800w,
+/static/issue详情1-ab31143c772f3223eeaa6ce4e31c81b7-b70ec.png 1200w,
+/static/issue详情1-ab31143c772f3223eeaa6ce4e31c81b7-d134a.png 1600w,
+/static/issue详情1-ab31143c772f3223eeaa6ce4e31c81b7-e6552.png 1919w"
+        sizes="(max-width: 800px) 100vw, 800px"
+      />
+    </span>
+  </span>
+  
+  </a>
+    </p>
+<p>
+  <a
+    class="gatsby-resp-image-link"
+    href="/static/issue详情2-b619d4c1df9c12dd5ce8038ce40d3b15-e6552.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+  
+  <span
+    class="gatsby-resp-image-wrapper"
+    style="position: relative; display: block; ; max-width: 800px; margin-left: auto; margin-right: auto;"
+  >
+    <span
+      class="gatsby-resp-image-background-image"
+      style="padding-bottom: 52.31891610213653%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAYAAAC0VX7mAAAACXBIWXMAAAsSAAALEgHS3X78AAABUElEQVQoz42S3UrDQBCF8yCCCFIUxDZUqbYEGlSsohfSG7302kcRtGqs1aogvpT4DNpim+Zn/467m1A3bQIuHHaZzHx7ZjbWxck59uptvDy8QwiOYBIgDEMwxv4lIURG1rF7hsZ6C0/eG9RSSb4/wWjsYywVBKG8IMpIx6IIXAJmlwSewqkcoH+fAikDIQRUO+DgXEjxjJQTSil+hiNdk3HYctrYWGmid/uqP8Yx0cksLWY5UpeovO+vQQaoHbq1I9glB92bZx1Q7lTLREIJyRH920UKg7Fbzc1DlJe30e30dYCqlmVysbv0zBJBuTOBTnUfa0s1eNePKZAikIMvdJi6YzyZsXYHo+WGvYvVxSrurnoJUBZwlu9OAVSx7xN8fgz0a8/NcKvsorRQMYAEnPK5lzWlwHFsODSBdXtHAzuX3rTlMIr1LAvF2PS3mm35F7kf3Ghe7zk3AAAAAElFTkSuQmCC'); background-size: cover; display: block;"
+    >
+      <img
+        class="gatsby-resp-image-image"
+        style="width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px transparent;"
+        alt="issue详情2"
+        title=""
+        src="/static/issue详情2-b619d4c1df9c12dd5ce8038ce40d3b15-48538.png"
+        srcset="/static/issue详情2-b619d4c1df9c12dd5ce8038ce40d3b15-bed0f.png 200w,
+/static/issue详情2-b619d4c1df9c12dd5ce8038ce40d3b15-5fd34.png 400w,
+/static/issue详情2-b619d4c1df9c12dd5ce8038ce40d3b15-48538.png 800w,
+/static/issue详情2-b619d4c1df9c12dd5ce8038ce40d3b15-b70ec.png 1200w,
+/static/issue详情2-b619d4c1df9c12dd5ce8038ce40d3b15-d134a.png 1600w,
+/static/issue详情2-b619d4c1df9c12dd5ce8038ce40d3b15-e6552.png 1919w"
+        sizes="(max-width: 800px) 100vw, 800px"
+      />
+    </span>
+  </span>
+  
+  </a>
+    </p>
+<p>
+  <a
+    class="gatsby-resp-image-link"
+    href="/static/issue事件列表-b1bd914359c8076471b01a4f89295b47-c4c6d.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+  
+  <span
+    class="gatsby-resp-image-wrapper"
+    style="position: relative; display: block; ; max-width: 800px; margin-left: auto; margin-right: auto;"
+  >
+    <span
+      class="gatsby-resp-image-background-image"
+      style="padding-bottom: 52.35355648535565%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAYAAAC0VX7mAAAACXBIWXMAAAsSAAALEgHS3X78AAABy0lEQVQoz22Rb2sUMRDG93MoRZAWilDPA7XF40BbocUW3/iqBV/3K4mtV1vPKv1aorbu7f9sks1m93FmsldRDAxJJskzv2cSHR+8xeTRPuazKzjnUJUKrnHoug5918N7j7ZdRhvyfS9xu6Z5OaLXO0eYPNzDxcklrDFYxAnSJEOeFcjSHLXSMNpK6NpIARaqVS1FnKNCvoOpNVSckuD2IQnu4vPZlVTI0gJVoVAWFVSl5PG/g6lYWCgpeBRJijiuEO1N32C8NsV8ELTGwlNl74NQRzOL8p6JwpkPeR/yHP3S8vbmAUarE1zMvoIlfi0U0txIHxXZ5Z7WZMdQO7iYIqtaG7KvZeYhd8mNofPo+dNX2Li/hfMPX2A98O1ngZtFDUuXmrKAVgpN00jwp7Awr621suYc743mvEM0fbyLB/ee4OPpJVri/nGTY5EqockzhYoq8+/zI5611rdiTM4ivOc834km45dYXxnj7GSOhjx/vy4Rp1psFCXbNoOgGwjtX4TOEaFtxL4Ibo1eYO3uCLP3nwLhdY44CYRJWaFkwsEyCzNVIDJ/euhCD0Xw2XgHq3c2cPruXAiXPWTCvLLyMfzA/YeQIwi2g2WH3/z31eVDIrrvAAAAAElFTkSuQmCC'); background-size: cover; display: block;"
+    >
+      <img
+        class="gatsby-resp-image-image"
+        style="width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px transparent;"
+        alt="issue详issue事件列表情2"
+        title=""
+        src="/static/issue事件列表-b1bd914359c8076471b01a4f89295b47-48538.png"
+        srcset="/static/issue事件列表-b1bd914359c8076471b01a4f89295b47-bed0f.png 200w,
+/static/issue事件列表-b1bd914359c8076471b01a4f89295b47-5fd34.png 400w,
+/static/issue事件列表-b1bd914359c8076471b01a4f89295b47-48538.png 800w,
+/static/issue事件列表-b1bd914359c8076471b01a4f89295b47-b70ec.png 1200w,
+/static/issue事件列表-b1bd914359c8076471b01a4f89295b47-d134a.png 1600w,
+/static/issue事件列表-b1bd914359c8076471b01a4f89295b47-c4c6d.png 1912w"
+        sizes="(max-width: 800px) 100vw, 800px"
+      />
+    </span>
+  </span>
+  
+  </a>
+    </p>
+<p>
+  <a
+    class="gatsby-resp-image-link"
+    href="/static/issue影响用户列表-7525d70b64b7d1d3dcdb9412cc8497e5-e6552.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+  
+  <span
+    class="gatsby-resp-image-wrapper"
+    style="position: relative; display: block; ; max-width: 800px; margin-left: auto; margin-right: auto;"
+  >
+    <span
+      class="gatsby-resp-image-background-image"
+      style="padding-bottom: 52.006253256904635%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAYAAAC0VX7mAAAACXBIWXMAAAsSAAALEgHS3X78AAABbklEQVQoz5WSW0/CMBiG90OMiTEhGhMBiQciqBATlOCNVxqv/TdGBUXFE/44z+y8dYN222v7DQzxRviSb13b9Nn7NNNO6yfYWmmgc/WCMAjhuwx8IBDHCZIkkWOMKIrSFhHNR6X25SMdh6UdVI9Rztdx3+pKYABDN2EaFizLppH5gVzvUwcsJLCC+j6DkB/gPIKIYgRy7vcMCawcoZTbkwm7dEj/NuA6HoHUofFE48kUmAyG6VzTgt5zodVKhygs7OC2+QTP8ygZH3CMLJKh0t/+VZbFOacm5cp6A/lMSSZ8pgXbYRhwdWdCKv3fyoBJE9MwKbW2vbqP5fkibpqPiAXHx6sOPxRTA23bocRauVDD0twa2pcPSgK9ng0v4NMBGZP37qbAzfwuFmcLuL7okLJjuWAqoZgMqDTDsE9QBdc2shVkZnJond9B7uLrzYDt84mBo4SWZaXAYq4qgVk0z9oU+f3TgcemV1Z/h3r/Ad1l16y/QesGAAAAAElFTkSuQmCC'); background-size: cover; display: block;"
+    >
+      <img
+        class="gatsby-resp-image-image"
+        style="width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px transparent;"
+        alt="issue影响用户列表"
+        title=""
+        src="/static/issue影响用户列表-7525d70b64b7d1d3dcdb9412cc8497e5-48538.png"
+        srcset="/static/issue影响用户列表-7525d70b64b7d1d3dcdb9412cc8497e5-bed0f.png 200w,
+/static/issue影响用户列表-7525d70b64b7d1d3dcdb9412cc8497e5-5fd34.png 400w,
+/static/issue影响用户列表-7525d70b64b7d1d3dcdb9412cc8497e5-48538.png 800w,
+/static/issue影响用户列表-7525d70b64b7d1d3dcdb9412cc8497e5-b70ec.png 1200w,
+/static/issue影响用户列表-7525d70b64b7d1d3dcdb9412cc8497e5-d134a.png 1600w,
+/static/issue影响用户列表-7525d70b64b7d1d3dcdb9412cc8497e5-e6552.png 1919w"
+        sizes="(max-width: 800px) 100vw, 800px"
+      />
+    </span>
+  </span>
+  
+  </a>
+    </p>
+<h4>如何与 github 完美结合</h4>
+<p>sentry 与 github 的结合与可谓深入浅出,浅在简单易用,深在巧妙利用 issue commit coder 的关联;
+先问一个问题?sentry 与 github 结合能给我们带来什么?</p>
+<ol>
+<li>把问题相关的 commit 展示出来;</li>
+<li>选出最适合改这个 bug 的人;</li>
+<li>两个版本之间的 commit 列出来;</li>
+</ol>
+<p>注:
+第二项,完美实现了这些,当问题发生时,任何一个人都可以分配问题,而不是一定要 TeamLeader 来做这件事,</p>
+<p>下面详细说明如何实现:</p>
+<p>与此相关的概念: Issue,Event,Release,Suspect Commit;</p>
+<p>首先在项目中授权项目的 github 地址;</p>
+<p>当我们发布版本时,设置一个 hook 把版本及 coomit 信息通知到 sentry;</p>
+<p>当采集到问题时, 把问题的版本 version 关联上来;</p>
+<p>这样就完成了. 对, 就这么简单! 然后呢 ? 以 js 为例说明</p>
+<p>首先,根据上传的问题 call stack 分析到是那个 js 出了问题;
+然后根据 js 中 sourcemap 信息推断出源代码的 path line colume,方便用户调试;
+接着分析源代码的相关 commit 及 coder;</p>
+<p>然后一切就明清晰了;</p>
+<p>
+  <a
+    class="gatsby-resp-image-link"
+    href="/static/release相关commit及coder-e119a2f27e7b0347b9b65691db55c4b3-f032e.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+  
+  <span
+    class="gatsby-resp-image-wrapper"
+    style="position: relative; display: block; ; max-width: 800px; margin-left: auto; margin-right: auto;"
+  >
+    <span
+      class="gatsby-resp-image-background-image"
+      style="padding-bottom: 60.84860173577628%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAMCAYAAABiDJ37AAAACXBIWXMAABYlAAAWJQFJUiTwAAAB6ElEQVQoz21Sy27UQBD016HkgqJEkCyHiAs3/oFP5Ao3RHax1297PB7PeOyiqx1Hu1IstXo8j+rqqk5+fDrADiNMZ9BULaZxwrIscG7CHGZcfuu6Xv3HEDAYCydvmL0PSL7cfUWWZijyAucsx/HliKZuMLmgMRqDrOj0Mj/mvZAdLEY7CoFVM0MB86xAVdQYhgFd28Fa+8amLc/4+fske9PGKi4SUdd9b6QTp2tmFkgOH59R172gT0LdYZo85jkqi/3hVct728v7UiQPtwd0ZYmXP3+15XOaC8tedWUQNIqmbGt/GNyIUyXy2B6BRWWb51GIJPc3j0p16Af0YgxZ+on6edVrB2HmI368+ytP4YTmumz7NDLQlPvbJ2FYIT2lqMpa3eaBF0C6x0xwyrCBrzDjjLx3pKWacn8ruFwwNAOMVGYmU+4FP+slxv5IWw5RC7MTnumeX+RfAB9unmRMWqT/ziiLCnXVaNDBoMYIYNyYsOPJSrGuFp2NsJ7f5BhtFIkU8FHFpxEEbptOo5a1kWGdZwGT2FqWUWkblOcMtndXDi+v45TcffisU06QqmxUxz2TKc/IjoB0M68NjlkDL/quF4DxddSS78/fMKqzXjNdZq47i3Nl0Bm3ORm30Zm9l8f+it3lHP4HHyuQV5yCmcEAAAAASUVORK5CYII='); background-size: cover; display: block;"
+    >
+      <img
+        class="gatsby-resp-image-image"
+        style="width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px transparent;"
+        alt="release相关commit及coder"
+        title=""
+        src="/static/release相关commit及coder-e119a2f27e7b0347b9b65691db55c4b3-48538.png"
+        srcset="/static/release相关commit及coder-e119a2f27e7b0347b9b65691db55c4b3-bed0f.png 200w,
+/static/release相关commit及coder-e119a2f27e7b0347b9b65691db55c4b3-5fd34.png 400w,
+/static/release相关commit及coder-e119a2f27e7b0347b9b65691db55c4b3-48538.png 800w,
+/static/release相关commit及coder-e119a2f27e7b0347b9b65691db55c4b3-b70ec.png 1200w,
+/static/release相关commit及coder-e119a2f27e7b0347b9b65691db55c4b3-d134a.png 1600w,
+/static/release相关commit及coder-e119a2f27e7b0347b9b65691db55c4b3-f032e.png 2074w"
+        sizes="(max-width: 800px) 100vw, 800px"
+      />
+    </span>
+  </span>
+  
+  </a>
+    </p>
+<p><a href="https://blog.sentry.io/2017/05/01/release-commits">开通流程参考</a></p>
+<h4>多端覆盖</h4>
+<p>sentry 目前最新版本 9.0 算得上老牌厂商了, 我们能用得上的语言他基本都可以支持;小程序的采集与有社区贡献代码;</p>
+<p>eg :javascript</p>
+<div class="gatsby-highlight" data-language="javascript">
+      <pre class="language-javascript"><code class="language-javascript"><span class="token operator">&lt;</span>script src<span class="token operator">=</span><span class="token string">"https://web-img.qmimg.com/qmfe/lib/ravenjs/raven-3.26.2.min.js"</span><span class="token operator">></span><span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">></span>
+<span class="token operator">&lt;</span>script<span class="token operator">></span>
+    Raven<span class="token punctuation">.</span><span class="token function">config</span><span class="token punctuation">(</span><span class="token string">'https://&lt;key>@sentry.io/&lt;project>'</span><span class="token punctuation">,</span>
+        <span class="token punctuation">{</span> logger<span class="token punctuation">:</span> <span class="token string">"@qianmi/official-mobile"</span><span class="token punctuation">,</span> release<span class="token punctuation">:</span> <span class="token constant">QM_VERSION</span><span class="token punctuation">,</span> environment<span class="token punctuation">:</span> <span class="token string">"production"</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">install</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">></span></code></pre>
+      </div>
+<p>eg:(reactNative)[https://docs.sentry.io/clients/javascript/integrations/react/]</p>
+<div class="gatsby-highlight" data-language="javascript">
+      <pre class="language-javascript"><code class="language-javascript"><span class="token comment">//index.ios.js</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> Sentry <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'react-native-sentry'</span><span class="token punctuation">;</span>
+
+Sentry<span class="token punctuation">.</span><span class="token function">config</span><span class="token punctuation">(</span>
+  <span class="token string">'https://8070a174f3ab4fe298d4c5516b3e2704@sentry.qianmi.com/7'</span>
+<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">install</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">// set the user context</span>
+Sentry<span class="token punctuation">.</span><span class="token function">setUserContext</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  email<span class="token punctuation">:</span> <span class="token string">''</span><span class="token punctuation">,</span>
+  userID<span class="token punctuation">:</span> Config<span class="token punctuation">.</span><span class="token constant">ADMINID</span><span class="token punctuation">,</span>
+  username<span class="token punctuation">:</span> Config<span class="token punctuation">.</span><span class="token constant">DEVICE</span><span class="token punctuation">.</span>model<span class="token punctuation">,</span>
+  extra<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    is_admin<span class="token punctuation">:</span> <span class="token boolean">false</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+Sentry<span class="token punctuation">.</span><span class="token function">setTagsContext</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  environment<span class="token punctuation">:</span> <span class="token string">'production'</span><span class="token punctuation">,</span>
+  react<span class="token punctuation">:</span> <span class="token boolean">true</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+Sentry<span class="token punctuation">.</span><span class="token function">setEventSentSuccessfully</span><span class="token punctuation">(</span>event <span class="token operator">=></span> <span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'发送错误'</span><span class="token punctuation">,</span> event<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+      </div>
+<h5>备注</h5>
+<p><a href="https://docs.sentry.io/platforms/?platform=javascript">node java python …接入</a></p>
+<p><a href="https://github.com/youzan/raven-weapp">小程序接入</a>:</p>
+<h4><a href="https://docs.sentry.io/api/">openapi</a></h4>
+<p>借助于 openapi 几乎可以做到所有的事情(项目管理,issue 管理),像第三方工具对接,</p>
+<p>
+  <a
+    class="gatsby-resp-image-link"
+    href="/static/api-c4c845b87fd3126de7dea66516fd5bea-32735.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+  
+  <span
+    class="gatsby-resp-image-wrapper"
+    style="position: relative; display: block; ; max-width: 800px; margin-left: auto; margin-right: auto;"
+  >
+    <span
+      class="gatsby-resp-image-background-image"
+      style="padding-bottom: 70.38461538461537%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAOCAYAAAAvxDzwAAAACXBIWXMAABYlAAAWJQFJUiTwAAAB9UlEQVQ4y52TS0/bQBSF/T94bBDZlKeoUtpSHimPVDwrUfWHoC5aCUpTKgib7rplwYYNO/5Iq6qABAJBkjbECY7jB44fp3euxyYqorK40pFH9sw35/jOKD++/8ThryOcnZ7jqlyBqCAIWL7vx+N/5fuBmImTYw0H+xfQ6w6vVT68+4TdnT28X8nh6/Y3eJ5HH3UYhgnbvkHyCjdSMs9nMT6cRU9XGrnVLYLVcXlxiVKhhDqNXdeF4zhoNpuh5Pj2ncsmBIwdzk+/wavMa3S19SK3tkkTb6CqKhp6g6RDFyIwi8aapvFG17UaPRukMEkMnJtaxmL2LVId/fi8lqeoBkrFIi+ybRuWacKyLFbkkN3JpzAgUkT/XpkcmcfM2BJSnQMcuVatolgowJYQIZOgQiLaHbkeNy8q5SUBR9Mz6G7vw5f1PE0AQS08pKTDBTwdzKCbI2/xv/tTKnM8X7q47+i0KgZmns2yw1THAAMdp0kOr2VUi6LbcaRo4X3uOHJ2Yglzk8vscGN9m19WKxaqqh0f1qQwdpjuG8OT/nHu8sbHPH9QrwyUfxvk1mu5OUgUXRl6NAIBFV2OgJWyQVDRYVdesaRNociPe15Ih61Ak4HCYRJXfLeD8G5LYOhQNEVUXaO73DBjd/8DWdQ0w6BjRo0r6AH+AsDc4mxUfZ5WAAAAAElFTkSuQmCC'); background-size: cover; display: block;"
+    >
+      <img
+        class="gatsby-resp-image-image"
+        style="width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px transparent;"
+        alt="api.png"
+        title=""
+        src="/static/api-c4c845b87fd3126de7dea66516fd5bea-48538.png"
+        srcset="/static/api-c4c845b87fd3126de7dea66516fd5bea-bed0f.png 200w,
+/static/api-c4c845b87fd3126de7dea66516fd5bea-5fd34.png 400w,
+/static/api-c4c845b87fd3126de7dea66516fd5bea-48538.png 800w,
+/static/api-c4c845b87fd3126de7dea66516fd5bea-b70ec.png 1200w,
+/static/api-c4c845b87fd3126de7dea66516fd5bea-d134a.png 1600w,
+/static/api-c4c845b87fd3126de7dea66516fd5bea-32735.png 2080w"
+        sizes="(max-width: 800px) 100vw, 800px"
+      />
+    </span>
+  </span>
+  
+  </a>
+    </p>
+<h4>问题处理流程</h4>
+<p>我们的愿景是对问题主动出击,那么如何实现主动,如何在第一时间感知问题?
+sentry 提供了 email 与 webhook;基于 webhook 可以把问题简略信息发布到钉钉,企业微信或个人微信;让我们能第一时间感知</p>
+<p>项目中肯定会有报错是低优先级的,不影响流程的,这种错误可以借助 sentry 统计起来, 一周或一个月集中处理;(这个时候是不是锻炼新队员的好时候,哈哈.)</p>
+<p>
+  <a
+    class="gatsby-resp-image-link"
+    href="/static/告警群-79d56e54366b8389668adbdace4c2f42-671f5.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+  
+  <span
+    class="gatsby-resp-image-wrapper"
+    style="position: relative; display: block; ; max-width: 800px; margin-left: auto; margin-right: auto;"
+  >
+    <span
+      class="gatsby-resp-image-background-image"
+      style="padding-bottom: 85.57377049180327%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAARCAYAAADdRIy+AAAACXBIWXMAABYlAAAWJQFJUiTwAAADLElEQVQ4y6WUy4/jRBDG8+9y5rRCIIGQWK1Wc1hAK64c4AiHBaHRitkMeTieZJyZ2cHxO+kkdmLHmcRO/E4+qtvZADckIv1U1d3p6u6qr9xgbIr53CXmOAI4Ho8n/umLwdlC/PPv9UNVibGmaWiM2RyLYA134WO13mCzjfG02daQv95wIkH4FJ3HQbhBXpQiUJqXYq/OA07YDN3+A357N0B7oOHmYYzeoweZ6A4t3D6YGJkMqjGGqtuEA82awJl6SLNc3DbJK7jLFQxdR+NR1dBs9XDd6RMyrtsyOoqBzqOPtmKhM1AhKRodeo+2JKMr38J0ppi6wSkgkGQVtnECx7HR0E0bcl9BqyOhJd9DUWd4MFwMNUJf4I4YmVM4lBp7UuMwV9gPAeOkgE8pGI8dNEb0DOneQW+oQerf0e0sdO8cdIY2Wgq3tEbr70c2NNPByHDOT0+zQgTcpSXldIsJDxiGa5RUpIwSm6aZOJX7POF8w26fCvg4zwthi6JeL/nG4wF7CrgInmBZJhps5tGGBBGRVwdkPFCeU15yssW/oTU+n+S5qGx1rOWTlkdRdcOgohiWg+uWhKvL33F7o8BQTbDZEox5YBMXzJlhRvDx1GZibjKmPFoM+2iHY5og3uwQrCNYpkFVJklcX0lQn30E9fOPYb34FNrFF9BffQXj9UuYzz+B8fwzaN9cwP7yGcavXmD+7UuE310g//5r4MfXSH/+AZ7DYFgWl42Bq2YPzV/eovXrWzTfXKL50xv0Lt/hVhpC+UPGn+0OVLkPlVvCHihg71Ukpg74LmJqCne+gGlSDqfkBOst/LjCkhOV8E6+tymEjSlfUVqQrQRRVmKzz1DXGNhTw7h+WD9ZpxwOlHvc9AcwyXe9JYLVGn4QnvGoCxY+saxZ+vVcRqrgnZLSIVyHpkEBLXsMidTfbHXRkQfgKeBaE3DdkeZ0ewZ9EkKbrE6EYNQp2an1uNRWYUhVpoBBsBJ64ot5USChU7kty1JQlLXeivJAej2cbUXwL02WZYhJp3OX55ACRlGE//tL8wOeSEKi9fgNC9EVdZf8V7IPkODjeEefvS003cBfj7zohC1CmiAAAAAASUVORK5CYII='); background-size: cover; display: block;"
+    >
+      <img
+        class="gatsby-resp-image-image"
+        style="width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px transparent;"
+        alt="告警群"
+        title=""
+        src="/static/告警群-79d56e54366b8389668adbdace4c2f42-48538.png"
+        srcset="/static/告警群-79d56e54366b8389668adbdace4c2f42-bed0f.png 200w,
+/static/告警群-79d56e54366b8389668adbdace4c2f42-5fd34.png 400w,
+/static/告警群-79d56e54366b8389668adbdace4c2f42-48538.png 800w,
+/static/告警群-79d56e54366b8389668adbdace4c2f42-b70ec.png 1200w,
+/static/告警群-79d56e54366b8389668adbdace4c2f42-d134a.png 1600w,
+/static/告警群-79d56e54366b8389668adbdace4c2f42-671f5.png 1830w"
+        sizes="(max-width: 800px) 100vw, 800px"
+      />
+    </span>
+  </span>
+  
+  </a>
+    
+
+  <a
+    class="gatsby-resp-image-link"
+    href="/static/复盘也是必要的-9774e76d3191ff206c5ea38960113ae9-412e1.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+  
+  <span
+    class="gatsby-resp-image-wrapper"
+    style="position: relative; display: block; ; max-width: 800px; margin-left: auto; margin-right: auto;"
+  >
+    <span
+      class="gatsby-resp-image-background-image"
+      style="padding-bottom: 52.61121856866537%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAYAAAB/Ca1DAAAACXBIWXMAABYlAAAWJQFJUiTwAAAB1klEQVQoz4WSS2sUQRSF+y+KooSEGKNEQyAg6O9w50oQF24CiotAFmIgm6AhkCzEhS5cZfrd1d0z3fWu4701mXEkqA2XW3RVn/rOPZ082XqGVnTQSsM7j8UTQgC8R/AOzhg4a+G56J13jsrGPT7nfbjuHsne9nN0bU+iPYbZCCU1iRtYY2FIWFP10mI0HorWlu6xmJei+/ms0Sb2YToi2d18irpsMckEsqxCUwsMwxgPyItz6Isv0F8v4X7+gL88g0uv4M5P4T6fwH7/Bkd0c2IPKRWSnY39SFcUNYqsRN9NyQpbIMdH74DXL4D3bxCODxHevkT4+AHh4FVcu9NP4CmxXS5NpMmj9T00VYs0q5Fe5ahIWEoZN5VxUNpCWR9JHNlkgdi54pjnYgyhKIdke20XoumQFw3qqoEcJc1RRUFLIThScM4tKVYrBuSvQ1kIbt17DFG3JCiW82NBQ6HEpFdS/2v5Fcubd3eITCBNS0zIMq+n/SzSMcGc0C8/uknof1vmUDbuPCSyDkXVQ4gpZrMBI9smfP4dmJR7FL0hGP6YYSRcv/0AVdkgnRTI0xwlhSJES4Lqv5YXs+MZM2kkXLt1P/6HedHGhMdBLgP559xWCBfhsJtfjZ5B5HaxXocAAAAASUVORK5CYII='); background-size: cover; display: block;"
+    >
+      <img
+        class="gatsby-resp-image-image"
+        style="width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px transparent;"
+        alt="复盘也是必要的"
+        title=""
+        src="/static/复盘也是必要的-9774e76d3191ff206c5ea38960113ae9-48538.png"
+        srcset="/static/复盘也是必要的-9774e76d3191ff206c5ea38960113ae9-bed0f.png 200w,
+/static/复盘也是必要的-9774e76d3191ff206c5ea38960113ae9-5fd34.png 400w,
+/static/复盘也是必要的-9774e76d3191ff206c5ea38960113ae9-48538.png 800w,
+/static/复盘也是必要的-9774e76d3191ff206c5ea38960113ae9-b70ec.png 1200w,
+/static/复盘也是必要的-9774e76d3191ff206c5ea38960113ae9-d134a.png 1600w,
+/static/复盘也是必要的-9774e76d3191ff206c5ea38960113ae9-412e1.png 2068w"
+        sizes="(max-width: 800px) 100vw, 800px"
+      />
+    </span>
+  </span>
+  
+  </a>
+    </p>
+<p>也许有经验的小伙伴会反驳,告警群里一直反馈问题不停的报警,会引发 coder 的反感,最终演化成”狼来了”的故事;
+为了避免陷入这种困境,一定要有一个原则:“所报出的问题,都是有价值的,都是值得追踪的”;
+sentry 为我们提供了灵活的报警策略,实现这个目标:</p>
+<p>
+  <a
+    class="gatsby-resp-image-link"
+    href="/static/告警规则-8d135d708aa067f48da8322026f46231-5b1cb.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+  
+  <span
+    class="gatsby-resp-image-wrapper"
+    style="position: relative; display: block; ; max-width: 800px; margin-left: auto; margin-right: auto;"
+  >
+    <span
+      class="gatsby-resp-image-background-image"
+      style="padding-bottom: 67.79069767441861%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAOCAYAAAAvxDzwAAAACXBIWXMAABYlAAAWJQFJUiTwAAAB+klEQVQ4y21U2Y7bMAzM/39ZHwoU6HOB7rbdZpP4kC1L1mFpOqTspNnWwECkLA/FIemTGSY4uyA5hxQzgg8IqyAihoTMvRS5przbWe0Y+J5nxAY2oG5qn5xfsVqLdegwzRaWcItThBCwlQ3b9i8CCVNKXBO+fzP48TLTJ+EyO0TeoDDO68tPEnnUCpRSFI2gfEDbq7XwAgGfP13w9Uun5Kd5shppyxne8bZ+YbruCesH/74XPIPGljKyBjot1iHnloZ3FmbsMZuBkUfMU8NEX/bEtoK57bll4kUCdV2pqSePaMgUtxQb4bJi6ExLu1QUptVQeYZBc/NlFT8TaS+UFksI5YahP6PkpES3S4f+Nqot+jrrFRIwqyxeK3xo3FB1VcKRbRNj1GqubBkzzFiERAgZTGzRVj6Q4h3VfyYsD8LJWG2BlrJHYqUeqT7QUt7u/pHu0afynRJKEx+9NdqI89XgfBnw9t7j17nDb64K7p2vo65v3Bf7xmyu3QRjA3zcbzhPS0uZhNYnvFO/nrc2THWkhoKBZ2Ttxhn9aNWX9z4VxcoihXxo2BslLGVTwcVfOT3/e7xL1DTe/boXo/6toYivk0JCsbtbD+dkWuoT5JH5dmwt8WOQqhe1n6osH5fymM82LUEHXbXNO7Y2/PqjkPahPHEvhP44csMfhNRCyRFCqCoAAAAASUVORK5CYII='); background-size: cover; display: block;"
+    >
+      <img
+        class="gatsby-resp-image-image"
+        style="width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px transparent;"
+        alt="告警规则"
+        title=""
+        src="/static/告警规则-8d135d708aa067f48da8322026f46231-48538.png"
+        srcset="/static/告警规则-8d135d708aa067f48da8322026f46231-bed0f.png 200w,
+/static/告警规则-8d135d708aa067f48da8322026f46231-5fd34.png 400w,
+/static/告警规则-8d135d708aa067f48da8322026f46231-48538.png 800w,
+/static/告警规则-8d135d708aa067f48da8322026f46231-b70ec.png 1200w,
+/static/告警规则-8d135d708aa067f48da8322026f46231-d134a.png 1600w,
+/static/告警规则-8d135d708aa067f48da8322026f46231-5b1cb.png 1720w"
+        sizes="(max-width: 800px) 100vw, 800px"
+      />
+    </span>
+  </span>
+  
+  </a>
+    
+
+  <a
+    class="gatsby-resp-image-link"
+    href="/static/告警规则设置-64d01fb7a63ec97a1b57001a229aa565-00700.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+  
+  <span
+    class="gatsby-resp-image-wrapper"
+    style="position: relative; display: block; ; max-width: 800px; margin-left: auto; margin-right: auto;"
+  >
+    <span
+      class="gatsby-resp-image-background-image"
+      style="padding-bottom: 68.71980676328504%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAOCAYAAAAvxDzwAAAACXBIWXMAABYlAAAWJQFJUiTwAAABr0lEQVQ4y6VTy27bQAzU/39ST73k0M8oYDeOpX2/tA9lSlKWY6QOULSHgXZlcjgzoqecC0JIKN4jqwUxZaSYkFNBpOe6rhhjoPd+B99rbSjU22pHShU5V/ltykRQyiqXlZ7zdUZrTZqeo98HvGNALRnfv53x4+UixFMiQms8KakY24DRTlDpzir5fSM1rEgGdSJrXcBnFuFcJLJd1ORcANseNyuWyPRsYJXD8qYQqHjrmzTXUhF9xJrXHXQ32uLy+gZ2KoQpZgQq6hsZ2Daa5jDPC65kncFn74Mo5TxPpzO0NjDGytM5Dx+COGBBk4RPhPX6E6NxsEOaa61iUcInW0zGNjmiGCJ9yCjnjUR0IuLaXSG91ItFzUkmGLKqrhoLYb4sco4+wVCN46yJvNwscwRaGZxPv2hI+rDMhbvkTSwoKlJKw1ondhvnS0p4TbjZkl1Hv7Htvc7KhxPLvHM89VgLtsqqcyliRyzx/t1WJVBe4WbZy3nPj6P6UGjDfcKxuJ+X+XGpj+ZnkI/CuT0SPjZ/xldDDkwcJuMZ4b9gkpUgHFl9/Zf7O0x/5tP/i/g3ML9Cf68LMYgAAAAASUVORK5CYII='); background-size: cover; display: block;"
+    >
+      <img
+        class="gatsby-resp-image-image"
+        style="width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px transparent;"
+        alt="告警规则设置"
+        title=""
+        src="/static/告警规则设置-64d01fb7a63ec97a1b57001a229aa565-48538.png"
+        srcset="/static/告警规则设置-64d01fb7a63ec97a1b57001a229aa565-bed0f.png 200w,
+/static/告警规则设置-64d01fb7a63ec97a1b57001a229aa565-5fd34.png 400w,
+/static/告警规则设置-64d01fb7a63ec97a1b57001a229aa565-48538.png 800w,
+/static/告警规则设置-64d01fb7a63ec97a1b57001a229aa565-b70ec.png 1200w,
+/static/告警规则设置-64d01fb7a63ec97a1b57001a229aa565-d134a.png 1600w,
+/static/告警规则设置-64d01fb7a63ec97a1b57001a229aa565-00700.png 1656w"
+        sizes="(max-width: 800px) 100vw, 800px"
+      />
+    </span>
+  </span>
+  
+  </a>
+    </p>
+<h4>服务端日志处理</h4>
+<p>服务端错误日志采集最好与官方提供的sdk进行结合,但目前已运行项目已经接入logserver,通过kafka进行消息传递,那么我们怎么办呢?;
+通过监听kafka的日志消息将错误日志上报到sentry;
+
+  <a
+    class="gatsby-resp-image-link"
+    href="/static/server告警流程-e1305b8366fc4cd7797ec75e731e113e-9415b.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+  
+  <span
+    class="gatsby-resp-image-wrapper"
+    style="position: relative; display: block; ; max-width: 800px; margin-left: auto; margin-right: auto;"
+  >
+    <span
+      class="gatsby-resp-image-background-image"
+      style="padding-bottom: 80.53204353083434%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAQCAYAAAAWGF8bAAAACXBIWXMAABYlAAAWJQFJUiTwAAACLElEQVQ4y61UPWgUQRR+M7M/N7s7u5s777xcgtEkiCQaSGEQGyEaIRhsREQMxoCIFsEUXqFNUKysBGNOETXYqJ0giK2IoqBYWAg21oJgpZafb+5y7l3gUE+Lx857M++b9+b73pIYPwi5+Bjy0GUQUZcmsrWcq2HTWyC88x06ySPUOZAQfwwWzBDiKsGcIsiUY2LXUQRLL+HOrUA4LmITQSrVliQEW4sfRiGiKEIQBBi73YvJD8OYeF6BN2wBB8ZBBy6AJo7UD2utodYBrrc4juG6Ll8iUTzpYfNygL5LPlTRtnzsKiovAHPjC3Tcg3yacEVZy3lDGBkgbOxpaTMMuZIOF8qZ80juA7mlVyDHq7fs+z4811bp4OY5B3gT4+kVBcUJPlvCLYuO75wzoPIIKK3UA8bEbAZRqLmKEA8vBsCnQbxe0Uh4vyAJ/Z7M3pR9UmtmfWdqAemtr9DVJ5CuDxOFbSyPDRKOTxF2j2ZVFDlZdZJNbr6G0fdA6d4PeCatv2GTZSHaE5pVlVQGEEwzSWfZ5lk2iY1ZlqerEDsPNw4wy62ykQyqZOPbjPW5EmVHoMDroWse9n7cih3PUqghK5tte0CzyxD7FhoaC4PfysZW6ohG2/nThC13NXotaSXed0/UMP4OKK9+Qy4pIK4zKP9q9GwRmWwmz8Bc/wx/8RFPitfVLIdWlxkx1PVPQfyaHINU/SNgE2wDE/agX2N/IP8P4HZPYLUo4a75PwGb0oZK1CuSRgAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
+    >
+      <img
+        class="gatsby-resp-image-image"
+        style="width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px transparent;"
+        alt="server告警流程.png"
+        title=""
+        src="/static/server告警流程-e1305b8366fc4cd7797ec75e731e113e-48538.png"
+        srcset="/static/server告警流程-e1305b8366fc4cd7797ec75e731e113e-bed0f.png 200w,
+/static/server告警流程-e1305b8366fc4cd7797ec75e731e113e-5fd34.png 400w,
+/static/server告警流程-e1305b8366fc4cd7797ec75e731e113e-48538.png 800w,
+/static/server告警流程-e1305b8366fc4cd7797ec75e731e113e-b70ec.png 1200w,
+/static/server告警流程-e1305b8366fc4cd7797ec75e731e113e-d134a.png 1600w,
+/static/server告警流程-e1305b8366fc4cd7797ec75e731e113e-9415b.png 1654w"
+        sizes="(max-width: 800px) 100vw, 800px"
+      />
+    </span>
+  </span>
+  
+  </a>
+    ;</p>
+<p>优点:侵入小,无改动,只需监听消息便可以把所以错误消息导入;
+缺点:错误异常栈,影响用户,代码版本,breadcrumb等信息皆无, 只有通过上报的一条消息; 另外每一个消息的fingerprint要自己提取设置, 不</p>
+<p>参考资料:
+<a href="https://docs.sentry.io/clients/node/usage/?platform=javascript">Multiple Instances &#x26; Capturing Messages</a></p>
+<h4>部署</h4>
+<p>sentry sass服务注册帐号是直接可以使用的,但他的服务器是American,我们可以单独进行<a href="https://docs.sentry.io/server/installation/?platform=javascript">部署</a>
+
+  <a
+    class="gatsby-resp-image-link"
+    href="/static/sentry-docker-10f66eb27ad869010c5910888b466091-b903a.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+  
+  <span
+    class="gatsby-resp-image-wrapper"
+    style="position: relative; display: block; ; max-width: 800px; margin-left: auto; margin-right: auto;"
+  >
+    <span
+      class="gatsby-resp-image-background-image"
+      style="padding-bottom: 75.16879219804952%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAPCAYAAADkmO9VAAAACXBIWXMAAAsSAAALEgHS3X78AAACjklEQVQ4y4VTy27TQBT1tyBAPFQkaIHQNE1fadqmTUsLTQUIvoAVEhvEhm9g0x0bxAIWfFCp1JA0iWN7xvFj7NjO4d5xG1oIYqSja4/t4zPnnms0T5r4cXQMq29hMPAwGo3Ai+u/kGVZjjSjNzMcH7n49vkY3dMAxru3H/D1y3ccfvyEN6/fw5UuoiiGUhGiM6hQ6RrHQ0KsyS7+ICXiOE5pfwRjtbyDjeU9lO5Xsbf5Ar2uiVazhXb7FN1OF53TDponP2m/h2SYIEnS8SkmLaNcWMf8gzXcujKDenUfjuNASgEhBHzPI3UhQoJSSl9HaqiVkCkT7TBYXWPnFaZvl7C91oDZ66Pd6pEyUxP9b/2p1qjMb6MyX8fU1YeksAHbstGnBjFM00JA/vE3aZpeRpL8pU4TLs1uolLawZ3rBa3Qtm06tk1d70PaLpQI4QsPriXh2ZLscOG6gbZgklpjubiF1fJjTF0raA9ty4LFIELfkQiFiwGTCB+e6yMMgrzrESdAaWK2JqZ7rXDhUQ2blQbmZqrYrT2HJBJXSAg5gOsF8FWMQIPiEyeIqNPnNUc63stY4SIRVhd2cfdmEdvrB6RiQIoG6NsCDqkLwgg+KfKp8scJZZkxTEeXEKdZnkMm3Fh6guJ0RXvoEJkkZWGUaCgiYYSkgNX6YY4gGtIPsjH4nfScsLayjxJlcbf2DI7NOZTko62vHUdoeDSW7BtPEPuWUJcvNeRiU+rVA5qUNR0bkyai2+lQFlt6SsyeqSeGA58TqnHIuUHhWY3Om7IyV0e1TB7eKGpCJuGZnRSJPIPZhZrjdxaJcHG2hq3KPmbvLeNp/SWEI/WRBR2Tj8dGp1lu+CTwM488d6WHIXX7F/SRHVvfYwqjAAAAAElFTkSuQmCC'); background-size: cover; display: block;"
+    >
+      <img
+        class="gatsby-resp-image-image"
+        style="width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px transparent;"
+        alt="sentry-docker"
+        title=""
+        src="/static/sentry-docker-10f66eb27ad869010c5910888b466091-48538.png"
+        srcset="/static/sentry-docker-10f66eb27ad869010c5910888b466091-bed0f.png 200w,
+/static/sentry-docker-10f66eb27ad869010c5910888b466091-5fd34.png 400w,
+/static/sentry-docker-10f66eb27ad869010c5910888b466091-48538.png 800w,
+/static/sentry-docker-10f66eb27ad869010c5910888b466091-b70ec.png 1200w,
+/static/sentry-docker-10f66eb27ad869010c5910888b466091-b903a.png 1333w"
+        sizes="(max-width: 800px) 100vw, 800px"
+      />
+    </span>
+  </span>
+  
+  </a>
+    ;
+文档 说的很详细不再赘述!</p>
+<p>在部署的时间有一个有意思的事情 , sentry服务内部 的报错会上报给自己,这样当我们查一些问题通过上报的错误信息就知道发生了什么. 很棒,好的工具给人惊喜!</p>
+<p>
+  <a
+    class="gatsby-resp-image-link"
+    href="/static/sentry内部报错-1181e56d4df7b9792e593c4804807e3a-564e4.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+  
+  <span
+    class="gatsby-resp-image-wrapper"
+    style="position: relative; display: block; ; max-width: 800px; margin-left: auto; margin-right: auto;"
+  >
+    <span
+      class="gatsby-resp-image-background-image"
+      style="padding-bottom: 52.27629513343799%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAYAAAC0VX7mAAAACXBIWXMAAAsSAAALEgHS3X78AAABvElEQVQoz2VSXU8TQRTdH0JMiEFCTGyRoBBKBGKCoL74ZOSZf0PQ8FGlSjT+MiPQpt0u7e52OzM7H8c7d7JlGyc52Zk7e0/OOXei48MjbK++Ref8F7TWmBYCSpVwzqG+rLVcq1AtOj3sqR693/uEVvMA3y9/czEdpygmBRMYY2FN+GZZjgnVpVAMow10qUmE/xqUSkPJ0hN+RKvxBj8ufhIJMBimGI1yZGkOMZWBkJpmoLNvztOCncwgFf8f7bc+4PnyK3TOriGkwZ+bIYZJjjwrIEQJbeatB2tgYm/RWjJtHTvykUW7L9+hudSiDK+htMPNXUyEGUbjAtlEohDBljEm2CPU8/T7QGZYZbSzfoBnjzfx7UuHFf69jTHoD5HEySxPIfygVAA1+WavqlIY8vY5Uobba/t4uvgC7c9XnGG/n2B0n3KGU8qEc/QXc5bdTGWlkAlLItxafY2VR2ton36FVAa9XkzKMrrU/5HMwbqabfdgeaOxiycLTVyctKFKh26XhjJIcJ+MmdhbllISVBhAReKflK1btiwi2mzuYWmhgbOTS55or9tHTIRsuZjyW6tbrKuqT9k/KZ/xPzlL155wIPnhAAAAAElFTkSuQmCC'); background-size: cover; display: block;"
+    >
+      <img
+        class="gatsby-resp-image-image"
+        style="width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px transparent;"
+        alt="sentry内部报错.png"
+        title=""
+        src="/static/sentry内部报错-1181e56d4df7b9792e593c4804807e3a-48538.png"
+        srcset="/static/sentry内部报错-1181e56d4df7b9792e593c4804807e3a-bed0f.png 200w,
+/static/sentry内部报错-1181e56d4df7b9792e593c4804807e3a-5fd34.png 400w,
+/static/sentry内部报错-1181e56d4df7b9792e593c4804807e3a-48538.png 800w,
+/static/sentry内部报错-1181e56d4df7b9792e593c4804807e3a-b70ec.png 1200w,
+/static/sentry内部报错-1181e56d4df7b9792e593c4804807e3a-d134a.png 1600w,
+/static/sentry内部报错-1181e56d4df7b9792e593c4804807e3a-564e4.png 1911w"
+        sizes="(max-width: 800px) 100vw, 800px"
+      />
+    </span>
+  </span>
+  
+  </a>
+    ;</p>
+<p>问一句,如果拿开源代码这个在墙内部署,供其他人使用,是否有问题?  </p>
+<h2>总结</h2>
+<p>如果让我用一句话来总结 sentry,我想说:“改变了对问题的态度,从被 push 到 pull, 从此运筹帷幄,可以安安静静写代码!”</p>
+<p>从此摆脱传话筒的尴尬局面;</p>
+<h2>问题</h2>
+<blockquote>
+<p>开源与 sass 的</p>
+</blockquote>
+<h2>相关资料</h2></div><footer class="jss11"><div>Loading...</div><div class="jss12"><div class="jss15 jss13"><img alt="杨晓东" src="/static/avatar.82506122.jpeg" class="jss17"/></div><div class="jss14"><p>游大千世界,看大千世界,认知世界!</p></div></div><div id="post-comments"></div></footer></article><footer class="jss18"><div class="jss19"><p>I am a coder who solves the problem<a href="/about/">contact</a></p></div></footer></div><div style="position:absolute;height:6px;transition:opacity 200ms;opacity:0;display:none;right:2px;bottom:2px;left:2px;border-radius:3px"><div style="position:relative;display:block;height:100%;cursor:pointer;border-radius:inherit;background-color:rgba(0,0,0,.2)"></div></div><div style="position:absolute;width:6px;transition:opacity 200ms;opacity:0;display:none;right:2px;bottom:2px;top:2px;border-radius:3px"><div style="position:relative;display:block;width:100%;cursor:pointer;border-radius:inherit;background-color:rgba(0,0,0,.2)"></div></div></div></main><nav class="jss20 is-aside open "><div class="jss21"><div style="position:relative;overflow:hidden;width:100%;height:100%"><div style="position:absolute;top:0;left:0;right:0;bottom:0;overflow:hidden;-webkit-overflow-scrolling:touch;margin-right:0;margin-bottom:0"><div class="jss22"><header></header><ul class="jss23"><li class="jss28 tools" style="display:block"><a class="jss29" href="/灰度/"><div class="jss30 pointer"><div style="height:60px" class="lazyload-placeholder"></div></div><div class="jss31"><h1>灰度方案如何拉低我的焦虑值</h1><h2>用技术拯救自己</h2></div></a></li><li class="jss28 tools" style="display:block"><a class="jss29 active" aria-current="page" href="/sentry落地实战/"><div class="jss30 pointer"><div style="height:60px" class="lazyload-placeholder"></div></div><div class="jss31"><h1>sentry落地实战</h1><h2>如何让sentry真正起到作用</h2></div></a></li></ul></div></div><div style="position:absolute;height:6px;transition:opacity 200ms;opacity:0;display:none;right:2px;bottom:2px;left:2px;border-radius:3px"><div style="position:relative;display:block;height:100%;cursor:pointer;border-radius:inherit;background-color:rgba(0,0,0,.2)"></div></div><div style="position:absolute;width:6px;transition:opacity 200ms;opacity:0;display:none;right:2px;bottom:2px;top:2px;border-radius:3px"><div style="position:relative;display:block;width:100%;cursor:pointer;border-radius:inherit;background-color:rgba(0,0,0,.2)"></div></div></div></div></nav><div class="jss32"><div class="jss33"><button tabindex="0" class="jss41 jss35 jss34" type="button" aria-label="Back to list" title="Back to the list"><span class="jss40"><svg class="jss44" focusable="false" viewBox="0 0 24 24" aria-hidden="true"><g><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"></path></g></svg></span><span class="jss51"></span></button><a tabindex="0" class="jss41 jss35 jss34" role="button" aria-label="Search" data-shape="closed" title="Search" href="/search/"><span class="jss40"><svg class="jss44 jss34" focusable="false" viewBox="0 0 24 24" aria-hidden="true"><g><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path></g></svg></span><span class="jss51"></span></a></div><div class="jss33"><nav class="jss58"><div><div><button tabindex="0" class="jss41 jss35 jss59" type="button" aria-label="Increase font size" aria-haspopup="true" title="Change font size"><span class="jss40"><svg class="jss44" focusable="false" viewBox="0 0 24 24" aria-hidden="true"><g><path d="M9 4v3h5v12h3V7h5V4H9zm-6 8h3v7h3v-7h3V9H3v3z"></path></g></svg></span><span class="jss51"></span></button></div><div class="jss60" style="position:absolute;pointer-events:none;opacity:0"><div class="jss61 jss65 jss62" style="opacity:0;transform:scale(0.75, 0.5625);transform-origin:0 0 0" id="font-menu-list"><ul class="jss88 jss89" role="menu"><li tabindex="-1" class="jss41 jss94 jss97 jss101 jss102 jss92" role="menuitem">150%<span class="jss51"></span></li><li tabindex="-1" class="jss41 jss94 jss97 jss101 jss102 jss92" role="menuitem">125%<span class="jss51"></span></li><li tabindex="-1" class="jss41 jss94 jss97 jss101 jss102 jss92" role="menuitem">100%<span class="jss51"></span></li></ul></div></div></div></nav><button tabindex="0" class="jss41 jss35" type="button" aria-label="Back to top" title="Scroll to top"><span class="jss40"><svg class="jss44 jss34" focusable="false" viewBox="0 0 24 24" aria-hidden="true"><g><path d="M4 12l1.41 1.41L11 7.83V20h2V7.83l5.58 5.59L20 12l-8-8-8 8z"></path></g></svg></span><span class="jss51"></span></button></div></div><aside class="jss104"><a class="jss106" href="/"><div class="jss15 jss107"><img alt="杨晓东" src="/static/avatar.82506122.jpeg" class="jss17"/></div></a><h3 class="jss105">杨晓东<small>personal blog</small></h3><nav class="jss108"><div><div><button tabindex="0" class="jss41 jss35 jss109" type="button" aria-label="More" aria-haspopup="true"><span class="jss40"><svg class="jss44" focusable="false" viewBox="0 0 24 24" aria-hidden="true"><g><path d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"></path></g></svg></span><span class="jss51"></span></button></div><div class="jss110" style="position:absolute;pointer-events:none;opacity:0"><div class="jss61 jss65 jss62" style="opacity:0;transform:scale(0.75, 0.5625);transform-origin:0 0 0" id="menu-list"><ul class="jss88 jss89" role="menu"><li tabindex="-1" class="jss41 jss94 jss97 jss101 jss102 jss92" role="menuitem">Home<span class="jss51"></span></li><a style="display:block" tabindex="-1" href="/about/"><li tabindex="-1" class="jss41 jss94 jss97 jss101 jss102 jss92" role="menuitem">About<span class="jss51"></span></li></a><a style="display:block" tabindex="-1" href="/contact/"><li tabindex="-1" class="jss41 jss94 jss97 jss101 jss102 jss92" role="menuitem">Contact<span class="jss51"></span></li></a></ul></div></div></div></nav></aside></div></div><script id="webpack-manifest">/*<![CDATA[*/window.webpackManifest={"0":"0-53ba957317ce6c3a6161.js","1":"1-9c19fef1591e843ef52d.js","231608221292675":"app-75a747c75e3049884ae1.js","99219681209289":"component---node-modules-gatsby-plugin-offline-app-shell-js-5c4c5a0f7af9dc69d6d7.js","198517197184460":"component---src-templates-post-template-js-ef37c9e9a42144afdd50.js","235131596041995":"component---src-templates-page-template-js-e0434750f574a9276ef2.js","70144966829960":"component---src-pages-contact-js-16424a405ad6f76901ad.js","35783957827783":"component---src-pages-index-js-aa9570313651ef926b5a.js","142807904292071":"component---src-pages-search-js-27892778d13ae07b5777.js","60335399758886":"path----7e302df3cd210523c0cc.js","210333531512890":"path---offline-plugin-app-shell-fallback-a0e39f21c11f6a62c5ab.js","252064409861187":"path---sentry落地实战-f9db27827dba770dc60f.js","194442657917441":"path---灰度-6744bba0e4c9dd1dca79.js","273950069227526":"path---about-52aced4691d0c42f7409.js","170786371021445":"path---success-c55e327b7eab26280667.js","184662623972074":"path---contact-a0e39f21c11f6a62c5ab.js","142629428675168":"path---index-613789360131cccb8dd6.js","254572558124955":"path---search-84269fabafea3eec14cf.js","114276838955818":"component---src-layouts-index-js-b8135bf7a2f007ef84ae.js"}/*]]>*/</script><script>
+            
+  
+  if(true) {
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  }
+  if (typeof ga === "function") {
+    ga('create', 'UA-125993066-1', 'auto');
+      }
+      </script><script>
+        WebFontConfig = {
+          google: {
+            families: ["Open Sans:300,400,600"]
+          }
+        };
+
+        (function(d) {
+            var wf = d.createElement('script'), s = d.scripts[0];
+            wf.src = 'https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js';
+            wf.async = true;
+            s.parentNode.insertBefore(wf, s);
+        })(document);</script><script>/*<![CDATA[*/["/commons-c4d8e44a0ee665e0dfe4.js","/app-75a747c75e3049884ae1.js","/path---sentry落地实战-f9db27827dba770dc60f.js","/component---src-templates-post-template-js-ef37c9e9a42144afdd50.js","/component---src-layouts-index-js-b8135bf7a2f007ef84ae.js"].forEach(function(s){document.write('<script src="'+s+'" defer></'+'script>')})/*]]>*/</script></body></html>
