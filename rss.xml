@@ -1,5 +1,65 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[PersonalBlog - a blog starter for GatsbyJS]]></title><description><![CDATA[PersonalBlog is a GatsbyJS starter.]]></description><link>https://github.com/creasy2010</link><generator>RSS for Node</generator><lastBuildDate>Wed, 26 Sep 2018 08:46:45 GMT</lastBuildDate><item><title><![CDATA[灰度方案如何拉低我的焦虑值]]></title><description><![CDATA[预告!!! 我know你进入了这个页面,文章会很快发出来!]]></description><link>https://github.com/creasy2010/灰度/</link><guid isPermaLink="false">https://github.com/creasy2010/灰度/</guid><content:encoded>&lt;p&gt;&lt;strong&gt;&lt;em&gt;预告!!!&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;我know你进入了这个页面,文章会很快发出来!&lt;/p&gt;</content:encoded></item><item><title><![CDATA[sentry落地实战]]></title><description><![CDATA[sentry 翻译过来是 哨兵,寓意着像哨兵一样守护应用;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[PersonalBlog - a blog starter for GatsbyJS]]></title><description><![CDATA[PersonalBlog is a GatsbyJS starter.]]></description><link>https://github.com/creasy2010</link><generator>RSS for Node</generator><lastBuildDate>Sun, 30 Sep 2018 08:34:17 GMT</lastBuildDate><item><title><![CDATA[灰度方案如何拉低我的焦虑值]]></title><description><![CDATA[“潮退时就知道谁在裸泳” 如果给你 100W/M 的工资,你能写出无 bug…]]></description><link>https://github.com/creasy2010/灰度/</link><guid isPermaLink="false">https://github.com/creasy2010/灰度/</guid><content:encoded>&lt;p&gt;&lt;strong&gt;“潮退时就知道谁在裸泳”&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;如果给你 100W/M 的工资,你能写出无 bug 的代码吗?&lt;/p&gt;
+&lt;p&gt;我相信有这样的大神存在,但在一个项目要靠大神才能保障安全,也是可笑至极,最后的结果极可能是大神要烦死,小神们没空间成长,&lt;strong&gt;参天大树之下只有杂草丛生&lt;/strong&gt;;&lt;/p&gt;
+&lt;p&gt;正常项目都会遇到人员的流失,新人的培养,在能力锻炼的过程中,总会出一些线上问题,当问题出现时该如何处理?&lt;/p&gt;
+&lt;p&gt;风险的规避隔离应该是每一个人的选择,灰度是我的其中一个极有效选择;借助灰度可以打造一个&lt;strong&gt;良性循环&lt;/strong&gt;的团队升级机制;&lt;/p&gt;
+&lt;h3&gt;灰度解决的痛点&lt;/h3&gt;
+&lt;p&gt;在我的实践中,灰度会解决下列问题:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;次生灾害:一人生病,所有人受治疗的方案,可能  使正常用户受连带影响,甚至导致次生灾害的发生;&lt;/li&gt;
+&lt;li&gt;版本困境:版本升与不升都有用户受影响,升新版本就会影响 A 用户,不升版本 B 用户;&lt;/li&gt;
+&lt;li&gt;版本魔咒:每个版本总会有些问题的魔咒,上线会紧张,节假日前更慌的要命;&lt;/li&gt;
+&lt;li&gt;bug 复现难:某个问题在本地无法复现;&lt;/li&gt;
+&lt;li&gt;A/B 测试:一部分用户先尝试某功能,获取用户报告;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;上面列的问题会复合发生,我曾经历一个问题(2 与 4 的复合体),真的打打飞的去现场改 bug; 升版本会影响 KA 用户,不升版本又不能赶上功能上线时间;但本地使用各种方法都不能复现,最后  迫不得已,打飞的去客户现场才解决了问题 ;&lt;/p&gt;
+&lt;p&gt;
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/WechatIMG1-ff651233ad6778f81efeef5d5dd04e1b-5db87.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block; ; max-width: 800px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 176.63551401869157%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,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&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px transparent;&quot;
+        alt=&quot;WechatIMG1.jpeg&quot;
+        title=&quot;&quot;
+        src=&quot;/static/WechatIMG1-ff651233ad6778f81efeef5d5dd04e1b-48538.png&quot;
+        srcset=&quot;/static/WechatIMG1-ff651233ad6778f81efeef5d5dd04e1b-bed0f.png 200w,
+/static/WechatIMG1-ff651233ad6778f81efeef5d5dd04e1b-5fd34.png 400w,
+/static/WechatIMG1-ff651233ad6778f81efeef5d5dd04e1b-48538.png 800w,
+/static/WechatIMG1-ff651233ad6778f81efeef5d5dd04e1b-5db87.png 856w&quot;
+        sizes=&quot;(max-width: 800px) 100vw, 800px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    &lt;/p&gt;
+&lt;h3&gt;灰度 是什么&lt;/h3&gt;
+&lt;p&gt;百科上解释&lt;/p&gt;
+&lt;p&gt;灰度 是指在黑与白之间，能够平滑过渡的一种发布方式。在其上可以进行 A/B testing，即让一部分用户继续用产品特性 A，一部分用户开始用产品特性 B，如果用户对 B 没有什么反对意见，那么逐步扩大范围，把所有用户都迁移到 B 上面来。灰度发布可以保证整体系统的稳定，在初始灰度的时候就可以发现、调整问题，以保证其影响度。
+灰度期：灰度发布开始到结束期间的这一段时间，称为灰度期。&lt;/p&gt;
+&lt;p&gt;在上线流程上添加一个环节 “灰度上线”,就能解决上面列出的 5 类问题;&lt;/p&gt;
+&lt;p&gt;问题突发时: 尤其在问题并不明朗的情况下,可以把受影响用户切到灰度,单独为其部署 fix 版本;控制了影响范围,上线心理压力自然小些;&lt;/p&gt;
+&lt;p&gt;新版本上线:可以拉一些用户进行体验,借助数据分析, 错误追踪,售后等措施,获取用户反馈,在震荡期过后,可以平移到线上;&lt;/p&gt;
+&lt;p&gt;A/B 测试:新特性上线,邀请用户体验新功能;&lt;/p&gt;
+&lt;h3&gt;灰度实现&lt;/h3&gt;
+&lt;p&gt;这里不做过多说明,如果对方案有兴趣可以留言;&lt;/p&gt;
+&lt;h3&gt;总结&lt;/h3&gt;
+&lt;p&gt;灰度方案 也不是银弹, 只是辅助工具;&lt;/p&gt;
+&lt;p&gt;配合错误  跟踪,数据统计等工具,能达到最好的  “治疗”效果;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[sentry落地实战]]></title><description><![CDATA[sentry 翻译过来是 哨兵,寓意着像哨兵一样守护应用;
 它是一个完善,开放的 error trace 工具,围绕”Stop hoping your users will report errors”的理念,提供一系列工具,帮助 coder…]]></description><link>https://github.com/creasy2010/sentry落地实战/</link><guid isPermaLink="false">https://github.com/creasy2010/sentry落地实战/</guid><content:encoded>&lt;p&gt;sentry 翻译过来是 哨兵,寓意着像哨兵一样守护应用;
 它是一个完善,开放的 error trace 工具,围绕”Stop hoping your users will report errors”的理念,提供一系列工具,帮助 coder 快速定位问题,发现问题,解决问题;&lt;/p&gt;
 &lt;p&gt;你的项目经常会遇到以下问题(如果没有遇到可以忽略此文,好幸运,&lt;a href=&quot;/about/&quot;&gt;求交往&lt;/a&gt;!):&lt;/p&gt;
@@ -290,14 +350,12 @@
 &lt;p&gt;eg:(reactNative)[https://docs.sentry.io/clients/javascript/integrations/react/]&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;javascript&quot;&gt;
       &lt;pre class=&quot;language-javascript&quot;&gt;&lt;code class=&quot;language-javascript&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;//index.ios.js&lt;/span&gt;
-&lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; Sentry &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;react-native-sentry&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; Sentry &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;react-native-sentry&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
 
-Sentry&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;config&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;
-  &lt;span class=&quot;token string&quot;&gt;&apos;https://8070a174f3ab4fe298d4c5516b3e2704@sentry.qianmi.com/7&apos;&lt;/span&gt;
-&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;install&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+Sentry&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;config&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;https://8070a174f3ab4fe298d4c5516b3e2704@sentry.qianmi.com/7&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;install&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
 &lt;span class=&quot;token comment&quot;&gt;// set the user context&lt;/span&gt;
 Sentry&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;setUserContext&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
-  email&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+  email&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
   userID&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; Config&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token constant&quot;&gt;ADMINID&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
   username&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; Config&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token constant&quot;&gt;DEVICE&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;model&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
   extra&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
@@ -306,12 +364,12 @@ Sentry&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span cla
 &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
 
 Sentry&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;setTagsContext&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
-  environment&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;production&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+  environment&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;production&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
   react&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token boolean&quot;&gt;true&lt;/span&gt;
 &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
 
 Sentry&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;setEventSentSuccessfully&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;event &lt;span class=&quot;token operator&quot;&gt;=&gt;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
-  console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;发送错误&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; event&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+  console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;发送错误&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; event&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
 &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
       &lt;/div&gt;
 &lt;h5&gt;备注&lt;/h5&gt;
@@ -507,8 +565,8 @@ sentry 为我们提供了灵活的报警策略,实现这个目标:&lt;/p&gt;
   &lt;/a&gt;
     &lt;/p&gt;
 &lt;h4&gt;服务端日志处理&lt;/h4&gt;
-&lt;p&gt;服务端错误日志采集最好与官方提供的sdk进行结合,但目前已运行项目已经接入logserver,通过kafka进行消息传递,那么我们怎么办呢?;
-通过监听kafka的日志消息将错误日志上报到sentry;
+&lt;p&gt;服务端错误日志采集最好与官方提供的 sdk 进行结合,但目前已运行项目已经接入 logserver,通过 kafka 进行消息传递,那么我们怎么办呢?;
+通过监听 kafka 的日志消息将错误日志上报到 sentry;
 
   &lt;a
     class=&quot;gatsby-resp-image-link&quot;
@@ -546,11 +604,11 @@ sentry 为我们提供了灵活的报警策略,实现这个目标:&lt;/p&gt;
   &lt;/a&gt;
     ;&lt;/p&gt;
 &lt;p&gt;优点:侵入小,无改动,只需监听消息便可以把所以错误消息导入;
-缺点:错误异常栈,影响用户,代码版本,breadcrumb等信息皆无, 只有通过上报的一条消息; 另外每一个消息的fingerprint要自己提取设置, 不&lt;/p&gt;
+缺点:错误异常栈,影响用户,代码版本,breadcrumb 等信息皆无, 只有通过上报的一条消息; 另外每一个消息的 fingerprint 要自己提取设置, 不&lt;/p&gt;
 &lt;p&gt;参考资料:
 &lt;a href=&quot;https://docs.sentry.io/clients/node/usage/?platform=javascript&quot;&gt;Multiple Instances &amp;#x26; Capturing Messages&lt;/a&gt;&lt;/p&gt;
 &lt;h4&gt;部署&lt;/h4&gt;
-&lt;p&gt;sentry sass服务注册帐号是直接可以使用的,但他的服务器是American,我们可以单独进行&lt;a href=&quot;https://docs.sentry.io/server/installation/?platform=javascript&quot;&gt;部署&lt;/a&gt;
+&lt;p&gt;sentry sass 服务注册帐号是直接可以使用的,但他的服务器是 American,我们可以单独进行&lt;a href=&quot;https://docs.sentry.io/server/installation/?platform=javascript&quot;&gt;部署&lt;/a&gt;
 
   &lt;a
     class=&quot;gatsby-resp-image-link&quot;
@@ -587,7 +645,7 @@ sentry 为我们提供了灵活的报警策略,实现这个目标:&lt;/p&gt;
   &lt;/a&gt;
     ;
 文档 说的很详细不再赘述!&lt;/p&gt;
-&lt;p&gt;在部署的时间有一个有意思的事情 , sentry服务内部 的报错会上报给自己,这样当我们查一些问题通过上报的错误信息就知道发生了什么. 很棒,好的工具给人惊喜!&lt;/p&gt;
+&lt;p&gt;在部署的时间有一个有意思的事情 , sentry 服务内部 的报错会上报给自己,这样当我们查一些问题通过上报的错误信息就知道发生了什么. 很棒,好的工具给人惊喜!&lt;/p&gt;
 &lt;p&gt;
   &lt;a
     class=&quot;gatsby-resp-image-link&quot;
@@ -624,7 +682,7 @@ sentry 为我们提供了灵活的报警策略,实现这个目标:&lt;/p&gt;
   
   &lt;/a&gt;
     ;&lt;/p&gt;
-&lt;p&gt;问一句,如果拿开源代码这个在墙内部署,供其他人使用,是否有问题?  &lt;/p&gt;
+&lt;p&gt;问一句,如果拿开源代码这个在墙内部署,供其他人使用,是否有问题?&lt;/p&gt;
 &lt;h2&gt;总结&lt;/h2&gt;
 &lt;p&gt;如果让我用一句话来总结 sentry,我想说:“改变了对问题的态度,从被 push 到 pull, 从此运筹帷幄,可以安安静静写代码!”&lt;/p&gt;
 &lt;p&gt;从此摆脱传话筒的尴尬局面;&lt;/p&gt;
