@@ -1,4 +1,292 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[PersonalBlog - a blog starter for GatsbyJS]]></title><description><![CDATA[PersonalBlog is a GatsbyJS starter.]]></description><link>https://github.com/creasy2010</link><generator>RSS for Node</generator><lastBuildDate>Sun, 30 Sep 2018 08:34:17 GMT</lastBuildDate><item><title><![CDATA[灰度方案如何拉低我的焦虑值]]></title><description><![CDATA[“潮退时就知道谁在裸泳” 如果给你 100W/M 的工资,你能写出无 bug…]]></description><link>https://github.com/creasy2010/灰度/</link><guid isPermaLink="false">https://github.com/creasy2010/灰度/</guid><content:encoded>&lt;p&gt;&lt;strong&gt;“潮退时就知道谁在裸泳”&lt;/strong&gt;&lt;/p&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[PersonalBlog - a blog starter for GatsbyJS]]></title><description><![CDATA[PersonalBlog is a GatsbyJS starter.]]></description><link>https://github.com/creasy2010</link><generator>RSS for Node</generator><lastBuildDate>Tue, 27 Nov 2018 03:22:26 GMT</lastBuildDate><item><title><![CDATA[dubbo2js解读]]></title><description><![CDATA[dubbo2js 逐渐落地, 在使用过程中遇到跟踪一些问题,会有些害怕,不知道如何处理,本文来讲解 dubbo 项目相关的概念及源代码解读 question 让我们先从问题入手,看这些问题,你是否也似曾相识; dubbo2js 是什么?
+zookeeper…]]></description><link>https://github.com/creasy2010/-dubbo2js解读/</link><guid isPermaLink="false">https://github.com/creasy2010/-dubbo2js解读/</guid><content:encoded>&lt;p&gt;dubbo2js 逐渐落地, 在使用过程中遇到跟踪一些问题,会有些害怕,不知道如何处理,本文来讲解 dubbo 项目相关的概念及源代码解读&lt;/p&gt;
+&lt;h2&gt;question&lt;/h2&gt;
+&lt;p&gt;让我们先从问题入手,看这些问题,你是否也似曾相识;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;dubbo2js 是什么?
+zookeeper 扮演了什么角色?
+dubbo 负载是如何做的?
+dubbo 服务优雅登机如何做到?
+node 与 dubbo 不是一个技术体系, 如何通信的?&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3&gt;Q1: dubbo2js 是什么?&lt;/h3&gt;
+&lt;p&gt;dubbo2js 是连接 node 与 dubbo 的一个桥梁. 也可以看做 dubbo 服务的 node 版 sdk;&lt;/p&gt;
+&lt;p&gt;其本身依赖了 hession.js ,js-to-java zookeeperClient;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/node-modules/hessian.js/&quot;&gt;hession.js&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;用来解码与编码 hession 协议的字节流;以下两个代码片段也可以看出其作用&lt;/p&gt;
+&lt;p&gt;Encoder&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;javascript&quot;&gt;
+      &lt;pre class=&quot;language-javascript&quot;&gt;&lt;code class=&quot;language-javascript&quot;&gt;// java code:
+// Map&amp;lt;Long, Integer&amp;gt; map = new HashMap&amp;lt;Long, Integer&amp;gt;();
+// map.put(123L, 123456);
+// map.put(123456L, 123);
+
+var hessian = require(&amp;#39;hessian.js&amp;#39;);
+var encoder = new hessian.Encoder();
+
+// using es6 Map
+var map = new Map();
+map.set({ &amp;#39;$class&amp;#39;: &amp;#39;java.lang.Long&amp;#39;, &amp;#39;$&amp;#39;: 123 }, 123456);
+map.set({ &amp;#39;$class&amp;#39;: &amp;#39;java.lang.Long&amp;#39;, &amp;#39;$&amp;#39;: 123456 }, 123);
+
+encoder.write(map); // or encoder.write({ &amp;#39;$class&amp;#39;: &amp;#39;java.util.HashMap&amp;#39;, &amp;#39;$&amp;#39;: map })&lt;/code&gt;&lt;/pre&gt;
+      &lt;/div&gt;
+&lt;p&gt;Decode&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;javascript&quot;&gt;
+      &lt;pre class=&quot;language-javascript&quot;&gt;&lt;code class=&quot;language-javascript&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;var&lt;/span&gt; hessian &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;hessian.js&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;var&lt;/span&gt; decoder &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;hessian&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;Decoder&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;buf&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+
+decoder&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;read&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;//return what it is&lt;/span&gt;
+decoder&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;readNull&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+decoder&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;readBool&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+decoder&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;readInt&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+decoder&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;readLong&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+decoder&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;readDouble&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+decoder&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;readDate&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+decoder&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;readObect&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+decoder&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;readMap&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+decoder&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;readArray&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+decoder&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;readList&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+decoder&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;readRef&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+      &lt;/div&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/node-modules/js-to-java&quot;&gt;js-to-java&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;“easy way to wrap js object to java object”&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;javascript&quot;&gt;
+      &lt;pre class=&quot;language-javascript&quot;&gt;&lt;code class=&quot;language-javascript&quot;&gt;var java = require(&amp;#39;js-to-java&amp;#39;);
+
+// Java: com.java.Object o = new com.java.Object();
+java(&amp;#39;com.java.Object&amp;#39;, { foo: &amp;#39;bar&amp;#39; });
+// =&amp;gt; {$class: &amp;#39;com.java.Object&amp;#39;, $: { foo: &amp;#39;bar&amp;#39; }}
+
+// Java: Boolean r;
+java.Boolean(true);
+// =&amp;gt; {$class: &amp;#39;java.lang.Boolean&amp;#39;, $: true}
+
+// Java: short[] shorts = new short[] {1, 2, 3};
+java.array(&amp;#39;short&amp;#39;, [1, 2, 3]);
+// =&amp;gt; {$class: &amp;#39;[short&amp;#39;, $: [1, 2, 3]}
+
+// Java: int[] ints = new int[] {1, 2, 3};
+java.array(&amp;#39;int&amp;#39;, [1, 2, 3]);
+// same to the next example
+java.array.int([1, 2, 3]);
+// =&amp;gt; {$class: &amp;#39;[int&amp;#39;, $: [1, 2, 3]}&lt;/code&gt;&lt;/pre&gt;
+      &lt;/div&gt;
+&lt;p&gt;zookeeper&lt;/p&gt;
+&lt;p&gt;用来做服务发现,负载均衡相关的参数也在这里实现;关于 zookeeper 的详细讲解会在下一个问题详细说明&lt;/p&gt;
+&lt;h3&gt;Q2: zookeeper 扮演了什么角色?&lt;/h3&gt;
+&lt;p&gt;zookeeper 源于大数据框架 Hadoop,可以用来分布式配置服务,同步服务.其本质是一个目录服务服务,&lt;/p&gt;
+&lt;p&gt;在 java 体系中使用 zookeeper 来解耦 Provider 与 consumer;
+Provider 把接口信息写入 zookeeper, zookeeper 会通知相关的 consumer 同步信息;
+借肋于 zookeeper 特性, dubbo 负载,及服务优雅停机都可以做到了;&lt;/p&gt;
+&lt;h3&gt;Q3: dubbo 负载是如何做的?&lt;/h3&gt;
+&lt;p&gt;查看@2&lt;/p&gt;
+&lt;h3&gt;Q4: dubbo 服务优雅登机如何做到?&lt;/h3&gt;
+&lt;p&gt;查看@2
+还不明白请留言.&lt;/p&gt;
+&lt;h2&gt;dubbo2js 相关词汇&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;hession 协议&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;hession.js&lt;/li&gt;
+&lt;li&gt;js-to-java&lt;/li&gt;
+&lt;li&gt;翻译师&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;序列化&lt;/li&gt;
+&lt;li&gt;Provider&lt;/li&gt;
+&lt;li&gt;Zookeeper&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4&gt;dubbo 报文格式&lt;/h4&gt;
+&lt;p&gt;
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/WX20181127-100520-d71cca2fc02fd9dabbec7f14c7c9756e-dcd04.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block; ; max-width: 800px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 66.63452266152362%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAAAsSAAALEgHS3X78AAACPElEQVQ4y2VSyY7TUBDMZ8IFxA0Eh5E4IPEBIIHgEilkI5eIRRy4j4RYZlglhJh7yGQy3p3YsR0viZMUXe0xCmCp5X793quuqn4NyBdnPl4c38Lzo+t4e9LCq08HeP3lDt78bOLlx5s4/PEYdwffcfn+e1x9eIQbzc+43f2Ggydfce3RMa48+IBL997h2eEJGgQsViucnU1gmOfwPBem/P2Zh9nMh2FUtfk8gOf7sG1baqbmjuPIHRNBEMr5mdyz0NjtdkjSDK5LABZNvZSmKcIwxGKx0EjTJZbLpeRVLY5jbRgGgdQTJLLmvcZ2u0EkB9nJdV1Mz6fSMVDAJEmw2WxQliXW67UGcwbr8/kcvjD1BZjNLMu6kLwulRkLk8kpxuOxdsvzHOvyb6B98P0m2+1WrPEqwFw8JCC9YkdK4SYtoOwgDJQ1ZaoN0QJZlqkKMmONzVWyAhYrTKdTMdvA+HSs0nk4iiK9wMv8ByKRTWhFURQKwuDeSkg5jgDmeYYwiuEKI06NRcsyqwHJnz7FsQDLUNiEQPwokT7WwTXV/WFIMPNiMGmW6lQphUHASGTSBjbglMms9vM/DwspUi49YFjynsiQ75OMyIwAlEowNqHMqkFQyZYzJNVYRKG+Qy48z9fDBGDXehhc0yPuOa6jAKHs2bYlqgzN6bNKTvgolyl+yVMZjUYatclkVOdkyjWjHhKDk+ef0nXKw+EQTwcDtFottNttdDoddLtd9Ho99Pt9Deb/rut8P5rNJn4DM1260G1CkqkAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px transparent;&quot;
+        alt=&quot;WX20181127 100520&quot;
+        title=&quot;&quot;
+        src=&quot;/static/WX20181127-100520-d71cca2fc02fd9dabbec7f14c7c9756e-48538.png&quot;
+        srcset=&quot;/static/WX20181127-100520-d71cca2fc02fd9dabbec7f14c7c9756e-bed0f.png 200w,
+/static/WX20181127-100520-d71cca2fc02fd9dabbec7f14c7c9756e-5fd34.png 400w,
+/static/WX20181127-100520-d71cca2fc02fd9dabbec7f14c7c9756e-48538.png 800w,
+/static/WX20181127-100520-d71cca2fc02fd9dabbec7f14c7c9756e-dcd04.png 1037w&quot;
+        sizes=&quot;(max-width: 800px) 100vw, 800px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    &lt;/p&gt;
+&lt;p&gt;
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/WX20181127-100546-1c2faae480fb03d6a6b1d9025cdf5847-6bdde.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block; ; max-width: 800px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 33.587786259541986%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAHCAYAAAAIy204AAAACXBIWXMAAAsSAAALEgHS3X78AAABQElEQVQoz32RO0sDQRSF91dqVIjRVmwCihb+DisRTKOVTYIbRCxi3DS2ghDMQyWokKi789p5HO/MZkVFHPjmnrmz9+xcbvQ8y/DOFKwDNG1fGIfc2KCN9bo4f6f8ttQ8t4ik0pilHNNUQOQ5rNEBOAPAQiqJjyyD1iqcATOPgBAKKRMol/9pBEvFRhJUIC2mFF4zgFHaW3CqzXIqpqhcASdPSoV7ARe0RdFFdDtJsd0coh73Ub9pY3S8C36xAt5dRNapQFwtQHYrYJ0lYjnk385rGB00A+PDFu73T5H2H8Pbo7sXhp3WEFvtPjaTMwxO9sAu18F7q+DXNcikCkHwpEasQfSqZLyBp0Yb46MYD404GLPBBNobhuYdyVyGfphviXD4n7+WH07k+1YllqZlDKHpktDz+Buf1/YHmsz8lD8BU/EKnsu3eQ8AAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px transparent;&quot;
+        alt=&quot;WX20181127 100546&quot;
+        title=&quot;&quot;
+        src=&quot;/static/WX20181127-100546-1c2faae480fb03d6a6b1d9025cdf5847-48538.png&quot;
+        srcset=&quot;/static/WX20181127-100546-1c2faae480fb03d6a6b1d9025cdf5847-bed0f.png 200w,
+/static/WX20181127-100546-1c2faae480fb03d6a6b1d9025cdf5847-5fd34.png 400w,
+/static/WX20181127-100546-1c2faae480fb03d6a6b1d9025cdf5847-48538.png 800w,
+/static/WX20181127-100546-1c2faae480fb03d6a6b1d9025cdf5847-6bdde.png 1048w&quot;
+        sizes=&quot;(max-width: 800px) 100vw, 800px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    &lt;/p&gt;
+&lt;p&gt;
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/WX20181127-100556-71bf82f1b6852abd67fd0fd1c932b45f-0d797.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block; ; max-width: 800px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 31.36320305052431%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAGCAYAAADDl76dAAAACXBIWXMAAAsSAAALEgHS3X78AAABbklEQVQY022QbU/aUBiG+/9/wjKZskqAjtcWkUwwbhXUzThHLNIXXekL7dyWkCUkUuDa037ehzv3fZ8n5zonj7LdbsmV7Xa8ijJgK3oV+UnCIk3xwpAHxyZ8eSlm2X+0ye/t9yi7HJJl/LFm/L37xvLkhKDTIex2CXJJTvt90uGQVHpq6KS6Tqx3ScRTwyj6z57BL89D2Qs1Byb3d/y+vsSvvMc5PMA5KuGVS0UOqyph+wOR9Fg9YqkeFrNAfCk9Fo8rZZJHC2Wz2bBarXh6NvHDMwZ+g7qnchufUp2XOfU0zFDnYPqG2+WA+lyl41WZBAbvpm8xA53ek8bxrIQb3aPksFT25P8YEwYjvtodLh5qXD02+WTVMS2NL3aba7vFjdtm7DSYuE2u5k0+zzRuvDYTp8XY1lhEUxTZJev1WoCmAM+49Br0rDJ9+cnAPi585MoDixYfoxrnkcZ5rDFwKwwXNUaSR3J2EdXx4+/8A8rknbw+VPV9AAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px transparent;&quot;
+        alt=&quot;WX20181127 100556&quot;
+        title=&quot;&quot;
+        src=&quot;/static/WX20181127-100556-71bf82f1b6852abd67fd0fd1c932b45f-48538.png&quot;
+        srcset=&quot;/static/WX20181127-100556-71bf82f1b6852abd67fd0fd1c932b45f-bed0f.png 200w,
+/static/WX20181127-100556-71bf82f1b6852abd67fd0fd1c932b45f-5fd34.png 400w,
+/static/WX20181127-100556-71bf82f1b6852abd67fd0fd1c932b45f-48538.png 800w,
+/static/WX20181127-100556-71bf82f1b6852abd67fd0fd1c932b45f-0d797.png 1049w&quot;
+        sizes=&quot;(max-width: 800px) 100vw, 800px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    &lt;/p&gt;
+&lt;h4&gt;&lt;a href=&quot;https://github.com/dubbo/dubbo2.js/tree/master/packages/interpret-cli&quot;&gt;翻译师&lt;/a&gt;&lt;/h4&gt;
+&lt;p&gt;
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/WX20181127-100646-5076e5f945265c5870f7d5a582978b5c-89d06.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block; ; max-width: 800px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 45.22673031026253%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAJCAYAAAAywQxIAAAACXBIWXMAAAsSAAALEgHS3X78AAACK0lEQVQoz32Q204TURSG+3p4hQ/gAW+oLyApltSKkQBKjIloBDSddurhQkLQaIygEC5UqJxboKXt9DTTmWlnpucD8LlbLrxzJ1/+lbX3/vOv5XK7b7O0uIQkBQkEQ0ihEEFZRpbDyCFZ9GQkQTAYJhx6L3rvCAXf9JGksNC3BAIyH5c/c+PmEK7A6wC0zlHVIqZhYusWhYJNtVKn3ehQrrRwai2KFZv94hExPUHcyHBaypIs5TkonnCkpTBxmHn6BNfLuXkMs0xke5eTeIJoNMZpukBGLaOXbHTTpmQ52LUqm9kIPzO/WEuts57eYCX5nR+pNX4rW1Qu6kxMTeKaX3iFU62xdxDlNKVwnEiSVHKoRR1NN2i02jTbXRrNLppjopRzpEU61daF5igIzZh5eufR45lLw5IlxjmMklYypDI5NFWnqIp0epVmq0NdmNqNGmbNQnV01IpOztb6teYYIlD9n+Hc/ALdc0ikemYFNKNM0bBEOvFZoBmXJPN5VqIbfNr/ypf9VRZ3l/mws8y3+Cox7YQmXSamxcizs8/pnl2IlBXKdhXLqfbVLFf6lKxe7WCIfR7mj9nNHrKXjbGp/CGi7Ij9RdhStjmuxPE99OOSAhKIhKrYV8myhFmNZuOMTps+Z11od6DabPSe/fc8m32Ba3DwKv7xB3g8o9z1evF6fX3u+f3474/38Yl6ZMzD8Kiba3euMzRyi2GPG7//8m7M52NyapqBgSv8BXBwY/lzcBCGAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px transparent;&quot;
+        alt=&quot;WX20181127 100646&quot;
+        title=&quot;&quot;
+        src=&quot;/static/WX20181127-100646-5076e5f945265c5870f7d5a582978b5c-48538.png&quot;
+        srcset=&quot;/static/WX20181127-100646-5076e5f945265c5870f7d5a582978b5c-bed0f.png 200w,
+/static/WX20181127-100646-5076e5f945265c5870f7d5a582978b5c-5fd34.png 400w,
+/static/WX20181127-100646-5076e5f945265c5870f7d5a582978b5c-48538.png 800w,
+/static/WX20181127-100646-5076e5f945265c5870f7d5a582978b5c-89d06.png 838w&quot;
+        sizes=&quot;(max-width: 800px) 100vw, 800px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    &lt;/p&gt;
+&lt;h2&gt;dubbo2js 解读&lt;/h2&gt;
+&lt;h3&gt; 词汇&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;SokcetWorker:与 dubbo 服务所在主机的一个&lt;/li&gt;
+&lt;li&gt;socket 连接&lt;/li&gt;
+&lt;li&gt;Context:一次 dubbo 服务调用的上下文,与 koa context 概念一致&lt;/li&gt;
+&lt;li&gt;RequestId:为发出的请求做一个编号&lt;/li&gt;
+&lt;li&gt;DubboAgent:dubbo 服务管理&lt;/li&gt;
+&lt;li&gt;Scheduler:调度器&lt;/li&gt;
+&lt;li&gt;Dubbo 实例&lt;/li&gt;
+&lt;li&gt;Quene:请求队列&lt;/li&gt;
+&lt;li&gt;Middleware:中间件&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;dubbo2js 发送信息时序图&lt;/h3&gt;
+&lt;p&gt;
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/WX20181127-100611-ed82a9d059c860980e0ce679fd402a8d-29d28.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block; ; max-width: 800px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 69.71484759095378%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAOCAYAAAAvxDzwAAAACXBIWXMAAAsSAAALEgHS3X78AAACZElEQVQ4y2VT2XLaQBDk/z8rbzzE5QAFBoSQkNB939eq07sScWwvNcVe6pnp7t2Eng9T0yDHPM9r4Mv4f0/N8W2sG6b5wKavanRZ8fV8aBHae6TOBdHzCIgJU1cg9ZbEgufx84DUvSBxPxDZJ9SRDu18xCZPMzxud2RZhjiOkSQJQt+DY2iIPBuBbWC32+F02CN0LJRVhTxL4ZgaPJ551p1zHTHvnj9OrLBuYWt3JFGEyA8I4iMJY1YXIOA6Z/UZk1ZFCTEKjBOrZYhpaV2ImWuhKjcMA5uhaVHxg+8jdXxIOkLDwvVwgnW5IQuiTx7HSU4wC8FE48LhCzCPkuUiD2XIkfmhItu96tCPZ1iajqduQjQdxqrFWNSY6uV/kJFXS4U9AYsX4KqyqtALMLMV56Ljuj8q0NQNgGHE3A2YCCraHk2Uoq3rry2Xcfqj5dyPFKAElsLJdiVg13VoSMXQdi8fkU+x2sbEpsoLuA8bTdugLEsVddPANR4UJEPD7Ep9hvOwYBkmTP2O4Omibck/VS/yHEPX43a7YVMwu60bKMpCWUdGURTk7I40SZW62+0Wf97fFwAmkAkliOe6yhkZ7zUE1vhAaJvmH4dipmKrKLLVitVKELk3UUl5L3R9pFFMT9KrpoWM9mqZ4JNDcuGbNsIgRE9+iLqobD0J6qNidpCjkYq2Wc5jyRl92K0ccj6uc2Wbki2HfIOzNGg/KMC+yKDvfiG87+Fov9GzgjYP4RsH9eHY1nhet3Bv74w3zt8QPw44H/eLyu33t8zfJN/vNGJkq4udhFq/7CX35VrGMAxry3f8BadEL2H3kYJlAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px transparent;&quot;
+        alt=&quot;WX20181127 100611&quot;
+        title=&quot;&quot;
+        src=&quot;/static/WX20181127-100611-ed82a9d059c860980e0ce679fd402a8d-48538.png&quot;
+        srcset=&quot;/static/WX20181127-100611-ed82a9d059c860980e0ce679fd402a8d-bed0f.png 200w,
+/static/WX20181127-100611-ed82a9d059c860980e0ce679fd402a8d-5fd34.png 400w,
+/static/WX20181127-100611-ed82a9d059c860980e0ce679fd402a8d-48538.png 800w,
+/static/WX20181127-100611-ed82a9d059c860980e0ce679fd402a8d-29d28.png 1017w&quot;
+        sizes=&quot;(max-width: 800px) 100vw, 800px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    &lt;/p&gt;
+&lt;h3&gt;常见问题&lt;/h3&gt;
+&lt;h2&gt; 相关信息&lt;/h2&gt;
+&lt;p&gt;ppt&lt;/p&gt;</content:encoded></item><item><title><![CDATA[灰度方案如何拉低我的焦虑值]]></title><description><![CDATA[“潮退时就知道谁在裸泳” 如果给你 100W/M 的工资,你能写出无 bug…]]></description><link>https://github.com/creasy2010/灰度/</link><guid isPermaLink="false">https://github.com/creasy2010/灰度/</guid><content:encoded>&lt;p&gt;&lt;strong&gt;“潮退时就知道谁在裸泳”&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;如果给你 100W/M 的工资,你能写出无 bug 的代码吗?&lt;/p&gt;
 &lt;p&gt;我相信有这样的大神存在,但在一个项目要靠大神才能保障安全,也是可笑至极,最后的结果极可能是大神要烦死,小神们没空间成长,&lt;strong&gt;参天大树之下只有杂草丛生&lt;/strong&gt;;&lt;/p&gt;
 &lt;p&gt;正常项目都会遇到人员的流失,新人的培养,在能力锻炼的过程中,总会出一些线上问题,当问题出现时该如何处理?&lt;/p&gt;
