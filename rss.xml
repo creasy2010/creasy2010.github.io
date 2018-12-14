@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[PersonalBlog - a blog starter for GatsbyJS]]></title><description><![CDATA[PersonalBlog is a GatsbyJS starter.]]></description><link>https://github.com/creasy2010</link><generator>RSS for Node</generator><lastBuildDate>Fri, 14 Dec 2018 08:56:15 GMT</lastBuildDate><item><title><![CDATA[我心中的团队]]></title><description><![CDATA[…]]></description><link>https://github.com/creasy2010/团队/</link><guid isPermaLink="false">https://github.com/creasy2010/团队/</guid><content:encoded>&lt;p&gt;从入职场开始,经过许多团队,但团队又是什么? 当上升到带领团队时,又如何操作呢?一些小想法小聊小聊:
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[PersonalBlog - a blog starter for GatsbyJS]]></title><description><![CDATA[PersonalBlog is a GatsbyJS starter.]]></description><link>https://github.com/creasy2010</link><generator>RSS for Node</generator><lastBuildDate>Fri, 14 Dec 2018 08:58:56 GMT</lastBuildDate><item><title><![CDATA[我心中的团队]]></title><description><![CDATA[…]]></description><link>https://github.com/creasy2010/团队/</link><guid isPermaLink="false">https://github.com/creasy2010/团队/</guid><content:encoded>&lt;p&gt;从入职场开始,经过许多团队,但团队又是什么? 当上升到带领团队时,又如何操作呢?一些小想法小聊小聊:
 可能有错误的地方,欢迎善意的批评!&lt;/p&gt;
 &lt;h2&gt;团队是什么?&lt;/h2&gt;
 &lt;p&gt;  一个好的团队大家奔着明确的目标,相互配合,达成目的,分享胜利的果实.
@@ -22,9 +22,11 @@
 &lt;h2&gt;知识累积&lt;/h2&gt;
 &lt;p&gt;  “退潮时才知道谁在裸泳”
 很多事情刚开始在蜜月期时,自己很享受,然而,当危机来时,哭的机会都没有.
-说两个例子:
-** 新人来时业务,技术培训
-** 业务出现疑问时,总是只有一个人能说不明白,其他人好似局外人一样; &lt;/p&gt;
+说两个例子:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;新人来时业务,技术培训&lt;/li&gt;
+&lt;li&gt;业务出现疑问时,总是只有一个人能说不明白,其他人好似局外人一样; &lt;/li&gt;
+&lt;/ol&gt;
 &lt;p&gt;  知识累积,靠的还是机制,而不是个别人的自觉, 一个团队,一个群体靠人性,是多么不靠谱的一件事,
 这些个文档,在做业务,或制订方案时,一定要留出时间来做,这个时候,慢就是快;&lt;/p&gt;
 &lt;h2&gt;人员流动&lt;/h2&gt;
