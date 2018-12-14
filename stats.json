@@ -9,8 +9,8 @@
       "path---dubbo-2-js解读-cc57b8e5df1963aa382c.js.map"
     ],
     "path---": [
-      "path----e526e345bc061de14f88.js",
-      "path----e526e345bc061de14f88.js.map"
+      "path----aa15ec2992bca264ad88.js",
+      "path----aa15ec2992bca264ad88.js.map"
     ],
     "component---src-pages-contact-js": [
       "component---src-pages-contact-js-16424a405ad6f76901ad.js",
@@ -21,8 +21,8 @@
       "component---node-modules-gatsby-plugin-offline-app-shell-js-5c4c5a0f7af9dc69d6d7.js.map"
     ],
     "component---src-layouts-index-js": [
-      "component---src-layouts-index-js-833fa2614817b258b76d.js",
-      "component---src-layouts-index-js-833fa2614817b258b76d.js.map"
+      "component---src-layouts-index-js-401d401e0eb9351a66fa.js",
+      "component---src-layouts-index-js-401d401e0eb9351a66fa.js.map"
     ],
     "path---insights": [
       "path---insights-fb88f0f15a699fdd99ff.js",
@@ -66,14 +66,18 @@
       "path---offline-plugin-app-shell-fallback-a0e39f21c11f6a62c5ab.js",
       "path---offline-plugin-app-shell-fallback-a0e39f21c11f6a62c5ab.js.map"
     ],
+    "path---互联网-教育": [
+      "path---互联网-教育-61b155b96f307b50e5a5.js",
+      "path---互联网-教育-61b155b96f307b50e5a5.js.map"
+    ],
     "path---团队": [
       "path---团队-686865dd9433cd8698f7.js",
       "path---团队-686865dd9433cd8698f7.js.map"
     ],
     "app": [
-      "app-968f526c627d0f2e77ef.js",
+      "app-1867608e89a47eb0cce0.js",
       "build-js-styles.css",
-      "app-968f526c627d0f2e77ef.js.map",
+      "app-1867608e89a47eb0cce0.js.map",
       "build-js-styles.css.map"
     ],
     "component---src-templates-page-template-js": [
