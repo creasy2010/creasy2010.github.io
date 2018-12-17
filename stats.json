@@ -75,9 +75,9 @@
       "path---团队-686865dd9433cd8698f7.js.map"
     ],
     "app": [
-      "app-6a96f2afabd91b88e709.js",
+      "app-cb2e1580e287fe3edfc3.js",
       "build-js-styles.css",
-      "app-6a96f2afabd91b88e709.js.map",
+      "app-cb2e1580e287fe3edfc3.js.map",
       "build-js-styles.css.map"
     ],
     "component---src-templates-page-template-js": [
@@ -93,8 +93,8 @@
       "path---search-84269fabafea3eec14cf.js.map"
     ],
     "path---about": [
-      "path---about-f8e24436fdd05e1e189d.js",
-      "path---about-f8e24436fdd05e1e189d.js.map"
+      "path---about-1a2abff40145b1c251b9.js",
+      "path---about-1a2abff40145b1c251b9.js.map"
     ]
   }
 }
