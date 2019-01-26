@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[PersonalBlog - a blog starter for GatsbyJS]]></title><description><![CDATA[PersonalBlog is a GatsbyJS starter.]]></description><link>https://github.com/creasy2010</link><generator>RSS for Node</generator><lastBuildDate>Wed, 26 Dec 2018 03:07:24 GMT</lastBuildDate><item><title><![CDATA[网红工具了解下]]></title><description><![CDATA[不是为了做网红. 团队内部做分享,需要把视频录制下来,做知识积累. 想做的高大上呢. 所以查资料看看 youtube…]]></description><link>https://github.com/creasy2010/网红工具了解下-obs直播教学/</link><guid isPermaLink="false">https://github.com/creasy2010/网红工具了解下-obs直播教学/</guid><content:encoded>&lt;p&gt;不是为了做网红. 团队内部做分享,需要把视频录制下来,做知识积累. 想做的高大上呢. 所以查资料看看 youtube 上高大上的视频怎么搞出来的. 一查才发现,原来网红这个群体已经把直播工具用到炉火纯青的地步了. 下面进一步了解呢.&lt;/p&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[PersonalBlog - a blog starter for GatsbyJS]]></title><description><![CDATA[PersonalBlog is a GatsbyJS starter.]]></description><link>https://github.com/creasy2010</link><generator>RSS for Node</generator><lastBuildDate>Sat, 26 Jan 2019 06:45:21 GMT</lastBuildDate><item><title><![CDATA[网红工具了解下]]></title><description><![CDATA[不是为了做网红. 团队内部做分享,需要把视频录制下来,做知识积累. 想做的高大上呢. 所以查资料看看 youtube…]]></description><link>https://github.com/creasy2010/网红工具了解下-obs直播教学/</link><guid isPermaLink="false">https://github.com/creasy2010/网红工具了解下-obs直播教学/</guid><content:encoded>&lt;p&gt;不是为了做网红. 团队内部做分享,需要把视频录制下来,做知识积累. 想做的高大上呢. 所以查资料看看 youtube 上高大上的视频怎么搞出来的. 一查才发现,原来网红这个群体已经把直播工具用到炉火纯青的地步了. 下面进一步了解呢.&lt;/p&gt;
 &lt;p&gt;在了解文章前 大家最好对图片是什么有一个初步的了解;&lt;/p&gt;
 &lt;p&gt;
   &lt;a
@@ -38,7 +38,7 @@
 &lt;p&gt;从一些问题入手,来浅层次了解下相关工具&lt;/p&gt;
 &lt;h3&gt;obs 是什么&lt;/h3&gt;
 &lt;p&gt;看下&lt;a href=&quot;https://obsproject.com/&quot;&gt;官方&lt;/a&gt;描述:“Free and open source software for video recording and live streaming.”
-从这句话我们知道 他是用来做视频录制,可以生成直播流的工具,是一款开源软件,当前斗魚等直播平台 都是在这个基础上进行开发;该软件官方文档 支持 16 国语言,可见其流程程序;&lt;/p&gt;
+从这句话我们知道 他是用来做视频录制,可以生成直播流的工具,是一款开源软件,当前斗魚等直播平台 都是在这个基础上进行开发;该软件官方文档 支持 16 国语言,可见其流行程度;&lt;/p&gt;
 &lt;p&gt;&lt;a href=&quot;https://obsproject.com/&quot;&gt;feature&lt;/a&gt;:&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;
@@ -52,7 +52,7 @@
 &lt;p&gt;多场景化,无缝切换;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;可以实现实时播放;
+&lt;p&gt;可以实时播放;
 (推流)将本地生成的视频流实时推送到 youtube,mixer, 优酷,斗鱼等视频平台,其他人可以直接收看,后面又可以看录播内容;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
