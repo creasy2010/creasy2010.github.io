@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[PersonalBlog - a blog starter for GatsbyJS]]></title><description><![CDATA[PersonalBlog is a GatsbyJS starter.]]></description><link>https://github.com/creasy2010</link><generator>RSS for Node</generator><lastBuildDate>Sun, 27 Jan 2019 04:09:17 GMT</lastBuildDate><item><title><![CDATA[工作经历介绍]]></title><description><![CDATA[Personal Information name：杨晓东 birth：1987-07-29 github： https://github.com/ blog： https://creasy2010.github.io/ About me…]]></description><link>https://github.com/creasy2010/工作经历/</link><guid isPermaLink="false">https://github.com/creasy2010/工作经历/</guid><content:encoded>&lt;h2&gt;Personal Information&lt;/h2&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[PersonalBlog - a blog starter for GatsbyJS]]></title><description><![CDATA[PersonalBlog is a GatsbyJS starter.]]></description><link>https://github.com/creasy2010</link><generator>RSS for Node</generator><lastBuildDate>Sun, 27 Jan 2019 04:59:44 GMT</lastBuildDate><item><title><![CDATA[工作经历介绍]]></title><description><![CDATA[Personal Information name：杨晓东 birth：1987-07-29 github： https://github.com/ blog： https://creasy2010.github.io/ About me…]]></description><link>https://github.com/creasy2010/工作经历/</link><guid isPermaLink="false">https://github.com/creasy2010/工作经历/</guid><content:encoded>&lt;h2&gt;Personal Information&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;name：杨晓东&lt;/li&gt;
 &lt;li&gt;birth：1987-07-29&lt;/li&gt;
@@ -567,39 +567,6 @@
 /static/IMG_2603-e8c6cf61c35c59cb5e6ff7189c12f124-bc99b.jpg 1600w,
 /static/IMG_2603-e8c6cf61c35c59cb5e6ff7189c12f124-1a1df.jpg 1618w&quot;
         sizes=&quot;(max-width: 800px) 100vw, 800px&quot;
-      /&gt;
-    &lt;/span&gt;
-  &lt;/span&gt;
-  
-  &lt;/a&gt;
-    &lt;/p&gt;
-&lt;p&gt;
-  &lt;a
-    class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/IMG_2604-591a92da80d31cc17d565b40af075637-857fb.jpg&quot;
-    style=&quot;display: block&quot;
-    target=&quot;_blank&quot;
-    rel=&quot;noopener&quot;
-  &gt;
-  
-  &lt;span
-    class=&quot;gatsby-resp-image-wrapper&quot;
-    style=&quot;position: relative; display: block; ; max-width: 750px; margin-left: auto; margin-right: auto;&quot;
-  &gt;
-    &lt;span
-      class=&quot;gatsby-resp-image-background-image&quot;
-      style=&quot;padding-bottom: 177.86666666666667%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAkABQDASIAAhEBAxEB/8QAGQABAAMBAQAAAAAAAAAAAAAAAAEDBAIF/8QAFgEBAQEAAAAAAAAAAAAAAAAAAQAC/9oADAMBAAIQAxAAAAG+PUpyYG0txyEqy6g3Ar//xAAcEAACAgMBAQAAAAAAAAAAAAAAAQIRBBASAxT/2gAIAQEAAQUCeGh4cT5Ya6LVlI5iNWcRGvO9Uj//xAAUEQEAAAAAAAAAAAAAAAAAAAAg/9oACAEDAQE/AV//xAAXEQEAAwAAAAAAAAAAAAAAAAABEBEg/9oACAECAQE/AVqHH//EAB4QAAEDBAMAAAAAAAAAAAAAAAABITECEDJBETOh/9oACAEBAAY/As1Hr4O1bR6YIOQhCDmjV4P/xAAgEAACAgAHAQEAAAAAAAAAAAAAAREhMUFRYXGRwRCB/9oACAEBAAE/IWl5GLai2IawOBtJSx5YP8DU3ZKsy9fMunG2KVHyNKtdCSm2diRC0FpOj//aAAwDAQACAAMAAAAQX+2+8A//xAAWEQEBAQAAAAAAAAAAAAAAAAABECD/2gAIAQMBAT8QUI4//8QAGREAAwADAAAAAAAAAAAAAAAAAAERECEx/9oACAECAQE/EF9CeirYhZ//xAAfEAEAAwACAgMBAAAAAAAAAAABABEhMUFRkWFxwdH/2gAIAQEAAT8QHch0mMACBwY1GD09vPzECAHKxdQ774IZ7WWh4GwLqFFbANzX8CNpW6WmwagYrYc9RQhPt/ZY3emt8Fd+KgVoRcpDF63urTZ//9k=&apos;); background-size: cover; display: block;&quot;
-    &gt;
-      &lt;img
-        class=&quot;gatsby-resp-image-image&quot;
-        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px transparent;&quot;
-        alt=&quot;IMG 2604&quot;
-        title=&quot;&quot;
-        src=&quot;/static/IMG_2604-591a92da80d31cc17d565b40af075637-857fb.jpg&quot;
-        srcset=&quot;/static/IMG_2604-591a92da80d31cc17d565b40af075637-a8180.jpg 200w,
-/static/IMG_2604-591a92da80d31cc17d565b40af075637-b7fcc.jpg 400w,
-/static/IMG_2604-591a92da80d31cc17d565b40af075637-857fb.jpg 750w&quot;
-        sizes=&quot;(max-width: 750px) 100vw, 750px&quot;
       /&gt;
     &lt;/span&gt;
   &lt;/span&gt;
@@ -2066,7 +2033,7 @@ Provider 把接口信息写入 zookeeper, zookeeper 会通知相关的 consumer 
 &lt;h3&gt;灰度解决的痛点&lt;/h3&gt;
 &lt;p&gt;在我的实践中,灰度会解决下列问题:&lt;/p&gt;
 &lt;ol&gt;
-&lt;li&gt;次生灾害:一人生病,所有人受治疗的方案,可能  使正常用户受连带影响,甚至导致次生灾害的发生;&lt;/li&gt;
+&lt;li&gt;次生灾害一人生病,所有人受治疗的方案,可能  使正常用户受连带影响,甚至导致次生灾害的发生;&lt;/li&gt;
 &lt;li&gt;版本困境:版本升与不升都有用户受影响,升新版本就会影响 A 用户,不升版本 B 用户;&lt;/li&gt;
 &lt;li&gt;版本魔咒:每个版本总会有些问题的魔咒,上线会紧张,节假日前更慌的要命;&lt;/li&gt;
 &lt;li&gt;bug 复现难:某个问题在本地无法复现;&lt;/li&gt;
@@ -2093,7 +2060,7 @@ Provider 把接口信息写入 zookeeper, zookeeper 会通知相关的 consumer 
       &lt;img
         class=&quot;gatsby-resp-image-image&quot;
         style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px transparent;&quot;
-        alt=&quot;WechatIMG1.jpeg&quot;
+        alt=&quot;WechatIMG1&quot;
         title=&quot;&quot;
         src=&quot;/static/WechatIMG1-ff651233ad6778f81efeef5d5dd04e1b-48538.png&quot;
         srcset=&quot;/static/WechatIMG1-ff651233ad6778f81efeef5d5dd04e1b-bed0f.png 200w,
