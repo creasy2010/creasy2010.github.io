@@ -1,16 +1,18 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[PersonalBlog - a blog starter for GatsbyJS]]></title><description><![CDATA[PersonalBlog is a GatsbyJS starter.]]></description><link>https://github.com/creasy2010</link><generator>RSS for Node</generator><lastBuildDate>Sun, 27 Jan 2019 03:59:20 GMT</lastBuildDate><item><title><![CDATA[工作经历介绍]]></title><description><![CDATA[Personal Information name:杨晓东 birth:1987-07-29 github: https://github.com/ blog: https://creasy2010.github.io/ About me…]]></description><link>https://github.com/creasy2010/工作经历/</link><guid isPermaLink="false">https://github.com/creasy2010/工作经历/</guid><content:encoded>&lt;h2&gt;Personal Information&lt;/h2&gt;
-&lt;blockquote&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[PersonalBlog - a blog starter for GatsbyJS]]></title><description><![CDATA[PersonalBlog is a GatsbyJS starter.]]></description><link>https://github.com/creasy2010</link><generator>RSS for Node</generator><lastBuildDate>Sun, 27 Jan 2019 04:01:32 GMT</lastBuildDate><item><title><![CDATA[工作经历介绍]]></title><description><![CDATA[Personal Information name:杨晓东 birth:1987-07-29 github: https://github.com/ blog: https://creasy2010.github.io/ About me…]]></description><link>https://github.com/creasy2010/工作经历/</link><guid isPermaLink="false">https://github.com/creasy2010/工作经历/</guid><content:encoded>&lt;h2&gt;Personal Information&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
 &lt;p&gt;name:杨晓东&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;
 &lt;p&gt;birth:1987-07-29&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;
 &lt;p&gt;github:&lt;a href=&quot;https://github.com/&quot;&gt;https://github.com/&lt;/a&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;
 &lt;p&gt;blog:&lt;a href=&quot;https://creasy2010.github.io/&quot;&gt;https://creasy2010.github.io/&lt;/a&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
 &lt;h2&gt;About me&lt;/h2&gt;
 &lt;p&gt;9+年工作经验,涉及前后端数据设计等方面
 在工作中非常有幸接触并实践了前端工程化,数据分析,灰度,自动化测试运维等理念,
