@@ -1,4 +1,457 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[PersonalBlog - a blog starter for GatsbyJS]]></title><description><![CDATA[PersonalBlog is a GatsbyJS starter.]]></description><link>https://github.com/creasy2010</link><generator>RSS for Node</generator><lastBuildDate>Tue, 29 Jan 2019 05:41:50 GMT</lastBuildDate><item><title><![CDATA[工作经历介绍]]></title><description><![CDATA[Personal Information name：杨晓东 birth：1987-07-29 github： https://github.com/ blog： https://creasy2010.github.io/ About me…]]></description><link>https://github.com/creasy2010/工作经历/</link><guid isPermaLink="false">https://github.com/creasy2010/工作经历/</guid><content:encoded>&lt;h2&gt;Personal Information&lt;/h2&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[PersonalBlog - a blog starter for GatsbyJS]]></title><description><![CDATA[PersonalBlog is a GatsbyJS starter.]]></description><link>https://github.com/creasy2010</link><generator>RSS for Node</generator><lastBuildDate>Tue, 29 Jan 2019 05:45:32 GMT</lastBuildDate><item><title><![CDATA[bug不解决,如何过年-node OOM]]></title><description><![CDATA[bug还没解决,如何过年? 不是标题党,确实是出了线上问题, 线上不间断出现oom问题,还有一周就过年了,问题不解决,如何能安心过年,过年的时候出问题,估计客户会把我们撕的碎碎的. 为什么说 “5块钱的bug,怎么变成了用1.5W…]]></description><link>https://github.com/creasy2010/bug不解决如何过年-node OOM/</link><guid isPermaLink="false">https://github.com/creasy2010/bug不解决如何过年-node OOM/</guid><content:encoded>&lt;p&gt;bug还没解决,如何过年?&lt;/p&gt;
+&lt;p&gt;不是标题党,确实是出了线上问题, 线上不间断出现oom问题,还有一周就过年了,问题不解决,如何能安心过年,过年的时候出问题,估计客户会把我们撕的碎碎的.&lt;/p&gt;
+&lt;p&gt;为什么说 “5块钱的bug,怎么变成了用1.5W的成本”? 数字列的有些夸张了, 但如果及早发现这个问题,一个人5分钟就搞定,但我们三个人却用了5天(包含周未);&lt;/p&gt;
+&lt;h2&gt;现象&lt;/h2&gt;
+&lt;p&gt;在”主动发现问题行动”的推动下配置了alinode的告警,然后就有报警出现了,. &lt;/p&gt;
+&lt;p&gt;报警: “已用堆内存超过堆上限的 80%，当前为 82.31%“;&lt;/p&gt;
+&lt;p&gt;再仔细一查, 不得了了.比报警内容还坏, 我们遇到的不是内存泄漏,而是oom崩溃, 而且是突发式的.一但发生立马崩溃,不给你半点时间;
+幸好进程会自动拉起. nginx也有健康状态检查,会自动分流; &lt;/p&gt;
+&lt;p&gt;
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/cpu等数据-c788b19c61c6b80817ffa4d8cfe0d6fc-200f3.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block; ; max-width: 800px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 50.44386422976501%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAYAAAC0VX7mAAAACXBIWXMAAAsSAAALEgHS3X78AAABc0lEQVQoz61SXU/CQBDs3/bZB1+NCEpM0BhBrARJ9Ff47E9ATYiQAu19362z26viu4TJTuf25m62LY6OT2jx/EJ305ImD49/cF/OaFKCo47xzJh0Gvh0Nqex7CvpCR7lfEHF6esb/eevGF7fCqnqhvbaUJ2xA9Z7aND52Xsv64ymg0FPo2mzb/ca56gY3bSG1nmKMZH1gQw2OyClRCFGwS9PFMFNCOj1osWDnmJ4NRJDD3dZQGMEuEpTBq8laCCCVg8/6wyPw4qz/oUY1lpLLJ9vp3HjDeIoa+XWfHplHFXW0Rr1C1gBa20R19JKO1IhUnE+uBTDHUQncQPVFvOCYWVQwRU0jrkF37qAtYDqaZfBhyvA45ZFr98a+jwzFr1ERjRK+Lfg+LzR5WgW1aDHCk+iywx7g6EYGtO+yZDn53ErjXisxTzPD2VpqRy9H2DZWNE/AcuRO0OF1+7y/BgcfcufAkxdjqzAVY7XoWHNWHAnh34DQ6P021JG5RoAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px transparent;&quot;
+        alt=&quot;cpu   &quot;
+        title=&quot;&quot;
+        src=&quot;/static/cpu等数据-c788b19c61c6b80817ffa4d8cfe0d6fc-48538.png&quot;
+        srcset=&quot;/static/cpu等数据-c788b19c61c6b80817ffa4d8cfe0d6fc-bed0f.png 200w,
+/static/cpu等数据-c788b19c61c6b80817ffa4d8cfe0d6fc-5fd34.png 400w,
+/static/cpu等数据-c788b19c61c6b80817ffa4d8cfe0d6fc-48538.png 800w,
+/static/cpu等数据-c788b19c61c6b80817ffa4d8cfe0d6fc-b70ec.png 1200w,
+/static/cpu等数据-c788b19c61c6b80817ffa4d8cfe0d6fc-d134a.png 1600w,
+/static/cpu等数据-c788b19c61c6b80817ffa4d8cfe0d6fc-200f3.png 1915w&quot;
+        sizes=&quot;(max-width: 800px) 100vw, 800px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    &lt;/p&gt;
+&lt;p&gt;随后开启服务器coredump,把进程崩溃的现场信息留下来,等了一天,便可以在alinode管理端获取coredump列表.&lt;/p&gt;
+&lt;p&gt;
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/alinodecoredump列表-8fb475d6b06ce63c8e745a61219e1c61-b9b8f.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block; ; max-width: 800px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 50.62565172054223%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAYAAAC0VX7mAAAACXBIWXMAAAsSAAALEgHS3X78AAABe0lEQVQoz3WRWUsDMRSF50cLgg8+CvrghgWtWqa009YK+p9E0E5mXzJLJjneJNM6dQkccudOzpeTxDk4Oob39IzxxMWjO8Xh2MXJZA5vsYTrLTEdar7YySXNFiu4s7nR+uUV3moNZ3Q/gR6VBBqaP2hmpBZWVJp+1UsO1A1qvVaRnKvRLZK2gx+ECKIYWZKiyHNEaYpNxODTd0BK8wJJVlA/R0b1nooSSRyTr4Bzc/cAn8jaxFiAoiyhpEKnBHzO8FY1SOrWnEIphbKTZrZD6aatKvK1DZxLShhQI0wzhFGEknNIDZQCjId4J2Ba2wNJMnMCtvRfmE2VgSsD5BZ4en6NsE8YhCHKbUIDDAww6YHaXBOwlhKNtOBvYJ/w7OIHcC8hHZk3iAfAqk+o0+0n/AfIe6CQLd1hgrARKFuxA7bSJtRJdcr/gXSHrE+oeuAnLRJk7LrOGkmSIPYh1G6TX8CIGixOsGHM3KE2dQTcVAUaISHEPnBbqz8e5Qskv+7Nf51IDgAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px transparent;&quot;
+        alt=&quot;alinodecoredump  &quot;
+        title=&quot;&quot;
+        src=&quot;/static/alinodecoredump列表-8fb475d6b06ce63c8e745a61219e1c61-48538.png&quot;
+        srcset=&quot;/static/alinodecoredump列表-8fb475d6b06ce63c8e745a61219e1c61-bed0f.png 200w,
+/static/alinodecoredump列表-8fb475d6b06ce63c8e745a61219e1c61-5fd34.png 400w,
+/static/alinodecoredump列表-8fb475d6b06ce63c8e745a61219e1c61-48538.png 800w,
+/static/alinodecoredump列表-8fb475d6b06ce63c8e745a61219e1c61-b70ec.png 1200w,
+/static/alinodecoredump列表-8fb475d6b06ce63c8e745a61219e1c61-d134a.png 1600w,
+/static/alinodecoredump列表-8fb475d6b06ce63c8e745a61219e1c61-b9b8f.png 1918w&quot;
+        sizes=&quot;(max-width: 800px) 100vw, 800px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    &lt;/p&gt;
+&lt;p&gt;有了这些信息,就可以开展分析工作了;&lt;/p&gt;
+&lt;h2&gt;线索&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;崩溃不定期发生,然而线上机器大概率发生, 灰度 机器并不发生;一台机器中个别进程崩溃;&lt;/li&gt;
+&lt;li&gt;查看其他应用并没有发生崩溃的问题; &lt;/li&gt;
+&lt;li&gt;近期上了健康检查与全链路跟踪; &lt;/li&gt;
+&lt;li&gt;线上虽有崩溃,然而并没有用户反馈有问题;&lt;/li&gt;
+&lt;li&gt;有3种崩溃的情况,不只是一种;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2&gt;解决角度&lt;/h2&gt;
+&lt;p&gt;根据对coredump内容分析,有三个解决角度&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;查看heap中占比最大的对象;&lt;/li&gt;
+&lt;li&gt;zoneContext导致;&lt;/li&gt;
+&lt;li&gt;urllib所发出的请求导致出问题; &lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;看了之后特别怀疑问题2, 原因有两点: &lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;最近我们上线了zipkin全链路跟踪;&lt;/li&gt;
+&lt;li&gt;zoneContex 所使用的async_hook还是实验特性 (不会入坑了吧. );&lt;/li&gt;
+&lt;li&gt;nginx有健康检查,会不停发请求; &lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3&gt;线索1:查看heap中占比最大的对象&lt;/h3&gt;
+&lt;p&gt;本以为手到病除, 然而一看coredump中对象列表就傻眼了.没有统计,没有规律,只显示object有600多M,但是什么对象就是找不到.
+就好比告诉你凶手就在茫茫人海中,说了几乎跟没说一样.. &lt;/p&gt;
+&lt;p&gt;
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/objectlist-a05ede811a97962799580ec1102498f4-3bb64.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block; ; max-width: 800px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 50.470219435736674%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAYAAAC0VX7mAAAACXBIWXMAAAsSAAALEgHS3X78AAABTklEQVQoz61S204CMRTc3/bJB/9A0GCQ4BUVCGiMv2RUILvb7b1bxtnuSngTE5tMzml7MmfOtNnR8QlmyxeMb+9xfTdJmDzN8DCdp/iT7+8n0zY+zhftPfH8+obpYomsIUhru8V/rOzicow6RryvNsiFhJAKZSWZV5DawHsPYy0s4Zg718B1sb0zxqazpjYbjW8obgupFJTRUFpDG7ODtW5HoHmnlN6RSjZvyXyqS4TD0VWSKnmgvYNioSE098qSwIfU8FBk/V6f/kWUmy8YkcPJiqPV7Fa3I9YB8U+E54OkMM8/oasCmmMoa1p1LtDftjAeTDgYJkJhVDeygXA6KavriLp5/T38SnjWKVznBV+34CsLVMrQx0BfVfJSu5rNYlLc2BFCICIcowueOS3iPsRG4WkPoBqx/oAqV/CigC9zRCptxoz8UrEbOR4w+jeYYvTBidXgwwAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px transparent;&quot;
+        alt=&quot;objectlist&quot;
+        title=&quot;&quot;
+        src=&quot;/static/objectlist-a05ede811a97962799580ec1102498f4-48538.png&quot;
+        srcset=&quot;/static/objectlist-a05ede811a97962799580ec1102498f4-bed0f.png 200w,
+/static/objectlist-a05ede811a97962799580ec1102498f4-5fd34.png 400w,
+/static/objectlist-a05ede811a97962799580ec1102498f4-48538.png 800w,
+/static/objectlist-a05ede811a97962799580ec1102498f4-b70ec.png 1200w,
+/static/objectlist-a05ede811a97962799580ec1102498f4-d134a.png 1600w,
+/static/objectlist-a05ede811a97962799580ec1102498f4-3bb64.png 1914w&quot;
+        sizes=&quot;(max-width: 800px) 100vw, 800px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    &lt;/p&gt;
+&lt;p&gt;尝试用概率的方法来人肉统计一次,然而次次无功而返;当然不依赖alinode对coredump进行分析,然而考虑到时间成本再试下别一个角度&lt;/p&gt;
+&lt;h3&gt;线索2:zoneContext导致&lt;/h3&gt;
+&lt;p&gt;朝着这个方向走,检查了zonecontext的代码,然而并没有看出什么问题, 只好忌出大法(范围缩小跟踪)&lt;/p&gt;
+&lt;p&gt;我们使用zonecontext的地方有两个,1) 全链路跟踪,2) dubbolog . 而 全链路跟踪是新上的功能,且是关键节点,dubbolog记录是很久上的,且业务应用也有使用&lt;/p&gt;
+&lt;p&gt;我们选择关闭了zipkin全链路跟踪,关闭了nginx健康检查(会发送大量请求); &lt;/p&gt;
+&lt;p&gt;理想总是美好的, 然而实现却啪啪啪的打脸. 把这些都关闭了线上还在出问题;囧了. 众多迹象证明问题不在zonecontext&amp;#x26;async_hook&lt;/p&gt;
+&lt;p&gt;
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/原因1-f157a782dc7a105fbcaeba2171ae4733-55c5b.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block; ; max-width: 800px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 50.36534446764092%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAYAAAC0VX7mAAAACXBIWXMAAAsSAAALEgHS3X78AAABQElEQVQoz62R20oDMRRF5799EPwBL9WiWKRY6/RKKVj0p+zccptkZrY7SS31RefBwOLMIWHNSXZydn6B3fsHJukcr/MlZqs10sUKL+xny3VgOlsETvuUdbHehHOTaYrt2w6rzRbJaPwMv9q2xX+sZHD/iEwqFFkOxSqFYJXQRFZV7LWGJtLvKwWldKi+14c9peJ38vg0DuY8K5FXFJNSkEJAEqsNmqbpSYtk+DAKwk9pkCmHvbLItYOyDeq2Q3e8TBfout9JLm/uwvF9pSmsef0auZcSVTsI42Bc/LvnT+HV7TAKhRdGUantUVpwWo+sG7i2j3AQhRknzKUN0oLCgtOWnFYZi4YTdnyjro/w+iAsMsVQahSUCoZimbITEvYbJtpY13/C8IaUVZxMMCBp4jU9xrUnMCyiGZrxwbmfU38BNrX0HLADTrYAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px transparent;&quot;
+        alt=&quot;  1&quot;
+        title=&quot;&quot;
+        src=&quot;/static/原因1-f157a782dc7a105fbcaeba2171ae4733-48538.png&quot;
+        srcset=&quot;/static/原因1-f157a782dc7a105fbcaeba2171ae4733-bed0f.png 200w,
+/static/原因1-f157a782dc7a105fbcaeba2171ae4733-5fd34.png 400w,
+/static/原因1-f157a782dc7a105fbcaeba2171ae4733-48538.png 800w,
+/static/原因1-f157a782dc7a105fbcaeba2171ae4733-b70ec.png 1200w,
+/static/原因1-f157a782dc7a105fbcaeba2171ae4733-d134a.png 1600w,
+/static/原因1-f157a782dc7a105fbcaeba2171ae4733-55c5b.png 1916w&quot;
+        sizes=&quot;(max-width: 800px) 100vw, 800px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    &lt;/p&gt;
+&lt;p&gt;
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/原因2-8476e1f72ff45b0e087e85029010b116-09816.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block; ; max-width: 800px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 50.54887611082071%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAYAAAC0VX7mAAAACXBIWXMAAAsSAAALEgHS3X78AAABdElEQVQoz52R227UMBRF8+E8VOIHqCoEiGlLp+k0HbVIFV+EaKYT6CR24nh8zWbbYUB94CIsLe1zLHn5WC5eHL3E+v4TFssVTssKi8trnDE/XFU4J8vrG1xVa5TMMuUB9qv1LS5XFesKd3RUtx9RpI20PIkkkAn/v4rF+TKLvgqFp2GfadXz7EaDYW+hjYP3Ho7431BclKtsbtNB7dCODv3eQbCWTO0ClPWwPiDGCdP0ZzjhRRbuKEySgyhlEhkfKeMbpr/LsvD12/ezsNc/ZbPQomffp2RvOOE/Cd+8W2ShEEnoIfZ+liaRsjBKIziPECOffGDKH8fzcx6YhfOEcjdA9nx2/gQLqQwka9MPsELCdgImJXuvNaJ3mIJ/Di8rTl4dA4PC5vMWTd3gC6m3LR6aDo/NE3b1I8TDhtSQNXOzhWi+QXVdZuBFw66FFi2iVijK9MshcELJCUf0RMsBioy8yI06TxSs/YFBdHbG2l81SVN+B9R48ELdeLncAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px transparent;&quot;
+        alt=&quot;  2&quot;
+        title=&quot;&quot;
+        src=&quot;/static/原因2-8476e1f72ff45b0e087e85029010b116-48538.png&quot;
+        srcset=&quot;/static/原因2-8476e1f72ff45b0e087e85029010b116-bed0f.png 200w,
+/static/原因2-8476e1f72ff45b0e087e85029010b116-5fd34.png 400w,
+/static/原因2-8476e1f72ff45b0e087e85029010b116-48538.png 800w,
+/static/原因2-8476e1f72ff45b0e087e85029010b116-b70ec.png 1200w,
+/static/原因2-8476e1f72ff45b0e087e85029010b116-d134a.png 1600w,
+/static/原因2-8476e1f72ff45b0e087e85029010b116-09816.png 1913w&quot;
+        sizes=&quot;(max-width: 800px) 100vw, 800px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    &lt;/p&gt;
+&lt;h3&gt;线索3:urllib所发出的请求导致出问题&lt;/h3&gt;
+&lt;p&gt;
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/原因2查询-3fab228881c13e4e06f1b61930f4f74f-3bb64.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block; ; max-width: 800px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 50.470219435736674%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAYAAAC0VX7mAAAACXBIWXMAAAsSAAALEgHS3X78AAABQ0lEQVQoz62P3U/CMBTF94f7YOKj4cFvjALyNb6UaIjx7zEBum7tZKxbuxFyvC0ixAcTiU1+ubfntKe33tHxCSavb2h2fHR6A/jDR/iDEdp+H81uD93+0Gm2tvf8Fvn90RN8q/s9jF8mGI2f4dmg/1xe9b6BbA2IRCHJDFSuHbkukJsCWb7Tfu8N3THwag8tZLrEVKRIcwrQh6OLFU14V4eiDRMJTVS6qTb1b9hAYwPPLm+QU8Pj5bdhyf+CKXaB51dV6HINuVBfgYQ5gO2XL65voc0KEU1YkGHoNWNfc7XcsNX3vR9oN2EJr3JawXKp8D6dY8YZZiwAC2MEPATjtueYB5x6Tr7VQrefM05nBLjVmNUipIsFvEatjkwpsCBwh3kYQcgYUoSI4xDyg0PK0BHFAjK2voAQEWlyUwXpdEenCT4B5hHp8GL2ofMAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px transparent;&quot;
+        alt=&quot;  2  &quot;
+        title=&quot;&quot;
+        src=&quot;/static/原因2查询-3fab228881c13e4e06f1b61930f4f74f-48538.png&quot;
+        srcset=&quot;/static/原因2查询-3fab228881c13e4e06f1b61930f4f74f-bed0f.png 200w,
+/static/原因2查询-3fab228881c13e4e06f1b61930f4f74f-5fd34.png 400w,
+/static/原因2查询-3fab228881c13e4e06f1b61930f4f74f-48538.png 800w,
+/static/原因2查询-3fab228881c13e4e06f1b61930f4f74f-b70ec.png 1200w,
+/static/原因2查询-3fab228881c13e4e06f1b61930f4f74f-d134a.png 1600w,
+/static/原因2查询-3fab228881c13e4e06f1b61930f4f74f-3bb64.png 1914w&quot;
+        sizes=&quot;(max-width: 800px) 100vw, 800px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    &lt;/p&gt;
+&lt;p&gt;根据报错信息组装并打开urllib发出的请求,可以看到请求(&lt;a href=&quot;http://192.168.65.222:18082/scene/b2c/retail/view/?size=200&amp;#x26;from=311200&quot;&gt;http://192.168.65.222:18082/scene/b2c/retail/view/?size=200&amp;#x26;from=311200&lt;/a&gt;)的具体信息,里面有几点是不正确的. &lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;门店查询为什么没有店家编号; &lt;/li&gt;
+&lt;li&gt;从311200即1556页开始查询,那个用户会能这么无聊;&lt;/li&gt;
+&lt;li&gt;查询这么多就是没有什么意义的;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;基于这个线索我们深入查看了代码.  终于剥开迷雾; 在查找代码后发现这段逻辑中有嵌套调用,无限循环; &lt;/p&gt;
+&lt;p&gt;当通过手机号能查询到用户时, 一切正常,而当通过手机号查询不到用户时,便变成了查询所有店铺列表;&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;typescript&quot;&gt;
+      &lt;pre class=&quot;language-typescript&quot;&gt;&lt;code class=&quot;language-typescript&quot;&gt;  &lt;span class=&quot;token comment&quot;&gt;/**
+   * 根据ticketId查询查询店铺列表
+   */&lt;/span&gt;
+  &lt;span class=&quot;token keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;async&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;shopListByPhonenum&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;phonenum&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token builtin&quot;&gt;string&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; pageSize&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token builtin&quot;&gt;number&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;200&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; pageNum&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token builtin&quot;&gt;number&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; ticketId &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;await&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;ctx&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;service&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;ucFetch&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;fetchTicketIdByPhonenum&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;phonenum&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;token constant&quot;&gt;ES&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;ctx&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;let&lt;/span&gt; dataList &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; esRes &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;await&lt;/span&gt; &lt;span class=&quot;token constant&quot;&gt;ES&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;pagingQuery&lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;IConnectionInfo&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+      router&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token template-string&quot;&gt;&lt;span class=&quot;token string&quot;&gt;`&lt;/span&gt;&lt;span class=&quot;token interpolation&quot;&gt;&lt;span class=&quot;token interpolation-punctuation punctuation&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;token constant&quot;&gt;ES&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;routers&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token constant&quot;&gt;SCENE_RETAIL_SHOP&lt;/span&gt;&lt;span class=&quot;token interpolation-punctuation punctuation&quot;&gt;}&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;/`&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+      pageSize&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+      pageNum&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+      terms&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+        prop&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;userId&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+        value&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; ticketId&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+      &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+    dataList &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; dataList&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;concat&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;esRes&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;dataList &lt;span class=&quot;token operator&quot;&gt;||&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;esRes&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;totalCount &lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;200&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; dataList&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;length &lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+      &lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; shopList &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;await&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;shopListByPhonenum&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;phonenum&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; pageSize&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; pageNum &lt;span class=&quot;token operator&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+      dataList &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; dataList&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;concat&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;shopList&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; dataList&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+      &lt;/div&gt;
+&lt;p&gt;
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/request截图-d395e33b2c30734e2c3e6669108b1d9f-7d528.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block; ; max-width: 800px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 39.71238938053097%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAICAYAAAD5nd/tAAAACXBIWXMAAAsSAAALEgHS3X78AAAAwklEQVQoz62S2w6CMBBE+f+vJAqU0na7BRFBk3GoRkP0SXw42UvS2Wl2CxcUrQyI44LTNON8WTA+4y8UnRfUvsdw3i+WBa0LaJxs3O1yaDoPE3qMuTH/x2HQ08bdHigo2eFlvmameSHXV/3m9tGbvtRFZR0OlouJgsrz+9x4GwcOiWiCoBFFvcYnjz7x63X0sJJyXjtFx3fF0UUKKcrW49gJSoofeEpWBTYJ2sSlqcuYFNmPMJpQRYppz+EpDzAUtszvPPNo5XA+GtIAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px transparent;&quot;
+        alt=&quot;request  &quot;
+        title=&quot;&quot;
+        src=&quot;/static/request截图-d395e33b2c30734e2c3e6669108b1d9f-48538.png&quot;
+        srcset=&quot;/static/request截图-d395e33b2c30734e2c3e6669108b1d9f-bed0f.png 200w,
+/static/request截图-d395e33b2c30734e2c3e6669108b1d9f-5fd34.png 400w,
+/static/request截图-d395e33b2c30734e2c3e6669108b1d9f-48538.png 800w,
+/static/request截图-d395e33b2c30734e2c3e6669108b1d9f-b70ec.png 1200w,
+/static/request截图-d395e33b2c30734e2c3e6669108b1d9f-d134a.png 1600w,
+/static/request截图-d395e33b2c30734e2c3e6669108b1d9f-7d528.png 1808w&quot;
+        sizes=&quot;(max-width: 800px) 100vw, 800px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    
+把url拼装后发现得出结果
+
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/elasticsearch-87f9fa0da2ad7e500210818c99e62558-cdf4d.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block; ; max-width: 800px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 57.17439293598234%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAYAAAB/Ca1DAAAACXBIWXMAAAsSAAALEgHS3X78AAABTklEQVQoz6WRy27CMBBF8/+/UVEgJHYSKLCo1BUbuiiIFaq6oRJFpJC3nQDidhywUEJb9THS1ciW75kZjzH0PLg2B2u34JomeozhjnN0bRs90sB10Hc4+nQ39Fy6szAajTCZzTCdPOFxPMZD18OA2bjvuTCYZYGRkZNcgpmtJlqNBiyzDbtjlrkqEw6ZebOJmzbDbYfDoWIOeZUM1ELmOYIgRFHs8F2I5xdMlznm6+o7Y7/fQ+twOGCzjeAHKYIoRUhKU3GtTELsyEPFlZSv9JPKDo/HYykVWZwg9H1kWQ4hC0iSEHmZpTxnOguC6jeVDjVMAwshkLwukEbZySguEHkuIGuFdCjGNTDfIXnbIH0PIeKs7ESbRQ36KbA+slpGst4iUR0SXFRGLv4IXPqIwuTS2b86pEfxYoU0iL8c9XdA9Yer0x+qrWqT+OFSPgBuojs0ShyxCAAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px transparent;&quot;
+        alt=&quot;elasticsearch&quot;
+        title=&quot;&quot;
+        src=&quot;/static/elasticsearch-87f9fa0da2ad7e500210818c99e62558-48538.png&quot;
+        srcset=&quot;/static/elasticsearch-87f9fa0da2ad7e500210818c99e62558-bed0f.png 200w,
+/static/elasticsearch-87f9fa0da2ad7e500210818c99e62558-5fd34.png 400w,
+/static/elasticsearch-87f9fa0da2ad7e500210818c99e62558-48538.png 800w,
+/static/elasticsearch-87f9fa0da2ad7e500210818c99e62558-b70ec.png 1200w,
+/static/elasticsearch-87f9fa0da2ad7e500210818c99e62558-d134a.png 1600w,
+/static/elasticsearch-87f9fa0da2ad7e500210818c99e62558-cdf4d.png 1812w&quot;
+        sizes=&quot;(max-width: 800px) 100vw, 800px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    &lt;/p&gt;
+&lt;h2&gt;回顾&lt;/h2&gt;
+&lt;p&gt;如果是一个请求造成了,内存暴增, 我们可以推断,有用户发送的http请求会中断 ; 然后我查询了nginx监控日志 (近期刚做监控,还没全面推广)
+通过图发现确实是如此,而且最后一个参数为undefined; 虽然马后炮没什么用, 但如果能解决这个问题,可能就不会有这么一遭经历了. &lt;/p&gt;
+&lt;p&gt;我们再来验证下线索:&lt;/p&gt;
+&lt;p&gt;“崩溃不定期发生”: 是因为有用户触发此请求才会导致,而且只有一个node进程崩溃;&lt;/p&gt;
+&lt;p&gt;“没有用户反馈”: 此功能非重要页面,用户会重新刷新,退出; &lt;/p&gt;
+&lt;p&gt;“有3种崩溃的情况,不只是一种”: 嵌套调用有时间间隔(异步) , 有可能此时dubbo正好返回,导致内存撑爆,故而3种情况甚至更多情况都会出现,只要有申请内存操作的都有机率出现; &lt;/p&gt;
+&lt;p&gt;
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/sentry统计-a5661bf40f5d44c0f5a928807a73359d-629ce.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block; ; max-width: 800px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 54.93741307371349%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAYAAAB/Ca1DAAAACXBIWXMAABYlAAAWJQFJUiTwAAACOElEQVQoz21S227TQBD1pyAQUgUhtE3S0pImIUCrtCIPCArijS/gt5C4BNLSVogvgbTQJLSOL0ns9X3XPsyuY9SHrjWyZ7Q+c86c0d7tvsLrvbdoVp/h+OAH4jiBO2cQPEWaZrjuZFl2NcljcbRuax+7zX00KnvofzrCRDegX+q4vNBhTExYlg3bmMA6+wnz9wBhECjAJEkQUfPENsE9hjjh4JRrO/UX6LbfoFXr4vjLCbJUwHVc+J4Pz/Pg+wFm9hT2eISEOcQ6VeExD0EYIp7aEIEPn75NZwZt++FzdBovsbXSQf/zCcKQw5nTBS8CcwMEfgQuu4v0eslFjZ5IEMPHG13IWCu1CfCIugoYFoM99WHNIljzeDHLjOSGiKI8T6kBcxmpYYpx0USrV3bQqHZQvdPEt/53VUyIUfGTELk5hVQZ0gT5Nm0XhumAc65qElTbXHmKemUbq0tbOKQZyjMlyXNHzjCAQ7IZyfeYD5dFZARXdySgNEJcNVwyXL/fxsbyE5Rvb+Lwaw7IWACXgBwWwwtoflwoFgnPGRfbkpARKRklfDJv6iImM7VaqYm18iOUbq2j3ztaSE6UTKEkCyUlW8jOskJ+hoDAMtcGd13YQwOeYRHgvSYeLLdx92YNvY8HtCY+zv8M8Xd8oXZyMjHUTpp0Wdbkjur6hMyJ8llTwygkNY5DI/IJsNwihi0s3VjFh/c92LRzp4MzDH6dYng+UjEajlWMR+P/eUxuy+YF6zhJaSQZ/gHEdAXLpZ7t9AAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px transparent;&quot;
+        alt=&quot;sentry  &quot;
+        title=&quot;&quot;
+        src=&quot;/static/sentry统计-a5661bf40f5d44c0f5a928807a73359d-48538.png&quot;
+        srcset=&quot;/static/sentry统计-a5661bf40f5d44c0f5a928807a73359d-bed0f.png 200w,
+/static/sentry统计-a5661bf40f5d44c0f5a928807a73359d-5fd34.png 400w,
+/static/sentry统计-a5661bf40f5d44c0f5a928807a73359d-48538.png 800w,
+/static/sentry统计-a5661bf40f5d44c0f5a928807a73359d-b70ec.png 1200w,
+/static/sentry统计-a5661bf40f5d44c0f5a928807a73359d-d134a.png 1600w,
+/static/sentry统计-a5661bf40f5d44c0f5a928807a73359d-f6ead.png 2400w,
+/static/sentry统计-a5661bf40f5d44c0f5a928807a73359d-629ce.png 2876w&quot;
+        sizes=&quot;(max-width: 800px) 100vw, 800px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    
+
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/sentry2-30c51a39024573ffb6bb984387e45725-6200b.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block; ; max-width: 800px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 55.00000000000001%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAYAAAB/Ca1DAAAACXBIWXMAABYlAAAWJQFJUiTwAAACGklEQVQoz21S227TQBD1nyCBBIg2pZekJSVt2lBatRKRQMBDeeUH+C1EaUoSCoivQQ1xEju+rL27vh52xgkgxFqjnfXsnDlnZq13z87xpvsWR83nuO5/R6JThL5AnuUoihL/W2X59/+Sz2zms7rtVzhrv8be5hl67weY2BPYYxvjnzZm0xkcx4HrurzTWUrJyWmaQesESZIhSxdmfOuk9RLdzjkOG10ML4aGWYrADxBFESJRme/5cJ25SU6Q58S84P8yltAEaNRIpTAN5rCOH7+oGG6cYnj1jUWIgC4ryEhBhDG0SjhpofAfydXKTRGdp7CeNLsga6wcGsCvHFQGLDFy0iQ1UipGBFLkBfvU35x8YyyV+p1Xd6zW1gn266eoP2hj0PvCgIHQEHEKpTOURZW4BCDAqncp+3EkufjybO1uPEVr6xib9/fQv7yGTICRHWA8jeB6MV9WSjMIGTGi3jmOy3sQhAxW7QmsnYcdNNePsHZ3F58+foZRiMlMYDaX8EPFl6mHzGoBqKTiQWlTSAhhJp7ykKhFVmO1je3aAVbv7ODKTDnWJX6MPNyMQ0wdwcmxYaKkNk9G8TvVWiMMBTOiWJZVrKm3VqPWxqP1DlZuN9C7GECmwI0dYmQkO57kqssBEVsaABXx5p5pBb0CwTFiSjGrXtvH9toB7t3awOWH/kJyiJkbw/NjlkUAtJNRMgH9kRz9lkwMfwGr0QhOp27L5AAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px transparent;&quot;
+        alt=&quot;sentry2&quot;
+        title=&quot;&quot;
+        src=&quot;/static/sentry2-30c51a39024573ffb6bb984387e45725-48538.png&quot;
+        srcset=&quot;/static/sentry2-30c51a39024573ffb6bb984387e45725-bed0f.png 200w,
+/static/sentry2-30c51a39024573ffb6bb984387e45725-5fd34.png 400w,
+/static/sentry2-30c51a39024573ffb6bb984387e45725-48538.png 800w,
+/static/sentry2-30c51a39024573ffb6bb984387e45725-b70ec.png 1200w,
+/static/sentry2-30c51a39024573ffb6bb984387e45725-d134a.png 1600w,
+/static/sentry2-30c51a39024573ffb6bb984387e45725-f6ead.png 2400w,
+/static/sentry2-30c51a39024573ffb6bb984387e45725-6200b.png 2880w&quot;
+        sizes=&quot;(max-width: 800px) 100vw, 800px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    &lt;/p&gt;
+&lt;h2&gt;小结&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;重视线上报错告警信息,每一个错都是一个潜在的雷,不排除,就被炸,问题越早发现处理成本越低,处理起来越简单; &lt;/li&gt;
+&lt;li&gt;重视代码规范(价值观),各环节的参数校验要到位,现在没问题不代表以后没问题; &lt;/li&gt;
+&lt;li&gt;现场只告诉你信息,原因要结合场景进行一些推断, 工具是还没那么智能的告诉你那里出问题了; &lt;/li&gt;
+&lt;li&gt;工具链非常重要,进程崩溃没有引发大范围业务问题,问题相关的定位太感谢相关的工具(alinode lldb sentry logserver,bugatti),好的工具链能营造一个好的开发体验,让我们便捷的去解决问题;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;参考文章&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&quot;https://zhuanlan.zhihu.com/p/41178823?spm=a2c4g.11186623.2.23.31636df2AekZJO&quot;&gt;Node 案发现场揭秘 —— Coredump 还原线上异常&lt;/a&gt;
+&lt;a href=&quot;https://www.bookstack.cn/read/node-in-debugging/2.1gcorellnode.md&quot;&gt;Node.js 调试指南&lt;/a&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[工作经历介绍]]></title><description><![CDATA[Personal Information name：杨晓东 birth：1987-07-29 github： https://github.com/ blog： https://creasy2010.github.io/ About me…]]></description><link>https://github.com/creasy2010/工作经历/</link><guid isPermaLink="false">https://github.com/creasy2010/工作经历/</guid><content:encoded>&lt;h2&gt;Personal Information&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;name：杨晓东&lt;/li&gt;
 &lt;li&gt;birth：1987-07-29&lt;/li&gt;
