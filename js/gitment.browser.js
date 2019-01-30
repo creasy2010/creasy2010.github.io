@@ -3489,7 +3489,6 @@ var Gitment =
             desc = this.desc,
             labels = this.labels;
 
-
           return _utils.http.post('/repos/' + owner + '/' + repo + '/issues', {
             title: title,
             labels: labels.concat(['gitment', id]),
