@@ -1,10 +1,10 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[PersonalBlog - a blog starter for GatsbyJS]]></title><description><![CDATA[PersonalBlog is a GatsbyJS starter.]]></description><link>https://github.com/creasy2010</link><generator>RSS for Node</generator><lastBuildDate>Wed, 30 Jan 2019 03:21:02 GMT</lastBuildDate><item><title><![CDATA[bug不解决如何过年-node OOM]]></title><description><![CDATA[bug还没解决，如何过年? 不是标题党，确实是出了线上问题，线上不间断出现oom问题，还有一周就过年了，问题不解决，如何能安心过年，过年的时候出问题，估计客户会把我们撕的碎碎的. 为什么说 “5块钱的bug，怎么用了1.5W…]]></description><link>https://github.com/creasy2010/bug不解决如何过年/</link><guid isPermaLink="false">https://github.com/creasy2010/bug不解决如何过年/</guid><content:encoded>&lt;p&gt;bug还没解决，如何过年?&lt;/p&gt;
-&lt;p&gt;不是标题党，确实是出了线上问题，线上不间断出现oom问题，还有一周就过年了，问题不解决，如何能安心过年，过年的时候出问题，估计客户会把我们撕的碎碎的.&lt;/p&gt;
-&lt;p&gt;为什么说 “5块钱的bug，怎么用了1.5W的成本?” 数字列的有些夸张了，但如果及早发现这个问题，一个人5分钟就搞定，但我们三个人却用了5天(包含周未);&lt;/p&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[PersonalBlog - a blog starter for GatsbyJS]]></title><description><![CDATA[PersonalBlog is a GatsbyJS starter.]]></description><link>https://github.com/creasy2010</link><generator>RSS for Node</generator><lastBuildDate>Thu, 31 Jan 2019 06:04:59 GMT</lastBuildDate><item><title><![CDATA[bug不解决如何过年-node OOM]]></title><description><![CDATA[bug还没解决，如何过年? 不是标题党,为博眼球，确实是出了线上问题，线上不间断出现oom问题，还有一周就过年了，问题不解决，如何能安心过年，过年的时候出问题，估计客户会把我们撕的碎碎的. 为什么说 “5块钱的bug，怎么用了1.5W…]]></description><link>https://github.com/creasy2010/bug不解决如何过年/</link><guid isPermaLink="false">https://github.com/creasy2010/bug不解决如何过年/</guid><content:encoded>&lt;p&gt;bug还没解决，如何过年?&lt;/p&gt;
+&lt;p&gt;不是标题党,为博眼球，确实是出了线上问题，线上不间断出现oom问题，还有一周就过年了，问题不解决，如何能安心过年，过年的时候出问题，估计客户会把我们撕的碎碎的.&lt;/p&gt;
+&lt;p&gt;为什么说 “5块钱的bug，怎么用了1.5W的成本?” 数字虽列的有些夸张了，但如果及早发现这个问题，一个人5分钟就搞定，但我们三个人却用了5天(包含周未);&lt;/p&gt;
 &lt;h2&gt;现象&lt;/h2&gt;
-&lt;p&gt;在”发现问题行动”的推动下配置了alinode的告警，然后就有报警出现了. &lt;/p&gt;
+&lt;p&gt;在”find Error Action”的推动下配置了alinode的告警，然后报警就真真的出现了. &lt;/p&gt;
 &lt;p&gt;报警: “已用堆内存超过堆上限的 80%，当前为 82.31%“;&lt;/p&gt;
-&lt;p&gt;再仔细一查，不得了了.比报警内容还坏，我们遇到的不是内存泄漏，而是oom崩溃，而且是突发式的.一但发生立马崩溃，不给你半点时间;
+&lt;p&gt;再仔细一查，不得了了．比报警内容还坏，我们遇到的不是内存泄漏，而是oom崩溃，而且是突发式的．一但发生立马崩溃，不给你半点时间;
 幸好进程会自动拉起. nginx也有健康状态检查，会自动分流; &lt;/p&gt;
 &lt;p&gt;
   &lt;a
@@ -82,7 +82,7 @@
 &lt;p&gt;有了这些信息，就可以开展分析工作了;&lt;/p&gt;
 &lt;h2&gt;线索&lt;/h2&gt;
 &lt;ol&gt;
-&lt;li&gt;崩溃不定期发生，然而线上机器大概率发生，灰度 机器并不发生;一台机器中个别进程崩溃;&lt;/li&gt;
+&lt;li&gt;崩溃不定期发生，然而线上机器大概率发生，灰度机器并不发生;　一台机器中个别进程崩溃;&lt;/li&gt;
 &lt;li&gt;查看其他应用并没有发生崩溃的问题; &lt;/li&gt;
 &lt;li&gt;近期上了健康检查与全链路跟踪; &lt;/li&gt;
 &lt;li&gt;线上虽有崩溃，然而并没有用户反馈有问题;&lt;/li&gt;
@@ -101,9 +101,9 @@
 &lt;li&gt;zoneContex 所使用的async_hook还是实验特性 (不会入坑了吧. );&lt;/li&gt;
 &lt;li&gt;nginx有健康检查，会不停发请求; &lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;但还是选一个软柿子捏.”查看heap中占比最大的对象” 这个最容易解决&lt;/p&gt;
+&lt;p&gt;线索列出来，还是选一个软柿子捏－－　“查看heap中占比最大的对象”，这个最容易解决&lt;/p&gt;
 &lt;h3&gt;线索1:查看heap中占比最大的对象&lt;/h3&gt;
-&lt;p&gt;本以为手到病除，然而一看coredump中对象列表就傻眼了.没有统计，没有规律，只显示object有600多M，但是什么对象就是找不到.
+&lt;p&gt;本以为药到病除，手到勤来，然而一看coredump中对象列表就傻眼了．没有统计，没有规律，只显示object有600多M，但是什么对象就是找不到.
 就好比告诉你凶手就在茫茫人海中，说了几乎跟没说一样.. 😱&lt;/p&gt;
 &lt;p&gt;
   &lt;a
@@ -143,8 +143,8 @@
     &lt;/p&gt;
 &lt;p&gt;尝试用概率的方法来人肉统计一次，然而次次无功而返;当然可以不依赖alinode对coredump进行分析，然而考虑到时间成本再试下别一个角度😤&lt;/p&gt;
 &lt;h3&gt;线索2:zoneContext导致&lt;/h3&gt;
-&lt;p&gt;朝着这个方向走，检查了zonecontext的代码，然而并没有看出什么问题，只好忌出大法(范围缩小跟踪)&lt;/p&gt;
-&lt;p&gt;我们使用zonecontext的地方有两个，1) 全链路跟踪，2) dubbolog . 而 全链路跟踪是新上的功能，且是关键节点，dubbolog记录是很久上的，且业务应用也有使用&lt;/p&gt;
+&lt;p&gt;朝着这个方向走，检查了zonecontext的代码，然而并没有看出什么问题，只好缩小排错的范围&lt;/p&gt;
+&lt;p&gt;我们使用zonecontext的地方有两个，1) 全链路跟踪，2) dubbolog . 而 全链路跟踪是新上的功能，dubbolog记录是很久上的，且业务应用也有使用&lt;/p&gt;
 &lt;p&gt;我们选择关闭了zipkin全链路跟踪，关闭了nginx健康检查(会发送大量请求); &lt;/p&gt;
 &lt;p&gt;理想总是美好的，然而实现却啪啪啪的打脸. 把这些都关闭了线上还在出问题;囧了. 众多迹象证明问题不在zonecontext&amp;#x26;async_hook😤&lt;/p&gt;
 &lt;p&gt;
@@ -363,12 +363,13 @@
   &lt;/a&gt;
     &lt;/p&gt;
 &lt;h2&gt;回顾&lt;/h2&gt;
-&lt;p&gt;如果是一个请求造成了，内存暴增，我们可以推断，有用户发送的http请求会中断 ; 然后我查询了nginx监控日志 (近期刚做监控，还没全面推广)
-通过图发现确实是如此，而且最后一个参数为undefined; 虽然马后炮没什么用，但如果能解决这个问题，可能就不会有这么一遭经历了. &lt;/p&gt;
-&lt;p&gt;我们再来验证下线索:&lt;/p&gt;
+&lt;p&gt;如果是一个请求造成了，内存暴增，我们可以推断，有用户发送的http请求会中断 ; 然后我查询了nginx监控日志 (近期刚做监控，还没全面推广)进行验证
+通过图发现确实是如此，而且最后一个参数为undefined; &lt;/p&gt;
+&lt;p&gt;虽然马后炮没什么用，但如果能及时解决这个问题，可能就不会有这么一遭经历了. &lt;/p&gt;
+&lt;p&gt;我们再来回顾下线索:&lt;/p&gt;
 &lt;p&gt;“崩溃不定期发生”: 是因为有用户触发此请求才会导致，而且只有一个node进程崩溃;&lt;/p&gt;
 &lt;p&gt;“没有用户反馈”: 此功能非重要页面，用户会重新刷新，退出; &lt;/p&gt;
-&lt;p&gt;“有3种崩溃的情况，不只是一种”: 嵌套调用有时间间隔(异步) ，有可能此时dubbo正好返回，导致内存撑爆，故而3种情况甚至更多情况都会出现，只要有申请内存操作的都有机率出现; &lt;/p&gt;
+&lt;p&gt;“有3种崩溃的情况，不只是一种”: 嵌套异步调用是有时间间隔 ，有可能此时dubbo正好返回，导致内存撑爆,变成了压死骆驼的最后一根稻草，故而3种情况甚至更多情况都会出现，只要有申请内存操作的都有机率出现; &lt;/p&gt;
 &lt;p&gt;
   &lt;a
     class=&quot;gatsby-resp-image-link&quot;
@@ -443,17 +444,21 @@
   
   &lt;/a&gt;
     &lt;/p&gt;
-&lt;h2&gt;小结&lt;/h2&gt;
+&lt;h2&gt;事故小结&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;重视线上报错告警信息，每一个错都是一个潜在的雷，不排除，就被炸，问题越早发现处理成本越低，处理起来越简单; &lt;/li&gt;
-&lt;li&gt;重视代码规范(价值观)，各环节的参数校验要到位，现在没问题不代表以后没问题; &lt;/li&gt;
-&lt;li&gt;各个环节的监控要配置到位;&lt;/li&gt;
-&lt;li&gt;现场只告诉你信息，原因要结合场景进行一些推断，工具是还没那么智能的告诉你那里出问题了; &lt;/li&gt;
-&lt;li&gt;工具链非常重要，进程崩溃没有引发大范围业务问题，问题相关的定位太感谢相关的工具(alinode lldb sentry logserver，bugatti dubbo2js zonecontext)，好的工具链能营造一个好的开发体验，让我们便捷的去解决问题;&lt;/li&gt;
+&lt;li&gt;重视告警: 每一个错都是一个潜在的雷，不排除，就被炸，问题越早发现处理成本越低，处理起来越简单; &lt;/li&gt;
+&lt;li&gt;重视代码规范(价值观): 各环节的参数校验要到位，现在没问题不代表以后没问题; &lt;/li&gt;
+&lt;li&gt;监控配置: 各个环节的监控要配置到位,针对前端,bff端,nginx,node底层;&lt;/li&gt;
+&lt;li&gt;结合场景调错: 现场只告诉你信息，要找到原因还是要结合场景进行一些推断，工具是还没那么智能的告诉你那里出问题了; &lt;/li&gt;
+&lt;li&gt;工具链支持: 非常重要，进程崩溃没有引发大范围业务问题，问题相关的定位太感谢相关的工具(&lt;a href=&quot;https://www.aliyun.com/product/nodejs&quot;&gt;alinode&lt;/a&gt; &lt;a href=&quot;https://lldb.llvm.org/&quot;&gt;lldb&lt;/a&gt; &lt;a href=&quot;https://sentry.io&quot;&gt;sentry&lt;/a&gt; logserver，bugatti &lt;a href=&quot;http://dubbo.io/dubbo2.js/&quot;&gt;dubbo2js&lt;/a&gt;)，好的工具链能营造一个好的开发体验，让我们便捷的去发现问题,解决问题;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2&gt;参考文章&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&quot;https://zhuanlan.zhihu.com/p/41178823?spm=a2c4g.11186623.2.23.31636df2AekZJO&quot;&gt;Node 案发现场揭秘 —— Coredump 还原线上异常&lt;/a&gt;
-&lt;a href=&quot;https://www.bookstack.cn/read/node-in-debugging/2.1gcorellnode.md&quot;&gt;Node.js 调试指南&lt;/a&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[工作经历介绍]]></title><description><![CDATA[Personal Information name：杨晓东 birth：1987-07-29 github： https://github.com/ blog： https://creasy2010.github.io/ About me…]]></description><link>https://github.com/creasy2010/工作经历/</link><guid isPermaLink="false">https://github.com/creasy2010/工作经历/</guid><content:encoded>&lt;h2&gt;Personal Information&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&quot;https://zhuanlan.zhihu.com/p/41178823?spm=a2c4g.11186623.2.23.31636df2AekZJO&quot;&gt;Node 案发现场揭秘 —— Coredump 还原线上异常&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.bookstack.cn/read/node-in-debugging/2.1gcorellnode.md&quot;&gt;Node.js 调试指南&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://dubbo.io/dubbo2.js/&quot;&gt;dubbo2js&lt;/a&gt;&lt;/p&gt;
+&lt;h2&gt;其他文章&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&quot;https://creasy2010.github.io/%E7%81%B0%E5%BA%A6/&quot;&gt;灰度方案如何拉低我的焦虑值&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://creasy2010.github.io/sentry%E8%90%BD%E5%9C%B0%E5%AE%9E%E6%88%98/&quot;&gt;sentry落地实战&lt;/a&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[工作经历介绍]]></title><description><![CDATA[Personal Information name：杨晓东 birth：1987-07-29 github： https://github.com/ blog： https://creasy2010.github.io/ About me…]]></description><link>https://github.com/creasy2010/工作经历/</link><guid isPermaLink="false">https://github.com/creasy2010/工作经历/</guid><content:encoded>&lt;h2&gt;Personal Information&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;name：杨晓东&lt;/li&gt;
 &lt;li&gt;birth：1987-07-29&lt;/li&gt;
