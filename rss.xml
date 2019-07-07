@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[PersonalBlog - a blog starter for GatsbyJS]]></title><description><![CDATA[PersonalBlog is a GatsbyJS starter.]]></description><link>https://github.com/creasy2010</link><generator>RSS for Node</generator><lastBuildDate>Sun, 07 Jul 2019 02:11:40 GMT</lastBuildDate><item><title><![CDATA[前端腻子粉 - 最近我在搞装修]]></title><description><![CDATA[google 10 倍工作法, 突破常规藩篱的魔法! 我们常会自嘲自己是码农,那捯饬下腻子粉更是符合我们的身份; 看到题目,大家的第一反应可能是: “腻子粉是什么?会给我们带来什么?”;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[PersonalBlog - a blog starter for GatsbyJS]]></title><description><![CDATA[PersonalBlog is a GatsbyJS starter.]]></description><link>https://github.com/creasy2010</link><generator>RSS for Node</generator><lastBuildDate>Sun, 07 Jul 2019 02:23:11 GMT</lastBuildDate><item><title><![CDATA[前端腻子粉 - 最近我在搞装修]]></title><description><![CDATA[google 10 倍工作法, 突破常规藩篱的魔法! 我们常会自嘲自己是码农,那捯饬下腻子粉更是符合我们的身份; 看到题目,大家的第一反应可能是: “腻子粉是什么?会给我们带来什么?”;
 腻子粉英文名称(polyfill…]]></description><link>https://github.com/creasy2010/且看&quot;前端腻子粉&quot;如何赋能团队/</link><guid isPermaLink="false">https://github.com/creasy2010/且看&quot;前端腻子粉&quot;如何赋能团队/</guid><content:encoded>&lt;blockquote&gt;
 &lt;p&gt;google 10 倍工作法, 突破常规藩篱的魔法!&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -6,7 +6,43 @@
 腻子粉英文名称(polyfill),在前端打包编译过程中我们频繁用到,会帮助我们把浏览器间的兼容问题打平,提高我们的幸福感,再不不用关心这个 api 浏览器是否支持,再也不用关心 css 适配问题等问题.&lt;/p&gt;
 &lt;h2&gt;是什么&lt;/h2&gt;
 &lt;p&gt;在解释我们的腻子粉能带来什么前, 我们先回味下前端不那么幸福的事情?
-!(作为前端你幸福吗?)[./xingfu.png];&lt;/p&gt;
+
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/xingfu-70e9176d49f48a46cbeef3960f165837-ed107.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block; ; max-width: 800px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 63.68794326241134%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAABYlAAAWJQFJUiTwAAACcUlEQVQ4y61TXUhTYRgeO2dnW85mg0wvosGgC1kKQQmCV6UESwgXdTG2i6DbiG5CXAX96V03CWUtaRfddKHU4kixBaGQOIduM/ZzGnObW3XUcMefzeP2dM53bCTmTfTCw/t978/Dy/s9n0qlUuE/4+8Jk8mEhoYGNDUdkdCM5mYTLMcotBw/IJ2bQFHU/oQajQYMwxBotVqC9vZ2dHZ2wmazwX7xMrrOnsb5rkNwXjKju/sMDjc2SnUMdDpdrV+tVkNF0zR8Ph9SqRTm5+cRiUSID4VmMDc7W7sHgyE8HnoGln2PsbExeL1eeDweBAIBkk+n0+jp6YFKZk8kEvhtsVgMKysrmJqewcdPExDW1mq5jY114ovFIrLZLARBwJ/mcrkUwnA4TALlchmVSgX5fAHRwCiWIn6sCz+lWBWiKJIat/sWzGYz7HY7BgcHSaxUKhHvcDgUwmg0WiOUzc++RXL0EZb9T7CcmiMxcSd3u/8GWb7FYoHVegIcx9Um3EMobilNC5Msvn8YRoYdwioXVKqrkKYtopQP4qrjAiE1Go1YXMzvJZQXL9vWzhQ8/wOfX97F8sQIhKUcqhUpt1lCaXMTIj+HN/euEcLWtjZpCBHb2+Juwng8vmu5yfFXmHpoRd5nw2pWyY2/Y6XHS2JjIYmv9904ddCAkx0du/qcTqciG/npeZ5HZiGL3LcMpp+ew8SdFvivHMXk8wHwq2sITQfxYngIIe8IcgMP8Lq/D9dv9iH+JQYuyaGwWEBvb68ibFmUskAJJFHr9DQYWg1GEiqjoYnQDQYD6urqwEhnhqJRX19PfpJer6+BUlP7f71/xS94dW0pOLOITgAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px transparent;&quot;
+        alt=&quot;作为前端你幸福吗?&quot;
+        title=&quot;&quot;
+        src=&quot;/static/xingfu-70e9176d49f48a46cbeef3960f165837-48538.png&quot;
+        srcset=&quot;/static/xingfu-70e9176d49f48a46cbeef3960f165837-bed0f.png 200w,
+/static/xingfu-70e9176d49f48a46cbeef3960f165837-5fd34.png 400w,
+/static/xingfu-70e9176d49f48a46cbeef3960f165837-48538.png 800w,
+/static/xingfu-70e9176d49f48a46cbeef3960f165837-b70ec.png 1200w,
+/static/xingfu-70e9176d49f48a46cbeef3960f165837-d134a.png 1600w,
+/static/xingfu-70e9176d49f48a46cbeef3960f165837-f6ead.png 2400w,
+/static/xingfu-70e9176d49f48a46cbeef3960f165837-ed107.png 2820w&quot;
+        sizes=&quot;(max-width: 800px) 100vw, 800px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    ;&lt;/p&gt;
 &lt;h3&gt;前端的烦恼&lt;/h3&gt;
 &lt;ol&gt;
 &lt;li&gt;这个 res 是什么结构? - 只有程序运行起来,查看 cosole.log 或 network 我们才明天返回参数是什么.&lt;/li&gt;
@@ -33,26 +69,290 @@
 &lt;li&gt;在页面使用到对象的地方,总是有引用;&lt;/li&gt;
 &lt;li&gt;当然,这一切是自动生成的,非人力可为;&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;!()[./swagger-api.png]
-!()[./ts1.png]
-!()[./ts2.png]
-!()[./ts3.png]
-!()[./ts4.png]
-!()[./ts5.png]&lt;/p&gt;
+&lt;p&gt;
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/swagger-api-587effdbd6595c7b875f946d6ac0f57a-0324f.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block; ; max-width: 800px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 78.3433133732535%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAQCAYAAAAWGF8bAAAACXBIWXMAAAsSAAALEgHS3X78AAACfklEQVQ4y41T2W7bMBDU/39Df6B/UfQtL0XRNk19yrooibrvy9Z0lo6SoAjQyBjvkqKXMztra5omzPOMcRzhqxB+oIgQaZYjI7q+v7/nuekDsOTrOi8o+gafTl/w1X3EQfnYRR4OcWDgVglUWyBo8//ipWA+NPgcPOBBH+FmGqdUmWKXIjYHVVd8CNYmeRgGeJTr+AE8X5k8LwpUVY1pnih5/AfTu7CWZcFyvZqiWqcIwxiKkLxuGhYt0TQtFqqQMwsxv4dpvvcwSRLEUUxDNBzHw+XiMLoIyDCKIniez0toUppCzmqtTZR1lmUGeZ6joJq2bWGVZYmKmyqMcLLPlOthf9gz+rg4DnxGyeUC13XNJYVpRYW6rg0k32DJuAhVqa7OEewjWdkcHc+DwwLCTikZJfaWe7IOmN/ZeyaXCxq2p+s6WKfz2ciQPjRhi/icIHAjBDQn1jFK9tC0JY6NNJEoufxGCvWcUzHUTAu9sALeLrKvtwVd1iE+sD+RRssiI/e3pi/PkzDR4euziWKo5BLXdYU8Ft4883RFErD5KkYhRtAQYVRRTsn+ZGSo07v7FXtXcqSE4cbOFJTKBvLhrSX7mJ9ddCrAUOYYmxpz3z2jxdS1Zm9qazIY3/IxdawtEcILJRZPNvSvR1S/f6L88Q0l4xAFGNMYvVZEiC5m5L/oWqbmdxupV4a3m1n0oUb0fQe1f0JiH5H7DlLXRuKcaNaB2Btovku4bnjRNL/274Xh9tyqAsUxhN6dke//IPvzhIIzWex3yI57DEV+l0msY4+1Ljatrwy3wVxudK7poQ4X+LYNdToiOB4wVyXWtjEF6BpWunzHgHWZXyRvDP8CT8nCSD93ddMAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px transparent;&quot;
+        alt=&quot;swagger api&quot;
+        title=&quot;&quot;
+        src=&quot;/static/swagger-api-587effdbd6595c7b875f946d6ac0f57a-48538.png&quot;
+        srcset=&quot;/static/swagger-api-587effdbd6595c7b875f946d6ac0f57a-bed0f.png 200w,
+/static/swagger-api-587effdbd6595c7b875f946d6ac0f57a-5fd34.png 400w,
+/static/swagger-api-587effdbd6595c7b875f946d6ac0f57a-48538.png 800w,
+/static/swagger-api-587effdbd6595c7b875f946d6ac0f57a-0324f.png 1002w&quot;
+        sizes=&quot;(max-width: 800px) 100vw, 800px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    &lt;/p&gt;
+&lt;p&gt;
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/ts1-ce70d6849754e50ced086588232b988e-e0d40.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block; ; max-width: 800px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 35.140562248995984%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAHCAYAAAAIy204AAAACXBIWXMAABYlAAAWJQFJUiTwAAABYElEQVQoz22Rf4+aQBCG+SKXCCwswumKyh16IvJTQStHTdtL0+//NZ5uOUrSpH88eTM7O+/OzBpSSlZLi/B1znPk43k2njBxhYVjmwhrhqMRI86EOeRt2/oHY/vs8vOk+FUfue53lNuA80tAtl6QLD0OI8nIFKs5b7p251lI6U4Y+8ClzGu69sGj/0bXP2jvHXXbkBYFVdNQNhcdt1xut0HzutZ37mzjmEg8IR0bIT4xYt/hmORUtzvX8p1r09P2PXnTEh0SjlVFUpak9Znsoh+pavZZTqHzKnphbT8N65lGjueCa3rka9/xven4uL3zoQ1/9Nq8LjhXusss5VxkNFWu9USRHmjrkl20IRZ/DG1tNnboS4dcOXxJdxSvIXm05rQJOagFb8uAre+xltZ/sAddOOZoZg0Yrv5lRy8zXC1QK8Vmo1ChwvUDPBkw93xMXTDT48wmtYazv4hh5M8ufwNucd9zX6Dj2gAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px transparent;&quot;
+        alt=&quot;ts1&quot;
+        title=&quot;&quot;
+        src=&quot;/static/ts1-ce70d6849754e50ced086588232b988e-48538.png&quot;
+        srcset=&quot;/static/ts1-ce70d6849754e50ced086588232b988e-bed0f.png 200w,
+/static/ts1-ce70d6849754e50ced086588232b988e-5fd34.png 400w,
+/static/ts1-ce70d6849754e50ced086588232b988e-48538.png 800w,
+/static/ts1-ce70d6849754e50ced086588232b988e-e0d40.png 996w&quot;
+        sizes=&quot;(max-width: 800px) 100vw, 800px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    &lt;/p&gt;
+&lt;p&gt;
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/ts2-978eb90fd563420b5c1773ad4ffda03c-368b7.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block; ; max-width: 800px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 42.39713774597496%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAICAYAAAD5nd/tAAAACXBIWXMAABYlAAAWJQFJUiTwAAABhElEQVQoz12S63KjMAyF8yjLxTSADcSkELANBAikgc52Ovv+r3JWdrrdmf44Iyyhz/IZHWIukHOGvuWQlUQqYogkRMQYfO8XPJL/U77n9K8WBj4YCxGGAQ6xEBA8xtU00HWPvhuw7yv6YYDpO7Sdgeo6KGPQao3WaDRaoVHK5RTVueAOGEUMh4QmZCwAT1OkxwTnssH2+xPz4w23xwPrvuP+/o5l27BuO5bHhvntWbOyeZFnbtrnhAQ8Mh+XMkcuz1BqxP7x6UDDfMO4rrgRYLrfXbwuCybKjRS7aXJwC/T/AzPEzMPUSih60qVuCXKHGUcnfb26xn6eYez3V15ZSyjaCzjZ9g1MhHDvz0SCshA4lRID/WQbansB+XQh32ptUNHZifyztYa81QRNsx/AiDysLEzWKApJ0BIFgU9nilKSFZLOJZIspy3gJPEdOT03Or4gCLwn0CZDWpEqT/FhJHo1Q58UTKnxmlWY2xP+LAUurwVEllGjj4BWJvhaHSubszAb/wLQQwENcYQG5QAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px transparent;&quot;
+        alt=&quot;ts2&quot;
+        title=&quot;&quot;
+        src=&quot;/static/ts2-978eb90fd563420b5c1773ad4ffda03c-48538.png&quot;
+        srcset=&quot;/static/ts2-978eb90fd563420b5c1773ad4ffda03c-bed0f.png 200w,
+/static/ts2-978eb90fd563420b5c1773ad4ffda03c-5fd34.png 400w,
+/static/ts2-978eb90fd563420b5c1773ad4ffda03c-48538.png 800w,
+/static/ts2-978eb90fd563420b5c1773ad4ffda03c-368b7.png 1118w&quot;
+        sizes=&quot;(max-width: 800px) 100vw, 800px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    &lt;/p&gt;
+&lt;p&gt;
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/ts3-457b0eb4ee5caec8c9776ac78c4769a5-a7df7.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block; ; max-width: 800px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 55.818540433925044%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAYAAAB/Ca1DAAAACXBIWXMAABYlAAAWJQFJUiTwAAABVUlEQVQoz52S2W6DMBRE+ZMQwHjDxjZ7G1VJpSbtc9U85P//Y3pJQAlqWlV5OGIxGmbu3GjzdsB2/47n3St2xxP2n0dsv07YHD5Qdz3qfiD6P1ieR67pYH0AlwLCWri6Pt8nWYrsAaLQtNC2hNEStc6giwJaaog8R5omRDpd7zOK3D5Hvm1RlJ6EFBRLkJOQ4Bycsccc+raDIUFmJJKSXBUMqzjGej2zmoiRJOsFKfHDYSCHo2DlJHrP0XmJoSngvUcI9J5GMuJozrZ0MDRn6xxKQmlNidiCqBojOw+nOYbKoG0sXoYC3VOFvg8XQfrGhXAWEEJAKnWG8xyMZQuism7pjxSZ5pZLSW4dNZwhniPHqwtT5DS9iXyvFOYaGBI0WqGm+SlquZhbzpIHSmkuLStaGzm1zHNyS/ZnB9kvwtfz6z2VQovtaLGtBKsEtc3u7th/Bb8B0FVFnPOHJv0AAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px transparent;&quot;
+        alt=&quot;ts3&quot;
+        title=&quot;&quot;
+        src=&quot;/static/ts3-457b0eb4ee5caec8c9776ac78c4769a5-48538.png&quot;
+        srcset=&quot;/static/ts3-457b0eb4ee5caec8c9776ac78c4769a5-bed0f.png 200w,
+/static/ts3-457b0eb4ee5caec8c9776ac78c4769a5-5fd34.png 400w,
+/static/ts3-457b0eb4ee5caec8c9776ac78c4769a5-48538.png 800w,
+/static/ts3-457b0eb4ee5caec8c9776ac78c4769a5-a7df7.png 1014w&quot;
+        sizes=&quot;(max-width: 800px) 100vw, 800px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    &lt;/p&gt;
+&lt;p&gt;
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/ts4-3dce2e68b3ab1269413f0f07f57183b9-e9886.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block; ; max-width: 800px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 77.20306513409962%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAPCAYAAADkmO9VAAAACXBIWXMAABYlAAAWJQFJUiTwAAABgElEQVQ4y5WU60rDQBCF+yrN3rLXZHOzbaqIYLWIIIJCwfd/jeMkvVdjzY+BITv7cWbPTCb36xfcvb5h9bzG4+YLq88NHt4/sHxao14s0LQtmsUfcXE+KWcz5FUNbS3SKsA4B+cMpFLggkMMBB/IJ/V8gawooY2Bjx4h16iyBFwyMJZcDc7P6yZVBywrpFpDlSl06yBrA6HF4cKY2AKLilomhZmHdx6K2hdSnCm4vHj67TQ/AruWi0C5RV0KyJQfgXwEsDkBusLDegLLBIp3b9IVUTH7qXIQmDVzhFj2LWdlBhs8civgNUNyUMj+r5DFWe+ySlOISiJtyRAyh1PLshuJsW/Y7MeGFAZSpzNy2RKQ84OycabMLt4wOmitoGkOeTdbA9DrLpNCRzAXA7yVCGoLG5rFv4Hlfmw85TmMdYianBZs5/TIwc4JqGhTdDTQTsMQKBVTsGSKhIKxX6L/vlu5k5p+l0MskMWIZXuLgtq/IbB19LMwtlfereVgXJx/A8/0uoneX9FhAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px transparent;&quot;
+        alt=&quot;ts4&quot;
+        title=&quot;&quot;
+        src=&quot;/static/ts4-3dce2e68b3ab1269413f0f07f57183b9-48538.png&quot;
+        srcset=&quot;/static/ts4-3dce2e68b3ab1269413f0f07f57183b9-bed0f.png 200w,
+/static/ts4-3dce2e68b3ab1269413f0f07f57183b9-5fd34.png 400w,
+/static/ts4-3dce2e68b3ab1269413f0f07f57183b9-48538.png 800w,
+/static/ts4-3dce2e68b3ab1269413f0f07f57183b9-e9886.png 1044w&quot;
+        sizes=&quot;(max-width: 800px) 100vw, 800px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    &lt;/p&gt;
+&lt;p&gt;
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/ts5-0184e88172d08279c35b300dcd5f2eec-7bed9.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block; ; max-width: 800px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 66.55052264808361%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAABYlAAAWJQFJUiTwAAAB+klEQVQ4y32T6ZKiQBCEfRQ5mvs+FVQukcE7Nibc93+S3OpmWDVmZ398AiVmV1ali7xuUWy2yLoe28sdadOhqCuqlYjTFGGSIuLXF/4+J99ZBPRhWDZkVUEYR3AjH7ZnwfdsOBaDZjLohGaoMEwDtmkLGFOhKBIhv7EI0wym7cDUVeSJK4qSzL9UoKrTS6qqvKCCEe+1J4uIBHXLQeIybFIbfuDD83S4ngFd06DrGgkoPwp8EwyTDBZ1yLvZ5h6aKkIWa3BMDYamC5vcmiwR8r95t0wztD0HTGPUlYuqbcQygihClCSIaK4cz/dgOzTXL+Z70zKh0W9nhGXLcehhmsuu6fHr9wPH2xX98YgDMV4u2H98oD0cMJxOolbWNeq+R7HdQqEu+ZKEZStKhaAqtiZjXVa4fX5ivF7RDgMaEtmPo7hW+7245+SbjRDlgpK0FGLCcpDwLc8xmASPt5vojnfAmcV2XScO4bWsLFFUNfKiEHN8LuXL8ixY7lrcHw+c7nfq5Ci6OZDNjlsmseF8FocVVSUOWVGn74LJlMNZMFutMIwHjOcTmqHDrq1ormStapCu18RKdJXSewkR0OJesyr+KdzyM0syfN9Fnq0QBgFFyqQs6tTFcoqJtPx/bCbBKTaMMRg6Qxy5FJUMsZ8g9GOKhiWWxn5AfeEP07eVG2gtTgIAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px transparent;&quot;
+        alt=&quot;ts5&quot;
+        title=&quot;&quot;
+        src=&quot;/static/ts5-0184e88172d08279c35b300dcd5f2eec-48538.png&quot;
+        srcset=&quot;/static/ts5-0184e88172d08279c35b300dcd5f2eec-bed0f.png 200w,
+/static/ts5-0184e88172d08279c35b300dcd5f2eec-5fd34.png 400w,
+/static/ts5-0184e88172d08279c35b300dcd5f2eec-48538.png 800w,
+/static/ts5-0184e88172d08279c35b300dcd5f2eec-7bed9.png 1148w&quot;
+        sizes=&quot;(max-width: 800px) 100vw, 800px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    &lt;/p&gt;
 &lt;p&gt;再来看下当命令运行时生成的代码(参考下图):&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;最左侧部分是生成的 api 调用代码&lt;/li&gt;
 &lt;li&gt;右上是 对应接口的 mock 数据&lt;/li&gt;
 &lt;li&gt;右下是 res/response 对应的 ts 提示;&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;!()[./api-example.png]&lt;/p&gt;
+&lt;p&gt;
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/api-example-79a69c44fde4492170c363c03a80975b-029d4.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block; ; max-width: 800px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 65.41417591801878%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAAAsSAAALEgHS3X78AAACLElEQVQ4y21S2W7bQBDTx1TSrvZeraTotJ3YSII2QR8KpP//IyxXztG0eRgMbM1ySA6L6XLBcD6hu91gvIc2BtraaxkLHz0enp/w49cLnl5+4/z8E+N6QD/OuJkX9MuGfl4xLCvStKCwVqOLBql1UJpg2kIpzW4gZQMharSpg/MBp+M9DqdbdIcBlm+Uyt8lhJScZReCgM7jso24nO8wrzO6KQ87aGdgyFbpBiEliKbBGldM3QQ7cnFQ/E+gritU1UcVDRk5o5C6Hm3XwqdAMAWpBBoykARybYKi/C1tmKYNcUxwvYOJGo3ljJKoqaSuaxTGOlgysUbCE8jSO2M9MvNdDgd9jHwgMfoZx3TE2N8gTJwZyDRyucmya1RliSJv9t4htBExtQQzuxfZl7xRcnBYV6zHEx7vv+P2/IBh40EOC0KXeMgA48LeLYseOngtYTSPItUO8rcnUgp02xHHy4m1YZxnhJj2BOQj7mU+etEQsDIE0TXKqkRJ2m9gZXkFdHlpS4lew9Tf9m958b8lsoeBOVto8jz1jEbca/eVHuatWb6PtCIGREbFZK++AHurIgf4bun32GyHmSEdYALlWMUsaspQBKTEyKC3PJis/ovKW+2AOTYND+B2UxkFz9/MXr6aoFzZvDIM9DjZnd1Xkt8BDRk6l2PDh67Zw6yNe49NXQvYcJXsAxmLzOYzyCfAHJtsemB4265jDt3VYCHeewZ0gR7mUvWr5K8Z/gHOBZDqpppwPgAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px transparent;&quot;
+        alt=&quot;api example&quot;
+        title=&quot;&quot;
+        src=&quot;/static/api-example-79a69c44fde4492170c363c03a80975b-48538.png&quot;
+        srcset=&quot;/static/api-example-79a69c44fde4492170c363c03a80975b-bed0f.png 200w,
+/static/api-example-79a69c44fde4492170c363c03a80975b-5fd34.png 400w,
+/static/api-example-79a69c44fde4492170c363c03a80975b-48538.png 800w,
+/static/api-example-79a69c44fde4492170c363c03a80975b-029d4.png 1171w&quot;
+        sizes=&quot;(max-width: 800px) 100vw, 800px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    &lt;/p&gt;
 &lt;h3&gt;项目如何落地&lt;/h3&gt;
 &lt;p&gt;如果动心了,你会想问如何做到, 不动心的同学,应该是走错地方了..
 要做到只有一点要求:&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;后台 bff 规范输出接口,如对接 swagger yapi 等 api 管理工具;&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;!()[./swagger-api.png];&lt;/p&gt;
+&lt;p&gt;
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/swagger-api-587effdbd6595c7b875f946d6ac0f57a-0324f.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block; ; max-width: 800px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 78.3433133732535%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAQCAYAAAAWGF8bAAAACXBIWXMAAAsSAAALEgHS3X78AAACfklEQVQ4y41T2W7bMBDU/39Df6B/UfQtL0XRNk19yrooibrvy9Z0lo6SoAjQyBjvkqKXMztra5omzPOMcRzhqxB+oIgQaZYjI7q+v7/nuekDsOTrOi8o+gafTl/w1X3EQfnYRR4OcWDgVglUWyBo8//ipWA+NPgcPOBBH+FmGqdUmWKXIjYHVVd8CNYmeRgGeJTr+AE8X5k8LwpUVY1pnih5/AfTu7CWZcFyvZqiWqcIwxiKkLxuGhYt0TQtFqqQMwsxv4dpvvcwSRLEUUxDNBzHw+XiMLoIyDCKIniez0toUppCzmqtTZR1lmUGeZ6joJq2bWGVZYmKmyqMcLLPlOthf9gz+rg4DnxGyeUC13XNJYVpRYW6rg0k32DJuAhVqa7OEewjWdkcHc+DwwLCTikZJfaWe7IOmN/ZeyaXCxq2p+s6WKfz2ciQPjRhi/icIHAjBDQn1jFK9tC0JY6NNJEoufxGCvWcUzHUTAu9sALeLrKvtwVd1iE+sD+RRssiI/e3pi/PkzDR4euziWKo5BLXdYU8Ft4883RFErD5KkYhRtAQYVRRTsn+ZGSo07v7FXtXcqSE4cbOFJTKBvLhrSX7mJ9ddCrAUOYYmxpz3z2jxdS1Zm9qazIY3/IxdawtEcILJRZPNvSvR1S/f6L88Q0l4xAFGNMYvVZEiC5m5L/oWqbmdxupV4a3m1n0oUb0fQe1f0JiH5H7DlLXRuKcaNaB2Btovku4bnjRNL/274Xh9tyqAsUxhN6dke//IPvzhIIzWex3yI57DEV+l0msY4+1Ljatrwy3wVxudK7poQ4X+LYNdToiOB4wVyXWtjEF6BpWunzHgHWZXyRvDP8CT8nCSD93ddMAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px transparent;&quot;
+        alt=&quot;swagger api&quot;
+        title=&quot;&quot;
+        src=&quot;/static/swagger-api-587effdbd6595c7b875f946d6ac0f57a-48538.png&quot;
+        srcset=&quot;/static/swagger-api-587effdbd6595c7b875f946d6ac0f57a-bed0f.png 200w,
+/static/swagger-api-587effdbd6595c7b875f946d6ac0f57a-5fd34.png 400w,
+/static/swagger-api-587effdbd6595c7b875f946d6ac0f57a-48538.png 800w,
+/static/swagger-api-587effdbd6595c7b875f946d6ac0f57a-0324f.png 1002w&quot;
+        sizes=&quot;(max-width: 800px) 100vw, 800px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    ;&lt;/p&gt;
 &lt;p&gt;生成代码示例:&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;shell&quot;&gt;
       &lt;pre class=&quot;language-shell&quot;&gt;&lt;code class=&quot;language-shell&quot;&gt;.
@@ -91,11 +391,12 @@
 &lt;blockquote&gt;
 &lt;p&gt;talk is cheap ,show me the code;&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;(适配代码)[https://github.com/creasy2010/moon/tree/master/packages/moon-wanmi]
+&lt;p&gt;&lt;a href=&quot;https://github.com/creasy2010/moon/tree/master/packages/moon-wanmi&quot;&gt;适配代码&lt;/a&gt;
 从 swagger 下载 api 描述 JSONSCHEMA ,分组,组装数据;&lt;/p&gt;
-&lt;p&gt;(转换逻辑)[https://github.com/creasy2010/moon/tree/master/packages/core/src/web-api/client]
+&lt;p&gt;&lt;a href=&quot;https://github.com/creasy2010/moon/tree/master/packages/core/src/web-api/client&quot;&gt;转换逻辑&lt;/a&gt;
 生成调用代码,生成 req/res ts 定义 生成 mock 数据;&lt;/p&gt;
-&lt;p&gt;(项目主页)[https://github.com/creasy2010/moon]&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/creasy2010/moon&quot;&gt;项目主页&lt;/a&gt;
+欢迎pr,众人拾柴火焰高!&lt;/p&gt;
 &lt;h2&gt;FAP:&lt;/h2&gt;
 &lt;h3&gt;什么是异步编程?&lt;/h3&gt;
 &lt;p&gt;我们知道同步与异步 的区别,就好解释了.
@@ -110,7 +411,43 @@
 &lt;li&gt;api 工具 不单单 sawgger - 如 yapi 等工具也需要;&lt;/li&gt;
 &lt;li&gt;BaseResponse 处理 - 后端接口喜欢包装一层 baseresponse, 那么我们并不希望它出现在每个地方,我们会在 ts 定义中剥除 BaseResponse,调用的位置只用关心自己的数据;&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;!()[./whyswaggergen.png];&lt;/p&gt;</content:encoded></item><item><title><![CDATA[redux动态加载reducer]]></title><description><![CDATA[背景 最近在用taro写小程序，写着写着，小程序就从小变大了.  二话不说直接分包. 梭完代码， 以为不过如此时，然后打开模拟器就报错了..   分包原则:“子可依赖主，主不能依赖子”; 简单分析了下，项目中redux中每个(类)页面都有相关联的reducer…]]></description><link>https://github.com/creasy2010/redux动态加载reducer/</link><guid isPermaLink="false">https://github.com/creasy2010/redux动态加载reducer/</guid><content:encoded>&lt;h2&gt;背景&lt;/h2&gt;
+&lt;p&gt;
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/whyswaggergen-485c94740544f90c35bcc984980d8c5e-6200b.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block; ; max-width: 800px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 62.5%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAABYlAAAWJQFJUiTwAAAA9ElEQVQ4y62Su26DUBBE7+WNeV8sHh1lmhQoECEhREMEEn/A///HmF0nReTCFrg42q1mZ0YrpBAQhKZBSnnfzyFg7HyEF3w3X1AqhWkY8DyPcRyHp2VZsG0bSZIgTVP4vs88CF6zHJ/XGLkm8DMvWJYFTdNgGAa0bYtxHDHPM7ZtY6ZpQtd1WNcVfd8/CtZ1DanrT6OQO9M0eX9SzX3R9w6DIEAURQjDkKMe7vDvKgllWYY4jmHsPZ4S1H4dVlXFpb8Q7TWHZVkiz3Pu7LRDeomiKBiKTtN13eMO6a9IlJwqpZgDsf87pMjUIU3q9HDkN/JewRtZ/BfA0syWZQAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px transparent;&quot;
+        alt=&quot;whyswaggergen&quot;
+        title=&quot;&quot;
+        src=&quot;/static/whyswaggergen-485c94740544f90c35bcc984980d8c5e-48538.png&quot;
+        srcset=&quot;/static/whyswaggergen-485c94740544f90c35bcc984980d8c5e-bed0f.png 200w,
+/static/whyswaggergen-485c94740544f90c35bcc984980d8c5e-5fd34.png 400w,
+/static/whyswaggergen-485c94740544f90c35bcc984980d8c5e-48538.png 800w,
+/static/whyswaggergen-485c94740544f90c35bcc984980d8c5e-b70ec.png 1200w,
+/static/whyswaggergen-485c94740544f90c35bcc984980d8c5e-d134a.png 1600w,
+/static/whyswaggergen-485c94740544f90c35bcc984980d8c5e-f6ead.png 2400w,
+/static/whyswaggergen-485c94740544f90c35bcc984980d8c5e-6200b.png 2880w&quot;
+        sizes=&quot;(max-width: 800px) 100vw, 800px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    ;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[redux动态加载reducer]]></title><description><![CDATA[背景 最近在用taro写小程序，写着写着，小程序就从小变大了.  二话不说直接分包. 梭完代码， 以为不过如此时，然后打开模拟器就报错了..   分包原则:“子可依赖主，主不能依赖子”; 简单分析了下，项目中redux中每个(类)页面都有相关联的reducer…]]></description><link>https://github.com/creasy2010/redux动态加载reducer/</link><guid isPermaLink="false">https://github.com/creasy2010/redux动态加载reducer/</guid><content:encoded>&lt;h2&gt;背景&lt;/h2&gt;
 &lt;p&gt;最近在用taro写小程序，写着写着，小程序就从小变大了.  二话不说直接分包.&lt;/p&gt;
 &lt;p&gt;梭完代码， 以为不过如此时，然后打开模拟器就报错了..  &lt;/p&gt;
 &lt;p&gt;
