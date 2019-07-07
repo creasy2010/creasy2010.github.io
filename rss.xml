@@ -1,4 +1,116 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[PersonalBlog - a blog starter for GatsbyJS]]></title><description><![CDATA[PersonalBlog is a GatsbyJS starter.]]></description><link>https://github.com/creasy2010</link><generator>RSS for Node</generator><lastBuildDate>Tue, 09 Apr 2019 09:10:01 GMT</lastBuildDate><item><title><![CDATA[redux动态加载reducer]]></title><description><![CDATA[背景 最近在用taro写小程序，写着写着，小程序就从小变大了.  二话不说直接分包. 梭完代码， 以为不过如此时，然后打开模拟器就报错了..   分包原则:“子可依赖主，主不能依赖子”; 简单分析了下，项目中redux中每个(类)页面都有相关联的reducer…]]></description><link>https://github.com/creasy2010/redux动态加载reducer/</link><guid isPermaLink="false">https://github.com/creasy2010/redux动态加载reducer/</guid><content:encoded>&lt;h2&gt;背景&lt;/h2&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[PersonalBlog - a blog starter for GatsbyJS]]></title><description><![CDATA[PersonalBlog is a GatsbyJS starter.]]></description><link>https://github.com/creasy2010</link><generator>RSS for Node</generator><lastBuildDate>Sun, 07 Jul 2019 02:11:40 GMT</lastBuildDate><item><title><![CDATA[前端腻子粉 - 最近我在搞装修]]></title><description><![CDATA[google 10 倍工作法, 突破常规藩篱的魔法! 我们常会自嘲自己是码农,那捯饬下腻子粉更是符合我们的身份; 看到题目,大家的第一反应可能是: “腻子粉是什么?会给我们带来什么?”;
+腻子粉英文名称(polyfill…]]></description><link>https://github.com/creasy2010/且看&quot;前端腻子粉&quot;如何赋能团队/</link><guid isPermaLink="false">https://github.com/creasy2010/且看&quot;前端腻子粉&quot;如何赋能团队/</guid><content:encoded>&lt;blockquote&gt;
+&lt;p&gt;google 10 倍工作法, 突破常规藩篱的魔法!&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;我们常会自嘲自己是码农,那捯饬下腻子粉更是符合我们的身份; 看到题目,大家的第一反应可能是: “腻子粉是什么?会给我们带来什么?”;
+腻子粉英文名称(polyfill),在前端打包编译过程中我们频繁用到,会帮助我们把浏览器间的兼容问题打平,提高我们的幸福感,再不不用关心这个 api 浏览器是否支持,再也不用关心 css 适配问题等问题.&lt;/p&gt;
+&lt;h2&gt;是什么&lt;/h2&gt;
+&lt;p&gt;在解释我们的腻子粉能带来什么前, 我们先回味下前端不那么幸福的事情?
+!(作为前端你幸福吗?)[./xingfu.png];&lt;/p&gt;
+&lt;h3&gt;前端的烦恼&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;这个 res 是什么结构? - 只有程序运行起来,查看 cosole.log 或 network 我们才明天返回参数是什么.&lt;/li&gt;
+&lt;li&gt;接口参数是什么? - 只有问后端接口或查看文档,才知道要传什么,发生错误,才明白 那个是必传的.&lt;/li&gt;
+&lt;li&gt;今日栽树,明日填坑? - 项目开始时,质量进度总是可控的,项目进行一段时间人员轮替,可维护性下降,问题总是他人的;&lt;/li&gt;
+&lt;li&gt;静待接口 - 前端依赖后端接口,联调时总会出现依赖;&lt;/li&gt;
+&lt;li&gt;review - 不断的 review 会议是否提升了我们的代码质量,代码可读性;&lt;/li&gt;
+&lt;li&gt;ts 定义何时普及 - 团队在普及 ts 时总会不尽如人意,上有对策下有政策,人性总是懒惰的,那么我们是否有更 “懒惰” 的方法普及 ts;&lt;/li&gt;
+&lt;li&gt;前端总是在拖项目时间假像 - 这个一周的时间总是,第四天接口才会才可以调,如何 让我们不”拖”?&lt;/li&gt;
+&lt;li&gt;ctrl+c ctrl+v? - 相似的代码总是穿插在代码中(不可能把所有代码都抽组件,都复用出来-除了 0|1 的抽象),不是从之前的功能 copy 就是找官方文档 copy
+…&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3&gt;我们想要的样子 - 你,那么美&lt;/h3&gt;
+&lt;p&gt;面对这些苦恼:我们如何能够幸福! 让我们先穿越下看看我们希望的是什么样子
+视频下载地址:
+链接: &lt;a href=&quot;https://pan.baidu.com/s/1Wxad7IwZkwn9fq7mOBJibg&quot;&gt;https://pan.baidu.com/s/1Wxad7IwZkwn9fq7mOBJibg&lt;/a&gt; 提取码: pypw 复制这段内容后打开百度网盘手机 App，操作更方便哦&lt;/p&gt;
+&lt;p&gt;注:主要关注 api 调用 ,res,req 部分,其他部分请无视;&lt;/p&gt;
+&lt;p&gt;现在说下主要部分(图请参考下方引用):&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;在调用 api 时有 controller(与 bff 层 1 比 1 还原)提示;&lt;/li&gt;
+&lt;li&gt;在调用 controller 方法时有提示;&lt;/li&gt;
+&lt;li&gt;如果不清楚方法 req 参数,点击引用直接到 ts 提示,后台备注信息我们都可以看到 (代码即文档,so sex!)&lt;/li&gt;
+&lt;li&gt;如果不清楚方法 res 返回值,点击引用直接查看后台定义;&lt;/li&gt;
+&lt;li&gt;在页面使用到对象的地方,总是有引用;&lt;/li&gt;
+&lt;li&gt;当然,这一切是自动生成的,非人力可为;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;!()[./swagger-api.png]
+!()[./ts1.png]
+!()[./ts2.png]
+!()[./ts3.png]
+!()[./ts4.png]
+!()[./ts5.png]&lt;/p&gt;
+&lt;p&gt;再来看下当命令运行时生成的代码(参考下图):&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;最左侧部分是生成的 api 调用代码&lt;/li&gt;
+&lt;li&gt;右上是 对应接口的 mock 数据&lt;/li&gt;
+&lt;li&gt;右下是 res/response 对应的 ts 提示;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;!()[./api-example.png]&lt;/p&gt;
+&lt;h3&gt;项目如何落地&lt;/h3&gt;
+&lt;p&gt;如果动心了,你会想问如何做到, 不动心的同学,应该是走错地方了..
+要做到只有一点要求:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;后台 bff 规范输出接口,如对接 swagger yapi 等 api 管理工具;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;!()[./swagger-api.png];&lt;/p&gt;
+&lt;p&gt;生成代码示例:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;shell&quot;&gt;
+      &lt;pre class=&quot;language-shell&quot;&gt;&lt;code class=&quot;language-shell&quot;&gt;.
+├── AuthorizeController.ts
+├── CouponCodeBaseController.ts
+├── CouponInfoController.ts
+├── CustomerBaseController.ts
+├── PetCouponInfoController.ts
+├── StoreCustomerController.ts
+├── _api-info.json
+├── fetch.ts
+├── index.ts
+├── mock
+│   ├── AuthorizeController.json
+│   ├── CouponCodeBaseController.json
+│   ├── CouponInfoController.json
+│   ├── CustomerBaseController.json
+│   ├── PetCouponInfoController.json
+│   └── StoreCustomerController.json
+└── mock-util.ts
+
+1 directory, 16 files&lt;/code&gt;&lt;/pre&gt;
+      &lt;/div&gt;
+&lt;p&gt;ps:
+当前封装的命令可以支持 swager ,yapi,如果是其他方式的要修改命令;&lt;/p&gt;
+&lt;h3&gt;feature&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;多端覆盖 - app h5 小程序,一个都不能少;&lt;/li&gt;
+&lt;li&gt;TS 类型 - “零”代价引入 , 将代码即文档实践到底;&lt;/li&gt;
+&lt;li&gt;代码提示 - anywhere, anyone;&lt;/li&gt;
+&lt;li&gt;mock 数据 - 自动生成,易于修改;&lt;/li&gt;
+&lt;li&gt;智能 mock - 新添加接口自动生成 mock 数据;&lt;/li&gt;
+&lt;li&gt;无侵入性 - 新老项目皆宜,无禁忌;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3&gt;实现逻辑:&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;talk is cheap ,show me the code;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;(适配代码)[https://github.com/creasy2010/moon/tree/master/packages/moon-wanmi]
+从 swagger 下载 api 描述 JSONSCHEMA ,分组,组装数据;&lt;/p&gt;
+&lt;p&gt;(转换逻辑)[https://github.com/creasy2010/moon/tree/master/packages/core/src/web-api/client]
+生成调用代码,生成 req/res ts 定义 生成 mock 数据;&lt;/p&gt;
+&lt;p&gt;(项目主页)[https://github.com/creasy2010/moon]&lt;/p&gt;
+&lt;h2&gt;FAP:&lt;/h2&gt;
+&lt;h3&gt;什么是异步编程?&lt;/h3&gt;
+&lt;p&gt;我们知道同步与异步 的区别,就好解释了.
+当我实现一个功能时,阻塞干扰不间隔出现,eg: 一会接口调不通了, 一会要查文档了,一会要去喝个水.&lt;/p&gt;
+&lt;h3&gt;why not swagger-codegen?&lt;/h3&gt;
+&lt;p&gt;上文提到了 swagger,有些人可能会说 为什么要重复造轮子,swagger-codegen 不是已经提供这脚本适配各平台代码了,你还造个 X 呀 !
+做这个基于下面几个考虑;请容我细细列出:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;group &amp;#x26; name - 自定义分组,可与后端 controller 一一对应,想想几百个 controller 放到一个文件里要有多酸爽.&lt;/li&gt;
+&lt;li&gt;mock 数据 - 生成本地 mock 数据,简化 mock 数据流程,;&lt;/li&gt;
+&lt;li&gt;api 调用自定义 - 生成的代码有一个规范的 get post 等方法定义,由项目实现 http 请求或其他协议的请求;&lt;/li&gt;
+&lt;li&gt;api 工具 不单单 sawgger - 如 yapi 等工具也需要;&lt;/li&gt;
+&lt;li&gt;BaseResponse 处理 - 后端接口喜欢包装一层 baseresponse, 那么我们并不希望它出现在每个地方,我们会在 ts 定义中剥除 BaseResponse,调用的位置只用关心自己的数据;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;!()[./whyswaggergen.png];&lt;/p&gt;</content:encoded></item><item><title><![CDATA[redux动态加载reducer]]></title><description><![CDATA[背景 最近在用taro写小程序，写着写着，小程序就从小变大了.  二话不说直接分包. 梭完代码， 以为不过如此时，然后打开模拟器就报错了..   分包原则:“子可依赖主，主不能依赖子”; 简单分析了下，项目中redux中每个(类)页面都有相关联的reducer…]]></description><link>https://github.com/creasy2010/redux动态加载reducer/</link><guid isPermaLink="false">https://github.com/creasy2010/redux动态加载reducer/</guid><content:encoded>&lt;h2&gt;背景&lt;/h2&gt;
 &lt;p&gt;最近在用taro写小程序，写着写着，小程序就从小变大了.  二话不说直接分包.&lt;/p&gt;
 &lt;p&gt;梭完代码， 以为不过如此时，然后打开模拟器就报错了..  &lt;/p&gt;
 &lt;p&gt;
@@ -1958,47 +2070,7 @@ RANDOMBYTESREQUEST, TLSWRAP, Timeout, Immediate, TickObject&lt;/code&gt;&lt;/pre
 &lt;h2&gt;参考资料&lt;/h2&gt;
 &lt;p&gt;(async&lt;em&gt;hooks Api)[&lt;a href=&quot;https://nodejs.org/dist/latest-v10.x/docs/api/async&quot;&gt;https://nodejs.org/dist/latest-v10.x/docs/api/async&lt;/a&gt;&lt;/em&gt;hooks.html]&lt;/p&gt;
 &lt;p&gt;(图解 Node.js 之 async_hooks)[https://blog.csdn.net/liuyaqi1993/article/details/78016166]&lt;/p&gt;
-&lt;p&gt;(Node.js v8.x 新特性 Async Hook 简介)[https://zhuanlan.zhihu.com/p/27394440]&lt;/p&gt;</content:encoded></item><item><title><![CDATA[互联网+教育]]></title><description><![CDATA[…]]></description><link>https://github.com/creasy2010/互联网+教育/</link><guid isPermaLink="false">https://github.com/creasy2010/互联网+教育/</guid><content:encoded>&lt;p&gt;互联网+的风吹到学校,听当老师的邻居说起,又特地查了查,感觉这盘棋下的真好;
-且听我娓娓道来&lt;/p&gt;
-&lt;h2&gt;做什么&lt;/h2&gt;
-&lt;p&gt;我所掌握的教育有几个明显的点(也是互联网可以大展身手的地方).&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;试卷批改;&lt;/li&gt;
-&lt;li&gt;教育资源不均衡;&lt;/li&gt;
-&lt;li&gt;所有学生做一套试卷.所以很多时候你在培人做考题;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;而这几个地方也是互联网+教育落地的点;&lt;/p&gt;
-&lt;p&gt;我试用了几款软件 “好分数”这一款邻居学校使用的,就用这个来说下吧. &lt;/p&gt;
-&lt;h2&gt;怎么进入学校&lt;/h2&gt;
-&lt;p&gt;据我了解应该是与学校利益共享,有分成给学校,或直接给学校一笔钱,软件就在学校推广起来了. 也是这互联网中羊毛出在猪身上的经典应用了;
-(钱是怎么来了后面会说明)&lt;/p&gt;
-&lt;h2&gt;老师使用&lt;/h2&gt;
-&lt;p&gt;老师在考试时会把试卷传到平台,学生做的试卷仍是纸质的. 学生交卷后扫描到平台,老师批改试卷即可在平台进行;
-试卷中的题目分为主观题与客观题,主观题需要老师在app上批改,客观题会根据正确答案,利用ocr技术自动完成,减少老师工作量&lt;/p&gt;
-&lt;p&gt;老师在app上进行批改打分,可以移动办公(在公交上在地铁上),评论也可以以交流语音的形式参与,因为写字这个太麻烦了,倒不如录上一段话,话中的情感也能体现出来.
-这样就结束了;&lt;/p&gt;
-&lt;h2&gt;学生使用&lt;/h2&gt;
-&lt;p&gt;学生要查考试成绩呢,要下载app,改分 看错题;
-家长如果要查看分数情况也要下载app看分数;&lt;/p&gt;
-&lt;p&gt;这样就结束了吗 ?  当然不是.这才仅仅是个开始,这个基础只是一个舞台. &lt;/p&gt;
-&lt;h2&gt;错题集(收费功能)&lt;/h2&gt;
-&lt;p&gt;既然平台有试卷,有学生的答卷,有老师的批改,错题集的需求便来了
-把学生每次做的错题收集起来. 分析错题背后的知识结构推送相关练习给学生. 错题集的练习当然会跟记忆曲线联系起来. &lt;/p&gt;
-&lt;h2&gt;千人千面(收费功能)&lt;/h2&gt;
-&lt;p&gt;这也是一重大功能, 一般练习的试卷大家做的都一样, 不能针对尖子生或差生做区分对待, 但平台有了试卷,有了题库,可以自由拼装试券,结合个人以往的错题掌握情况进行针对训练,
-而且这个不需要人为干预进来; 尖子生也不需要把题做透了. 达成目的即可了.  &lt;/p&gt;
-&lt;h2&gt;知识平移(平台功能)&lt;/h2&gt;
-&lt;p&gt;一个学校. 一个区域 一个城市 一个省,如果积累了足够多的信息, 可以不可以把这种能力直接平移给西部, 给山区,因为对老师的要求降底了许多.这种降底不是质量的降低而是繁杂工作少了,一个老师就能影响更多的人了
-就好比一个老师 face-to-face 一节课只能影响几十个同学, 但如果网络授课,能同时影响数以万计的同学,录下的视频复播又能源源不断的教育人&lt;/p&gt;
-&lt;h2&gt;一对一授课(收费功能)&lt;/h2&gt;
-&lt;p&gt;即然 老师 学生 都到我这个平台了, 学生要请私教的问题 也可以在平台上解决了. 订个标准 进行收费;
-当然我理解的一对一授课不再与教知识 而在于解惑.  学生学知识可以通过课本,视频,或远程教学来体现&lt;/p&gt;
-&lt;h2&gt;中考高考预测(收费功能)&lt;/h2&gt;
-&lt;p&gt;以前考试,估分数,在家都不是很精确,但如果你平时所有的练习都在平台上, 平台都你的知识掌握情况能掌握,是不是可以预测你的分数,预测你到那个学校? &lt;/p&gt;
-&lt;h2&gt;期望&lt;/h2&gt;
-&lt;p&gt;目前教育资源分布不均, 希望能通过这种方式,把享受高质量教育的权利让每个人都可以获取;&lt;br&gt;
-百度目前也在教育的风口上投入, 借助vr ai ar等高科技技术,让课堂更丰富多彩, 希望下一代人可以享受这波浪潮!
-未来已来!&lt;/p&gt;</content:encoded></item><item><title><![CDATA[我心中的团队]]></title><description><![CDATA[…]]></description><link>https://github.com/creasy2010/团队/</link><guid isPermaLink="false">https://github.com/creasy2010/团队/</guid><content:encoded>&lt;p&gt;从入职场开始,经过许多团队,但团队又是什么? 当上升到带领团队时,又如何操作呢?一些小想法小聊小聊:
+&lt;p&gt;(Node.js v8.x 新特性 Async Hook 简介)[https://zhuanlan.zhihu.com/p/27394440]&lt;/p&gt;</content:encoded></item><item><title><![CDATA[我心中的团队]]></title><description><![CDATA[…]]></description><link>https://github.com/creasy2010/团队/</link><guid isPermaLink="false">https://github.com/creasy2010/团队/</guid><content:encoded>&lt;p&gt;从入职场开始,经过许多团队,但团队又是什么? 当上升到带领团队时,又如何操作呢?一些小想法小聊小聊:
 可能有错误的地方,欢迎善意的批评!&lt;/p&gt;
 &lt;h2&gt;团队是什么?&lt;/h2&gt;
 &lt;p&gt;  一个好的团队大家奔着明确的目标,相互配合,达成目的,分享胜利的果实.
@@ -2038,7 +2110,47 @@ RANDOMBYTESREQUEST, TLSWRAP, Timeout, Immediate, TickObject&lt;/code&gt;&lt;/pre
 如果大家都决定做,那说明这个弯路的确要走一走,哈哈,说不定柳暗花明了; &lt;/p&gt;
 &lt;h2&gt;问题&lt;/h2&gt;
 &lt;p&gt;  okr考核问题如何实现?&lt;/p&gt;
-&lt;p&gt;如果我所在的团队不是这样子的,那我就打造这样的团队,如何打造不了,那我还在这时做什么!&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Insights]]></title><description><![CDATA[解读打心底喜欢的那些语句! Personal 要有敬畏之心,尊重他人! stay hungry stay foolish…]]></description><link>https://github.com/creasy2010/Insights/</link><guid isPermaLink="false">https://github.com/creasy2010/Insights/</guid><content:encoded>&lt;p&gt;解读打心底喜欢的那些语句!&lt;/p&gt;
+&lt;p&gt;如果我所在的团队不是这样子的,那我就打造这样的团队,如何打造不了,那我还在这时做什么!&lt;/p&gt;</content:encoded></item><item><title><![CDATA[互联网+教育]]></title><description><![CDATA[…]]></description><link>https://github.com/creasy2010/互联网+教育/</link><guid isPermaLink="false">https://github.com/creasy2010/互联网+教育/</guid><content:encoded>&lt;p&gt;互联网+的风吹到学校,听当老师的邻居说起,又特地查了查,感觉这盘棋下的真好;
+且听我娓娓道来&lt;/p&gt;
+&lt;h2&gt;做什么&lt;/h2&gt;
+&lt;p&gt;我所掌握的教育有几个明显的点(也是互联网可以大展身手的地方).&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;试卷批改;&lt;/li&gt;
+&lt;li&gt;教育资源不均衡;&lt;/li&gt;
+&lt;li&gt;所有学生做一套试卷.所以很多时候你在培人做考题;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;而这几个地方也是互联网+教育落地的点;&lt;/p&gt;
+&lt;p&gt;我试用了几款软件 “好分数”这一款邻居学校使用的,就用这个来说下吧. &lt;/p&gt;
+&lt;h2&gt;怎么进入学校&lt;/h2&gt;
+&lt;p&gt;据我了解应该是与学校利益共享,有分成给学校,或直接给学校一笔钱,软件就在学校推广起来了. 也是这互联网中羊毛出在猪身上的经典应用了;
+(钱是怎么来了后面会说明)&lt;/p&gt;
+&lt;h2&gt;老师使用&lt;/h2&gt;
+&lt;p&gt;老师在考试时会把试卷传到平台,学生做的试卷仍是纸质的. 学生交卷后扫描到平台,老师批改试卷即可在平台进行;
+试卷中的题目分为主观题与客观题,主观题需要老师在app上批改,客观题会根据正确答案,利用ocr技术自动完成,减少老师工作量&lt;/p&gt;
+&lt;p&gt;老师在app上进行批改打分,可以移动办公(在公交上在地铁上),评论也可以以交流语音的形式参与,因为写字这个太麻烦了,倒不如录上一段话,话中的情感也能体现出来.
+这样就结束了;&lt;/p&gt;
+&lt;h2&gt;学生使用&lt;/h2&gt;
+&lt;p&gt;学生要查考试成绩呢,要下载app,改分 看错题;
+家长如果要查看分数情况也要下载app看分数;&lt;/p&gt;
+&lt;p&gt;这样就结束了吗 ?  当然不是.这才仅仅是个开始,这个基础只是一个舞台. &lt;/p&gt;
+&lt;h2&gt;错题集(收费功能)&lt;/h2&gt;
+&lt;p&gt;既然平台有试卷,有学生的答卷,有老师的批改,错题集的需求便来了
+把学生每次做的错题收集起来. 分析错题背后的知识结构推送相关练习给学生. 错题集的练习当然会跟记忆曲线联系起来. &lt;/p&gt;
+&lt;h2&gt;千人千面(收费功能)&lt;/h2&gt;
+&lt;p&gt;这也是一重大功能, 一般练习的试卷大家做的都一样, 不能针对尖子生或差生做区分对待, 但平台有了试卷,有了题库,可以自由拼装试券,结合个人以往的错题掌握情况进行针对训练,
+而且这个不需要人为干预进来; 尖子生也不需要把题做透了. 达成目的即可了.  &lt;/p&gt;
+&lt;h2&gt;知识平移(平台功能)&lt;/h2&gt;
+&lt;p&gt;一个学校. 一个区域 一个城市 一个省,如果积累了足够多的信息, 可以不可以把这种能力直接平移给西部, 给山区,因为对老师的要求降底了许多.这种降底不是质量的降低而是繁杂工作少了,一个老师就能影响更多的人了
+就好比一个老师 face-to-face 一节课只能影响几十个同学, 但如果网络授课,能同时影响数以万计的同学,录下的视频复播又能源源不断的教育人&lt;/p&gt;
+&lt;h2&gt;一对一授课(收费功能)&lt;/h2&gt;
+&lt;p&gt;即然 老师 学生 都到我这个平台了, 学生要请私教的问题 也可以在平台上解决了. 订个标准 进行收费;
+当然我理解的一对一授课不再与教知识 而在于解惑.  学生学知识可以通过课本,视频,或远程教学来体现&lt;/p&gt;
+&lt;h2&gt;中考高考预测(收费功能)&lt;/h2&gt;
+&lt;p&gt;以前考试,估分数,在家都不是很精确,但如果你平时所有的练习都在平台上, 平台都你的知识掌握情况能掌握,是不是可以预测你的分数,预测你到那个学校? &lt;/p&gt;
+&lt;h2&gt;期望&lt;/h2&gt;
+&lt;p&gt;目前教育资源分布不均, 希望能通过这种方式,把享受高质量教育的权利让每个人都可以获取;&lt;br&gt;
+百度目前也在教育的风口上投入, 借助vr ai ar等高科技技术,让课堂更丰富多彩, 希望下一代人可以享受这波浪潮!
+未来已来!&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Insights]]></title><description><![CDATA[解读打心底喜欢的那些语句! Personal 要有敬畏之心,尊重他人! stay hungry stay foolish…]]></description><link>https://github.com/creasy2010/Insights/</link><guid isPermaLink="false">https://github.com/creasy2010/Insights/</guid><content:encoded>&lt;p&gt;解读打心底喜欢的那些语句!&lt;/p&gt;
 &lt;h2&gt;Personal&lt;/h2&gt;
 &lt;blockquote&gt;
 &lt;p&gt;要有敬畏之心,尊重他人!&lt;/p&gt;
